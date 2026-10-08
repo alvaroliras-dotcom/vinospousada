@@ -1,0 +1,27 @@
+Frases con ⚑ que importar_textos.py ha dejado fuera (se publican cuando David/Álvaro las confirmen):
+
+/licores/crema-de-orujo/: en la receta tradicional, la que explicaba hasta ahora nuestra web, se mezcla aguardiente 
+/licores/crema-de-orujo/: Los textos que acompañaban esta referencia en nuestra web anterior hablaban de recuerdos d
+/licores/crema-de-orujo/: se sirve junto a un café solo o con hielo, y se utiliza como base en tartas con mascarpone
+/licores/crema-de-orujo/: La crema de orujo forma parte de los siete licores de nuestra gama, todos en garrafa de 3 
+/licores/crema-de-orujo/: La composición exacta de la que servimos consta en la etiqueta de la garrafa ⚑ y, si la ne
+/licores/crema-de-orujo/: la garrafa en cámara y fuera solo la botella de servicio del turno; una vez abierta, convi
+/licores/crema-de-orujo/: coinciden en la textura y se distinguen en la base, whisky en una y aguardiente de orujo g
+/licores/crema-de-orujo/: En cocina, funciona como acompañamiento o base de postres cremosos, como una tarta de masc
+/licores/aguardiente-de-hierbas/: Tiene 30 % vol., una graduación que lo sitúa entre la crema de orujo, más suave, y el oruj
+/licores/aguardiente-de-hierbas/: no sabemos qué hierbas concretas lleva ni en qué proporción ⚑, y preferimos no inventar un
+/licores/aguardiente-de-hierbas/ FAQ: El detalle de las hierbas no consta ⚑.
+/licores/licor-de-cafe/: el catálogo no indica el tipo de café, la base alcohólica ni la receta, y no vamos a inven
+/licores/licor-de-cafe/: Tampoco figura el contenido de cafeína, por lo que no podemos afirmar nada al respecto ⚑.
+/licores/licor-de-cafe/: Se sirve en vaso corto con hielo, como alternativa a la crema de orujo cuando el cliente p
+/licores/licor-de-cafe/: Es una gama de siete licores en el mismo formato, de modo que puede pedir varias garrafas 
+/licores/limoncino/: La descripción de sabor del catálogo es breve y no incluye notas de cata detalladas, ni el
+/licores/orujo-blanco/: Tiene 40 % vol., la mayor graduación de los siete licores que distribuimos, y se entrega e
+/licores/orujo-blanco/: El catálogo no explica con qué se elabora, aunque el nombre «orujo» remite al aguardiente 
+/licores/orujo-blanco/: Tampoco indica si es de elaboración propia o de bodega gallega concreta ⚑.
+/licores/orujo-blanco/: El catálogo no da temperatura de servicio ⚑:
+/licores/pacharan-gallego/: El apellido «gallego» es el que usaba la web anterior de Pousada en el nombre de la ficha 
+/licores/pacharan-gallego/: no consta la base alcohólica, el tiempo de maceración ni si lleva otras plantas o aromas ⚑
+/licores/pacharan-gallego/: Dentro de nuestra gama de siete licores, el pacharán convive con el orujo blanco, la crema
+/licores/pacharan-gallego/: El catálogo no da temperatura de servicio ⚑.
+/licores/pacharan-gallego/ FAQ: El resto de la receta no consta ⚑.
