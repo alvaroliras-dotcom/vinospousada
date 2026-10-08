@@ -1,0 +1,162 @@
+{
+ "cleanUrls": true,
+ "trailingSlash": true,
+ "headers": [
+  {
+   "source": "/(.*)",
+   "headers": [
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex, nofollow"
+    }
+   ]
+  }
+ ],
+ "redirects": [
+  {
+   "source": "/productos/pousada/licores/crema-orujo{/}?",
+   "destination": "/licores/crema-de-orujo/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores/pacharan-gallego{/}?",
+   "destination": "/licores/pacharan-gallego/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores/licor-cafe{/}?",
+   "destination": "/licores/licor-de-cafe/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores/aguardiente{/}?",
+   "destination": "/licores/aguardiente-de-hierbas/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores/orujo-blanco{/}?",
+   "destination": "/licores/orujo-blanco/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores/limoncino{/}?",
+   "destination": "/licores/limoncino/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores/vodka-caramelo{/}?",
+   "destination": "/licores/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/licores{/}?",
+   "destination": "/licores/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-gallegos/ribeiro{/}?",
+   "destination": "/denominaciones/ribeiro/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-gallegos/rias-baixas{/}?",
+   "destination": "/denominaciones/rias-baixas/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-gallegos/valdeorras{/}?",
+   "destination": "/denominaciones/valdeorras/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-gallegos/monterrey{/}?",
+   "destination": "/denominaciones/monterrei/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-de-espana/ribera-duero{/}?",
+   "destination": "/denominaciones/ribera-del-duero/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-de-espana/rioja{/}?",
+   "destination": "/denominaciones/rioja/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-de-espana/rueda{/}?",
+   "destination": "/denominaciones/rueda/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-de-espana/navarra{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-gallegos{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/vinos-de-espana{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada/page/2{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/productos/pousada{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/shop{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/quienes-somos{/}?",
+   "destination": "/nosotros/",
+   "permanent": true
+  },
+  {
+   "source": "/vino/turbio{/}?",
+   "destination": "/vino-turbio/",
+   "permanent": true
+  },
+  {
+   "source": "/vino/trio{/}?",
+   "destination": "/catalogo/",
+   "permanent": true
+  },
+  {
+   "source": "/comprar/rueda-verdejo-musgo{/}?",
+   "destination": "/denominaciones/rueda/",
+   "permanent": true
+  },
+  {
+   "source": "/comprar/vina-sobreira{/}?",
+   "destination": "/denominaciones/rias-baixas/",
+   "permanent": true
+  },
+  {
+   "source": "/comprar/vino-tinto-davalillo{/}?",
+   "destination": "/denominaciones/rioja/",
+   "permanent": true
+  },
+  {
+   "source": "/comprar/vino-tinto-don-paulino-crianza{/}?",
+   "destination": "/denominaciones/rioja/",
+   "permanent": true
+  },
+  {
+   "source": "/comprar/tapias-godello{/}?",
+   "destination": "/denominaciones/monterrei/",
+   "permanent": true
+  }
+ ]
+}
