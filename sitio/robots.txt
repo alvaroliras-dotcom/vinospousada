@@ -1,3 +1,5 @@
+# Rastreadores de IA (ChatGPT, Claude, Perplexity, Gemini, Copilot…): abiertos a propósito, también para entrenamiento.
+# Decisión: visibilidad máxima (auditoría GEO del 08/10/2026, opción A). Fecha: 09/10/2026. Se revisa si cambia la política.
 User-agent: *
 Allow: /
 Disallow: /enviar.php

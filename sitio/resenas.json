@@ -1,6 +1,1 @@
-{
- "valoracion": "0",
- "resenas": 0,
- "opiniones": [],
- "_pendiente": "Sin reseñas reales todavía (David no las ha pasado). Mientras esté vacío, la web no enseña nota ni sección de opiniones (OPINIONES_SECCION = False en config.py). Formato de cada opinión cuando lleguen: {nombre, lugar, titulo, texto, servicio}."
-}
+{"valoracion": "0", "resenas": 0, "opiniones": []}
