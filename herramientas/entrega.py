@@ -24,8 +24,8 @@ Tercer modo, para el día de publicar (Bruno A4, Turing M1):
 """
 import argparse, os, shutil, subprocess, sys, zipfile
 
-MAX_ARCHIVOS = 60          # archivos + carpetas por tanda: < 100 (a Álvaro le cuenta también las carpetas al arrastrar)
-MAX_BYTES = 24 * 1024 * 1024   # < 25 MB
+MAX_ARCHIVOS = 90          # archivos + carpetas por tanda: límite real de GitHub = 100 por subida web
+MAX_BYTES = 80 * 1024 * 1024   # margen de sobra bajo el límite real de GitHub para subida por arrastre
 EXCLUIR = ("__pycache__", ".cache-img", ".git/", ".DS_Store")
 NO_PRODUCCION = ("vercel.json",)   # archivos de sitio/ que NO van al hosting del cliente
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

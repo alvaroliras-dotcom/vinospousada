@@ -1,0 +1,27 @@
+08-WEB · POUSADA · vv1 · 383 archivos en 6 tanda(s)
+
+QUÉ ES: la web generada (sitio/) y el código que la genera (generador/, contenido/, recursos/, cliente/, base/, herramientas/).
+Carpeta de trabajo completa: 08-WEB/repositorio-vv1/ (no se sube; es la copia al día).
+
+CÓMO SUBIRLO A GITHUB (página principal del repositorio > Add file > Upload files), tanda por tanda y en este orden:
+  1. Abre SUBIR-A-GITHUB/TANDA-1 (78 archivos, 1.2 MB). Selecciona lo que ves al abrirla (.gitignore, MAPA-DEL-TEMA-POUSADA.md, base, cliente, contenido, generador, herramientas), arrástralo JUNTO a la zona de subida y pulsa «Commit changes». Espera a que termine antes de la siguiente.
+  2. Abre SUBIR-A-GITHUB/TANDA-2 (73 archivos, 21.0 MB). Selecciona lo que ves al abrirla (herramientas, recursos, sitio), arrástralo JUNTO a la zona de subida y pulsa «Commit changes». Espera a que termine antes de la siguiente.
+     Ojo: GitHub no sube archivos que empiezan por punto (.htaccess): van al hosting a mano el día de publicar (están en el zip).
+  3. Abre SUBIR-A-GITHUB/TANDA-3 (50 archivos, 1.6 MB). Selecciona lo que ves al abrirla (sitio), arrástralo JUNTO a la zona de subida y pulsa «Commit changes». Espera a que termine antes de la siguiente.
+  4. Abre SUBIR-A-GITHUB/TANDA-4 (88 archivos, 8.9 MB). Selecciona lo que ves al abrirla (sitio), arrástralo JUNTO a la zona de subida y pulsa «Commit changes». Espera a que termine antes de la siguiente.
+  5. Abre SUBIR-A-GITHUB/TANDA-5 (79 archivos, 4.9 MB). Selecciona lo que ves al abrirla (sitio), arrástralo JUNTO a la zona de subida y pulsa «Commit changes». Espera a que termine antes de la siguiente.
+  6. Abre SUBIR-A-GITHUB/TANDA-6 (15 archivos, 0.3 MB). Selecciona lo que ves al abrirla (sitio), arrástralo JUNTO a la zona de subida y pulsa «Commit changes». Espera a que termine antes de la siguiente.
+
+Los zip de al lado son lo mismo por tandas, por si se sube desde otro ordenador o para guardar.
+
+ALTA DEL PROYECTO EN VERCEL (vista previa, la primera vez):
+  1. vercel.com > Add New > Project > Import del repositorio de GitHub.
+  2. En «Root Directory» pulsa Edit y escribe:  sitio   (si no, sale un 404, como en Solvento).
+  3. Framework Preset: «Other». Build Command: vacío. Output Directory: vacío. Install Command: vacío.
+  4. Deploy. La vista previa sale en https://<proyecto>.vercel.app con noindex (sitio/vercel.json) y se revisa con ?v=v1.
+  5. Cada subida nueva a GitHub vuelve a desplegar sola.
+
+EL DÍA DE PUBLICAR EN EL HOSTING DEL CLIENTE (paso 44+): python3 herramientas/entrega.py --cliente … --version … --produccion
+genera HOSTING/ (contenido de sitio/ con .htaccess y enviar.php, SIN vercel.json) y se sigue herramientas/PUBLICAR.md:
+lista de comprobación por HTTP (301, HTTPS, cabeceras, formulario, GTM, Search Console). Antes: buzón del formulario
+confirmado, email_aviso y GTM_ID en config.py.
