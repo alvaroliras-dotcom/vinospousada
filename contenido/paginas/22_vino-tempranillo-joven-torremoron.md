@@ -21,7 +21,7 @@ En la vista se presenta con un color granate picota intenso, con matices violác
 
 En boca es suave y equilibrado, con buena estructura y un final largo y agradable. La ficha insiste en que es muy fácil de beber, y esa es su baza para la carta: un tinto que se toma sin esfuerzo, apto para quien no quiere un vino de mucha tanicidad. Su graduación es de 14 % vol., algo mayor que la de otros tintos jóvenes de la tarifa, por lo que conviene servirlo en su punto, sin pasarlo de temperatura.
 
-El catálogo recomienda carnes rojas, cordero y asados, legumbres y quesos curados. Tiene sentido en un local de cocina de cuchara o de brasa: un cocido, unas lentejas, un chuletón o un cordero asado agradecen un tinto joven con fruta y recorrido sin exceso de madera. Para el menú del día y para la carta de vinos de la casa, es el tipo de referencia que cubre la demanda de «un tinto» sin más.
+El maridaje recomendado es el de los tintos castellanos de cuerpo: carnes rojas, cordero y asados, legumbres y quesos curados. Tiene sentido en un local de cocina de cuchara o de brasa: un cocido, unas lentejas, un chuletón o un cordero asado agradecen un tinto joven con fruta y recorrido sin exceso de madera. Para el menú del día y para la carta de vinos de la casa, es el tipo de referencia que cubre la demanda de «un tinto» sin más.
 
 Se suministra en caja de 12 botellas. La temperatura de servicio indicada es de 16 a 18 °C, por lo que en verano conviene refrescarlo unos minutos en cubitera antes de llevarlo a mesa.
 
@@ -43,4 +43,4 @@ Tempranillo al 100 %, de la D.O. Ribera del Duero.
 Entre 16 y 18 °C.
 
 **¿Con qué platos conviene?**
-Con carnes rojas, cordero y asados, legumbres y quesos curados, según la ficha del catálogo.
+Con carnes rojas, cordero y asados, legumbres y quesos curados.

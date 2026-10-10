@@ -84,13 +84,17 @@ def btn_llamar(clase="btn--acento", t=None, extra=""):
     return boton(t or f"Llamar al {N['telefono']}", f"tel:{N['telefono_e164']}", clase + " tel", "contacto", extra)
 
 
-CTX = {"pueblo": None}   # en las landings de municipio, todos los WhatsApp llevan el pueblo
+CTX = {"pueblo": None, "producto": None}   # en las landings de municipio, el WhatsApp lleva el pueblo; en las fichas, el nombre del vino/licor
 
 
-def wa_url(pueblo=None):
+def wa_url(pueblo=None, producto=None):
     from urllib.parse import quote
     pueblo = pueblo or CTX["pueblo"]
-    t = texto("whatsapp_saludo") + (texto("whatsapp_pueblo", pueblo=pueblo) if pueblo else "") + ": "
+    producto = producto or CTX.get("producto")
+    # El mensaje prerrelleno lleva el nombre del producto cuando se abre desde su ficha (paso 38, punto 16);
+    # si no hay producto (resto de páginas), se mantiene el pueblo como antes.
+    extra = texto("whatsapp_producto", producto=producto) if producto else (texto("whatsapp_pueblo", pueblo=pueblo) if pueblo else "")
+    t = texto("whatsapp_saludo") + extra + ": "
     return f"https://wa.me/{N['whatsapp']}?text={quote(t)}"
 
 
@@ -145,11 +149,40 @@ def tamanos_producto(w, h):
     return res
 
 
+def recorta_alfa(im):
+    """Botella en PNG con alfa: se recorta al cuadro de lo visible. Es la MISMA operación que hace rematar.py al generar
+    las variantes, así que lo que declara la página (width/height/srcset) coincide con el archivo (Bruno A3)."""
+    if im.mode == "RGBA":
+        bb = im.getbbox()
+        if bb:
+            im = im.crop(bb)
+    return im
+
+
+_MEDIDA_PRODUCTO = {}
+
+
+def medida_producto(archivo):
+    """Ancho y alto de una imagen de producto DESPUÉS del recorte del alfa (PNG) o tal cual (JPG). Con caché por archivo."""
+    if archivo not in _MEDIDA_PRODUCTO:
+        from PIL import Image
+        r = os.path.join(RAIZ, "recursos", "producto", archivo)
+        if os.path.exists(r):
+            with Image.open(r) as im:
+                if archivo.lower().endswith(".png"):
+                    im = recorta_alfa(im.convert("RGBA"))
+                _MEDIDA_PRODUCTO[archivo] = (im.width, im.height)
+        else:
+            _MEDIDA_PRODUCTO[archivo] = (840, 840)
+    return _MEDIDA_PRODUCTO[archivo]
+
+
 def producto_img(archivo, alt, sizes="(max-width: 900px) 40vw, 300px", clase="", prioridad=False):
     """Imagen de producto (recursos/producto/): botellas con alfa (PNG → WebP con alfa + PNG) o recortes (JPG → WebP + JPG),
-    con el lado mayor a 420 y 840. Las genera rematar.py con tamanos_producto()."""
+    con el lado mayor a 420 y 840. Las genera rematar.py con tamanos_producto() sobre la imagen ya recortada
+    (medida_producto): width, height y los descriptores «w» son los del archivo real, sin ampliar más de un 15 %."""
     base, ext = archivo.rsplit(".", 1)
-    w, h = medida(archivo, ("producto",))
+    w, h = medida_producto(archivo)
     tam = tamanos_producto(w, h)
     resp = "png" if ext.lower() == "png" else "jpg"
     carga = 'fetchpriority="high"' if prioridad else 'loading="lazy" decoding="async"'
@@ -354,7 +387,7 @@ def pie_oscuro(url, tipo, nombre, slug, compacto=False):
     <li>{N['localidad']} ({N['provincia']})</li>
     <li>{N['horario_texto']}</li>
     <li>{estado("estado--claro")}</li></ul></div>
-   <div class="pie__col"><p class="pie__h">{texto("pie_legal_titulo")}</p><ul>{leg}<li><a href="#" data-cookies-config>Cookies</a></li></ul></div>
+   <div class="pie__col"><p class="pie__h">{texto("pie_legal_titulo")}</p><ul>{leg}<li><a href="#" data-cookies-config>Configurar cookies</a></li></ul></div>
   </div>
   <div class="pie__legal">
    <span>© <span data-anio>2026</span> {N['razon_social']} · {N['localidad']} ({N['provincia']})</span>
@@ -417,3 +450,49 @@ def _cola():
 </body>
 </html>
 """
+
+
+# ---------- Cierre no rectangular de portada y cabeceras (Jean Paul, paso 36 · encargo de Álvaro 09/10/2026) ----------
+# Una «línea de marea»: la primera pantalla de cada página es un campo de color (con el paisaje lavado o la pieza propia)
+# que termina en una onda, no en un rectángulo. El SVG se pinta del color del bloque que viene debajo y se estira a lo
+# ancho (preserveAspectRatio="none"), así no deja huecos ni a 390 ni a 1920. Cada tipo de página usa una variante de la
+# misma familia (otra amplitud, otra cresta): la onda es la misma firma, no la misma plantilla. En móvil se usa un trazado
+# con una sola cresta (el de 1440 unidades, estirado a 390, quedaría rizado).
+ONDAS = {
+    # nombre: (trazado ancho en 1440×120, trazado estrecho en 390×120)
+    "marea":  ("M0 62C150 108 330 118 520 86 740 48 900 10 1080 30 1240 46 1340 86 1440 44V120H0Z",
+               "M0 70C70 112 150 116 220 80 290 46 340 34 390 56V120H0Z"),
+    "ola":    ("M0 40C220 88 440 108 700 72 940 40 1160 24 1440 66V120H0Z",
+               "M0 46C90 98 200 100 290 64 340 44 370 44 390 58V120H0Z"),
+    "ribera": ("M0 72C260 104 560 42 860 60 1100 74 1280 96 1440 50V120H0Z",
+               "M0 76C100 102 220 56 320 60 360 62 380 70 390 72V120H0Z"),
+    "costa":  ("M0 36C180 18 380 60 600 92 860 128 1120 90 1440 78V120H0Z",
+               "M0 40C80 20 170 64 250 86 310 102 360 92 390 82V120H0Z"),
+}
+
+
+def onda(variante="marea", color="var(--base)", clase=""):
+    """El cierre de onda: dos <svg> (ancho y estrecho) que el CSS alterna por anchura; «color» es el fondo del bloque siguiente."""
+    ancho, estrecho = ONDAS.get(variante, ONDAS["marea"])
+    return (f'<div class="onda onda--{variante} {clase}" aria-hidden="true" style="--onda-color:{color}">'
+            f'<svg class="onda__svg onda__svg--ancha" viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false"><path d="{ancho}"/></svg>'
+            f'<svg class="onda__svg onda__svg--estrecha" viewBox="0 0 390 120" preserveAspectRatio="none" focusable="false"><path d="{estrecho}"/></svg></div>')
+
+
+def producto_img_pronta(archivo, alt, sizes, clase=""):
+    """Imagen de producto que se carga desde el primer momento (sin lazy y sin fetchpriority): las botellas de la primera
+    pantalla y las de la estantería clavada (Emil M8: dentro de un tramo con overflow:hidden el lazy mide la intersección ya
+    recortada y las botellas llegan tarde)."""
+    return producto_img(archivo, alt, sizes, clase).replace('loading="lazy" decoding="async"', 'decoding="async"')
+
+
+def aviso_cookies():
+    """Aviso de cookies compacto (Jean Paul A-2, Dani C-08, corregido de verdad en el paso 38 v3): una frase corta y dos
+    botones pequeños EN LA MISMA FILA que el texto (no debajo), anclado bajo la cabecera en los anchos/altos de
+    portátil cortos y en móvil (CSS en tema.css), para que no tape el CTA de la portada ni el de /contacto/. El texto
+    se acorta a lo esencial para caber en una fila sin perder el aviso legal; la política completa está enlazada.
+    build.py lo inserta en lugar del aviso de la base (montar)."""
+    return f"""<div class="cookies cookies--compacto" id="cookies" role="dialog" aria-label="Aviso de cookies">
+ <p><span class="cookies__txt-larga">Cookies propias necesarias y, solo si lo acepta, Google Analytics para saber cómo se usa la web.</span><span class="cookies__txt-corta">Usamos cookies.</span> <a href="/politica-de-cookies/">Política de cookies</a>.</p>
+ <div class="cookies__acc"><button class="btn btn--oscuro btn--mini" type="button" data-cookies="si"><span class="btn__plano">Aceptar</span></button><button class="btn btn--linea btn--mini" type="button" data-cookies="no"><span class="btn__plano">Solo necesarias</span></button></div>
+</div>"""

@@ -15,11 +15,11 @@ Peñalagua es un vino tinto joven de la D.O. Ribera del Duero, elaborado por Bod
 
 ## Características
 
-Peñalagua se presenta en el catálogo como vino tinto joven de la D.O. Ribera del Duero, elaborado por Bodegas Castillejo de Robledo. La uva es tinta fina al 100 %, y la ficha aclara entre paréntesis que se trata de tempranillo. Es un dato útil para el personal de sala: el cliente que pide «un tempranillo joven de Ribera» está en el terreno de esta botella.
+Peñalagua es un vino tinto joven de la D.O. Ribera del Duero, elaborado por Bodegas Castillejo de Robledo. La uva es tinta fina al 100 %, el nombre local del tempranillo. Es un dato útil para el personal de sala: el cliente que pide «un tempranillo joven de Ribera» está en el terreno de esta botella.
 
-La cata del catálogo es breve y concreta. A la vista, rojo cereza con matices violáceos, limpio y brillante. En nariz, un aroma intenso a frutos rojos y negros maduros. En boca, suave, equilibrado y con un buen retrogusto. No hay mención de madera ni de crianza, de modo que conviene presentarlo como lo que es: un tinto joven, de fruta, para beber con soltura y sin ceremonia.
+La cata es breve y concreta. A la vista, rojo cereza con matices violáceos, limpio y brillante. En nariz, un aroma intenso a frutos rojos y negros maduros. En boca, suave, equilibrado y con un buen retrogusto. No hay mención de madera ni de crianza, de modo que conviene presentarlo como lo que es: un tinto joven, de fruta, para beber con soltura y sin ceremonia.
 
-Con 14 % vol. conserva la graduación de otros tintos de Ribera del Duero de la tarifa. Esa graduación, unida a una boca suave, lo hace adecuado para servicios de mediodía y cenas en las que se pide un tinto de la casa y se espera que sea amable. Dentro del catálogo comparte denominación, variedad y maridaje con Torremorón; la diferencia práctica está en el formato (aquí, caja de 6) y en la bodega, lo que permite al local elegir según volumen de consumo.
+Con 14 % vol. conserva la graduación de otros tintos de Ribera del Duero de la tarifa. Esa graduación, unida a una boca suave, lo hace adecuado para servicios de mediodía y cenas en las que se pide un tinto de la casa y se espera que sea amable. Comparte denominación, variedad y maridaje con Torremorón; la diferencia práctica está en el formato (aquí, caja de 6) y en la bodega, lo que permite al local elegir según volumen de consumo.
 
 El maridaje recogido es el de los tintos castellanos: carnes rojas, cordero y asados, legumbres y quesos curados. Un lechazo, unas costillas al horno, unas alubias o una tabla de curados completan la lista natural. Si su carta ofrece cocina de cuchara en invierno, este es un vino que cumple sin quitar protagonismo al plato.
 
@@ -40,7 +40,7 @@ FAQ
 Tinta fina (tempranillo) al 100 %, de la D.O. Ribera del Duero.
 
 **¿Quién lo elabora?**
-Bodegas Castillejo de Robledo, según el catálogo.
+Bodegas Castillejo de Robledo.
 
 **¿A qué temperatura se sirve y con qué?**
 Entre 16 y 18 °C, con carnes rojas, cordero y asados, legumbres y quesos curados.

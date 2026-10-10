@@ -14,6 +14,19 @@ def esc(t):
     return html.escape(t, quote=False)
 
 
+# Marcas de botón del texto fuente («[Solicitar tarifa] [Llamar al 666 631 615]», sin URL): son indicaciones de maqueta de
+# Merche, no texto. inline() solo convierte «[texto](url)», así que una línea de marcas llegaba tal cual al HTML y al JSON-LD
+# de la FAQ (Matías L-09, fuga en /distribuidor-vinos-hosteleria-madrid/). Aquí se quitan en origen, en el cuerpo y en la FAQ.
+MARCA_BOTON = re.compile(r"\[(?!LINK )[^\]\n]{1,60}\](?!\()")
+LINEA_MARCAS = re.compile(r"^\s*(?:\[(?!LINK )[^\]\n]{1,60}\](?!\()\s*)+$")
+
+
+def sin_marcas_boton(t):
+    """Quita las líneas que solo son marcas de botón y las marcas sueltas al final de una frase."""
+    lineas = [l for l in t.split("\n") if not LINEA_MARCAS.match(l)]
+    return "\n".join(re.sub(r"(\s*" + MARCA_BOTON.pattern + r")+\s*$", "", l) for l in lineas)
+
+
 def inline(t):
     """Markdown en línea: enlaces, negritas, marcas del contrato de enlaces."""
     t = re.sub(r"\s*(🔗|🆕)", "", t)
@@ -40,6 +53,7 @@ def bloques(md):
     """Divide markdown en bloques: ('h2'|'h3'|'p'|'ul'|'ol'|'tabla', contenido).
     Tablas (| a | b | + |---|---|) → ('tabla', (cabeceras, filas)). Citas (> …) → párrafo normal sin el «>»."""
     res, par, lista, tipo, tabla = [], [], [], None, []
+    md = sin_marcas_boton(md)
 
     def celdas(l):
         return [c.strip() for c in l.strip().strip("|").split("|")]
@@ -109,7 +123,7 @@ def leer(ruta):
         if ps.startswith("Notas para"):
             continue
         if ps.startswith("FAQ"):
-            for m in re.finditer(r"\*\*(.+?)\*\*\s*(.+?)(?=\n\s*\n\*\*|\Z)", ps[3:], re.S):
+            for m in re.finditer(r"\*\*(.+?)\*\*\s*(.+?)(?=\n\s*\n\*\*|\Z)", sin_marcas_boton(ps[3:]), re.S):
                 faq.append((m.group(1).strip(), " ".join(m.group(2).split())))
             continue
         if not cuerpo:

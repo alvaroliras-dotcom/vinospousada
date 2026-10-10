@@ -1,5 +1,5 @@
 URL: /licores/orujo-blanco/
-Title: Orujo blanco gallego, aguardiente 40 % | Vinos Pousada
+Title: Orujo blanco gallego, aguardiente 40 % | Pousada
 Meta description: Orujo blanco gallego, aguardiente tradicional de 40 % vol., limpio y cristalino, en garrafa de 3 L para hostelería en Madrid. Pida su tarifa.
 Keyword principal: orujo blanco gallego
 H1: Orujo blanco gallego para hostelería
@@ -11,13 +11,13 @@ Graduación: 40 % vol.
 Foto: orujo-blanco-gallego-garrafa-3-litros.jpg
 Producto: orujo-blanco
 ---
-El orujo blanco de Vinos Pousada es un aguardiente gallego tradicional de 40 % vol., limpio y cristalino, de carácter auténtico y sabor inconfundible según el catálogo. Es el licor de mayor graduación de nuestra gama de siete, y se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid. Se sirve en chupito, frío o a temperatura de bodega, al final de la comida. Con reparto desde Alcorcón, está pensado para cartas de licores de hostelería. Solicite la tarifa por teléfono, correo o WhatsApp.
+El orujo blanco de Vinos Pousada es un aguardiente gallego tradicional de 40 % vol., limpio y cristalino, de carácter auténtico y sabor inconfundible. Es el licor de mayor graduación de la gama, y se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid. Se sirve en chupito, frío o a temperatura de bodega, al final de la comida. Con reparto desde Alcorcón, está pensado para cartas de licores de hostelería. Solicite la tarifa por teléfono, correo o WhatsApp.
 
 ## Características
 
-El orujo blanco es uno de los aguardientes más asociados a la cocina gallega, y la búsqueda «orujo gallego» es de las más repetidas sobre esta bebida. La referencia de Vinos Pousada se describe en el catálogo como un aguardiente gallego tradicional, limpio y cristalino, con un carácter auténtico y un sabor inconfundible.
+El orujo blanco es uno de los aguardientes más asociados a la cocina gallega, y la búsqueda «orujo gallego» es de las más repetidas sobre esta bebida. La referencia de Vinos Pousada es un aguardiente gallego tradicional, limpio y cristalino, con un carácter auténtico y un sabor inconfundible.
 
-Es un aguardiente de aspecto transparente, como corresponde al calificativo «blanco»; la ficha no menciona ningún aroma ni dulzor añadido.
+Es un aguardiente de aspecto transparente, como corresponde al calificativo «blanco», sin aroma ni dulzor añadido.
 
 Esa graduación es la que determina cómo se sirve. Con 40 % vol., el orujo blanco se toma en chupito o en copa pequeña, en cantidad corta, y no suele acompañarse de hielo. Muchos locales lo ofrecen como cierre de la comida junto con el café, y otros lo utilizan para completar la bandeja de licores de cortesía, donde convive con la crema de orujo (15 %), el licor de café (25 %), el pacharán (25 %), el aguardiente de hierbas (30 %) y el limoncino (20 %). Es, dentro de esa bandeja, la opción de quien prefiere un aguardiente seco.
 
@@ -27,7 +27,7 @@ También conviene recordar que el orujo blanco y la crema de orujo se confunden 
 
 ## Cómo servirlo y con qué
 
-En chupito o copa pequeña, al final de la comida, con el café. muchos locales lo sirven frío y otros a temperatura de bodega, según el gusto del cliente. No necesita acompañamiento, aunque encaja con los postres de la cocina gallega y con el café solo. Por su graduación de 40 % vol., sírvalo en cantidad corta. Si lo ofrece como cortesía, conviene combinarlo con un licor más suave, como la crema de orujo o el limoncino, para que el cliente elija.
+En chupito o copa pequeña, al final de la comida, con el café. Muchos locales lo sirven frío y otros a temperatura de bodega, según el gusto del cliente. No necesita acompañamiento, aunque encaja con los postres de la cocina gallega y con el café solo. Por su graduación de 40 % vol., sírvalo en cantidad corta. Si lo ofrece como cortesía, conviene combinarlo con un licor más suave, como la crema de orujo o el limoncino, para que el cliente elija.
 
 ## Para su local
 
@@ -37,7 +37,7 @@ El orujo blanco se suministra en garrafa de 3 litros. Repartimos en toda la prov
 FAQ
 
 **¿Qué graduación tiene el orujo blanco?**
-40 % vol., según el catálogo de Vinos Pousada.
+40 % vol.
 
 **¿Cuál es la diferencia entre el orujo blanco y la crema de orujo?**
 El orujo blanco es un aguardiente transparente de 40 % vol.; la crema de orujo es un licor cremoso de 15 % vol. Ambos están en nuestra gama.

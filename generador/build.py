@@ -19,6 +19,38 @@ from config import (DOMINIO, NEGOCIO as N, SERVICIOS_HOME, SERVICIOS_SECCION, SE
                     CASOS, CASOS_VER, CINTA_PORTADA, CINTA_SECUNDARIA, CIFRAS, CIFRAS_EN, PASOS_ICONOS, ICONO_URL,
                     CTA_H2, CTA_ULTIMO, ZONA_H2, HORARIO_H2, CTA_EXTRA, texto)
 import config as CFG
+
+# ---------- Cifras del catálogo que rellena el generador (David, 09/10/2026: fuera la cifra fija «26 vinos y 6 licores») ----------
+# {n_vinos} = fichas publicadas en /comprar/ (incluye el turbio en barril y en botella) · {n_licores} = fichas de /licores/<slug>/.
+# Valen en los .md de Merche, en las cadenas de config.py (también las que pasan por texto()), en el JSON-LD y en llms.txt:
+# se rellenan al escribir cada archivo (escribir) y, para texto(), aquí mismo antes de que plantilla.py importe la función.
+CIFRAS_MARCA = {}
+
+
+def cifras_marca():
+    if not CIFRAS_MARCA:
+        CIFRAS_MARCA["{n_vinos}"] = str(sum(1 for p in PAGINAS if datos.tipo_de(p["url"]) == "ficha"))
+        CIFRAS_MARCA["{n_licores}"] = str(sum(1 for p in PAGINAS if datos.tipo_de(p["url"]) == "licor"))
+    return CIFRAS_MARCA
+
+
+def rellena_cifras(s):
+    for k, v in cifras_marca().items():
+        s = s.replace(k, v)
+    return s
+
+
+_texto_config = CFG.texto
+
+
+def texto(clave, **extra):
+    """config.texto() con {n_vinos} y {n_licores} disponibles en cualquier cadena de TEXTOS."""
+    c = cifras_marca()
+    extra.setdefault("n_vinos", c["{n_vinos}"]); extra.setdefault("n_licores", c["{n_licores}"])
+    return _texto_config(clave, **extra)
+
+
+CFG.texto = texto
 import plantilla as T
 
 RAIZ = datos.RAIZ
@@ -96,8 +128,23 @@ def migas_html(url):
 NEG_ID = DOMINIO + "/#negocio"
 
 
+def area_servida(url=None):
+    """areaServed del negocio y de los servicios (Matías L-08, Turing M2): la provincia (AdministrativeArea «Madrid»,
+    NEGOCIO["zona_servida"]) en todas; la página de zona de la sede añade su municipio como City."""
+    zona = N.get("zona_servida") or N["provincia"]
+    a = [{"@type": "AdministrativeArea", "name": zona}]
+    pb = PUEBLO.get(url) if url else None
+    if pb and "provincia" not in pb.lower() and pb != zona:
+        a.append({"@type": "City", "name": pb})
+    return a if len(a) > 1 else a[0]
+
+
+def geo_publicable():
+    """Solo se publican geo y hasMap con el CID de la ficha y coordenadas del pin, no aproximadas (Matías L-04, Turing A2)."""
+    return N.get("cid") not in ("0", "", None) and not N.get("geo_aproximado")
+
+
 def negocio_schema():
-    area = [BASE] + [v for k, v in PUEBLO.items() if v != BASE]
     d = {
         "@type": N["schema_tipo"], "@id": NEG_ID, "name": N["nombre"],
         "alternateName": N["nombre_largo"], "legalName": N["razon_social"],
@@ -107,11 +154,11 @@ def negocio_schema():
                     "addressLocality": N["localidad"], "addressRegion": N["region"], "addressCountry": "ES"},
         "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": N["dias_schema"],
                                        "opens": N["abre"], "closes": N["cierra"]}],
-        "areaServed": [{"@type": "AdministrativeArea" if "provincia" in a.lower() else "City", "name": a} for a in area],
-        "geo": {"@type": "GeoCoordinates", "latitude": N["lat"], "longitude": N["lng"]},
+        "areaServed": area_servida(),
         "knowsAbout": N["knows_about"],
     }
-    if N.get("cid") not in ("0", "", None):
+    if geo_publicable():
+        d["geo"] = {"@type": "GeoCoordinates", "latitude": N["lat"], "longitude": N["lng"]}
         d["hasMap"] = FICHA
         d["sameAs"] = [FICHA]
     if int(N["resenas"]) > 0:
@@ -133,6 +180,9 @@ def negocio_schema():
 
 
 def producto_schema(p, pr):
+    """NO se emite (Bruno A2, Matías L-07): sin offers/review/aggregateRating, Google marca cada Product como fragmento no
+    válido (la web vieja ya tenía 13). Se conserva para el día que haya precios o reseñas reales: entonces se añade «offers»
+    y se vuelve a llamar desde schema_de()."""
     url = DOMINIO + p["url"]
     props = [("Denominación", DEN[pr["do"]][0] if pr.get("do") in DEN else ("Sin denominación de origen" if pr.get("familia") == "vino" else "")),
              ("Tipo", pr.get("tipo", "")), ("Uva", pr.get("uva", "")), ("Graduación", pr.get("graduacion", "")),
@@ -164,21 +214,15 @@ def schema_de(p):
     t = datos.tipo_de(p["url"])
     if t in ("servicio", "marca", "municipio"):
         g.append({"@type": "Service", "name": p["h1"], "serviceType": N["servicio_tipo"], "provider": {"@id": NEG_ID},
-                  "url": url, "areaServed": {"@type": "AdministrativeArea" if "provincia" in PUEBLO.get(p["url"], BASE).lower() else "City",
-                                             "name": PUEBLO.get(p["url"], BASE)}})
-    if t in ("ficha", "licor"):
-        pr = datos.producto(p["url"])
-        if pr:
-            g.append(producto_schema(p, pr))
+                  "url": url, "areaServed": area_servida(p["url"])})
+    # Fichas (ficha, licor): WebPage + BreadcrumbList, sin Product (Bruno A2, Matías L-07; ver producto_schema).
     if t in ("catalogo", "denominacion", "licores", "turbio"):
         lista = productos_de(t, p)
         if lista:
-            g.append({"@type": "ItemList", "name": p["h1"], "itemListElement": [
+            g.append({"@type": "ItemList", "name": p["h1"], "numberOfItems": len(lista), "itemListElement": [
                 {"@type": "ListItem", "position": i + 1, "url": DOMINIO + pr["url"], "name": pr["nombre"]} for i, pr in enumerate(lista)]})
-    if p["faq"]:
-        g.append({"@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", inline(a))}}
-            for q, a in p["faq"]]})
+    # Sin FAQPage (Bruno B5, Matías L-07): Google no da resultado enriquecido de FAQ fuera de webs oficiales y de salud;
+    # las preguntas siguen visibles en la página, que es lo que vale.
     return {"@context": "https://schema.org", "@graph": g}
 
 
@@ -379,16 +423,20 @@ def botones(url, t, nombre_pr="", slug_pr="", claro=False):
     """Pareja de botones de la página según la tabla de llamadas a la acción (misma fuente que el pie)."""
     f = T.frase_pie(url, t, nombre_pr, slug_pr) or ("", "", "tarifa", "llamar")
     b1, b2 = f[2], f[3]
+    def ancla(u):
+        # los enlaces a /contacto/ aterrizan en el formulario (Dani C-09): #tarifa
+        return u + "#tarifa" if u.startswith(URLS["contacto"]) and "#" not in u else u
+
     def b(clave, principal):
         cls = ("btn--blanco" if claro else "btn--acento") if principal else ("btn--linea-claro" if claro else "btn--linea")
         if clave == "tarifa":
-            return T.btn_tarifa(cls, extra=' data-zona="portada_boton"')
+            return T.btn_tarifa(cls, href=ancla(URLS["contacto"]), extra=' data-zona="portada_boton"')
         if clave == "llamar":
             return T.btn_llamar(cls, extra=' data-zona="portada_boton"')
         if clave == "whatsapp":
             return T.btn_whatsapp(cls, t="Escribir por WhatsApp")
         tx, u = clave
-        return T.boton(tx.format(nombre=nombre_pr, slug=slug_pr), u.format(nombre=nombre_pr, slug=slug_pr), cls)
+        return T.boton(tx.format(nombre=nombre_pr, slug=slug_pr), ancla(u.format(nombre=nombre_pr, slug=slug_pr)), cls)
     return b(b1, True) + b(b2, False)
 
 
@@ -403,8 +451,13 @@ def portada_foto(p, intro):
     ps = intro_parrafos(intro)
     entr = f'<p class="entradilla portada__entr">{inline(ps[0])}</p>' if ps else ""
     PO = getattr(CFG, "PORTADA", {})
-    foto = T.foto(PO["foto"], PO.get("alt", ""), "(max-width: 1024px) 100vw, 54vw", prioridad=True, clase="portada__img") if PO.get("foto") else T.pieza_tipografica(N["nombre"], texto("oficio"), "portada__tipo")
-    return f"""<section class="portada" data-portada>
+    # v2 (paso 36): paisaje lavado de fondo (decorativo, fundido por la izquierda y por abajo), cinco botellas limpias que se
+    # salen por el borde inferior y cierre en onda. Sin foto en caja, sin paralaje (Jean Paul A-1, Emil A7/M7).
+    fondo = f'<div class="portada__fondo" aria-hidden="true">{T.foto(PO["foto"], "", "(max-width: 1024px) 100vw, 70vw", prioridad=True, clase="portada__paisaje")}</div>' if PO.get("foto") else ""
+    bots = "".join(T.producto_img_pronta(f, "", "(max-width: 767px) 26vw, (max-width: 1024px) 18vw, 150px", "portada__botella") for f in PO.get("botellas", []))
+    botellas = f'<div class="portada__botellas" aria-hidden="true">{bots}</div>' if bots else ""
+    return f"""<section class="portada portada--marea" data-portada>
+ {fondo}
  <div class="contenedor portada__in">
   <div class="portada__txt">
    <p class="antetitulo">{etiqueta}</p>
@@ -413,8 +466,9 @@ def portada_foto(p, intro):
    <div class="acciones" data-acciones>{botones("/", "home")}</div>
    {confianza_html()}
   </div>
-  <figure class="portada__foto" data-paralaje>{foto}</figure>
+  {botellas}
  </div>
+ {T.onda(PO.get("onda", "marea"), "var(--base)", "portada__onda")}
 </section>
 """
 
@@ -426,7 +480,8 @@ def estanteria():
         return ""
     tarj = []
     for u, tit, sub, foto, oscura in E:
-        img = T.producto_img(foto, "", "(max-width: 767px) 120px, 150px", "estante__img" + (" estante__img--foto" if not foto.endswith(".png") else "")) if foto else T.pieza_tipografica(tit, sub, "estante__tipo")
+        # sin loading="lazy": dentro del tramo clavado (overflow:hidden) el navegador las cargaba tarde (Emil M8)
+        img = T.producto_img_pronta(foto, "", "(max-width: 767px) 120px, 150px", "estante__img" + (" estante__img--foto" if not foto.endswith(".png") else "")) if foto else T.pieza_tipografica(tit, sub, "estante__tipo")
         tarj.append(f'<li><a class="estante{" estante--oscuro" if oscura else ""}" href="{u}">{img}<span class="estante__tit">{esc(tit)}</span><span class="estante__sub">{esc(sub)}</span></a></li>')
     return f"""<section class="estanteria" aria-labelledby="estanteria-tit" data-estanteria>
  {T.cinta(CINTA_PORTADA, "cinta--do", -1)}
@@ -492,8 +547,8 @@ def cajas_catalogo(sec):
      <a class="enlace-flecha" href="{URLS["catalogo"]}">{esc(texto("do_ver_todos"))} {T.ico("flecha-derecha")}</a></div>
     <div class="caja__botellas" aria-hidden="true" data-botellas>{bot}</div>
    </article>
-   <article class="caja caja--turbio rv">{turbio_img}<div class="caja__txt"><h3>{esc(nombre(URLS["turbio"]))} gallego</h3><p>{p_tur}</p></div></article>
-   <article class="caja caja--licores rv">{licores_img}<div class="caja__txt"><h3>Licores y aguardientes</h3><p>{p_lic}</p></div></article>
+   <article class="caja caja--turbio caja--pulsable rv">{turbio_img}<div class="caja__txt"><h3>{esc(nombre(URLS["turbio"]))} gallego</h3><p>{p_tur}</p></div><a class="caja__enlace" href="{URLS["turbio"]}" aria-label="{A(nombre(URLS["turbio"]))} gallego"></a></article>
+   <article class="caja caja--licores caja--pulsable rv">{licores_img}<div class="caja__txt"><h3>Licores y aguardientes</h3><p>{p_lic}</p></div><a class="caja__enlace" href="{URLS["licores"]}" aria-label="Licores y aguardientes"></a></article>
   </div>
  </div>
 </section>
@@ -507,12 +562,19 @@ def grifo(url_pagina="/"):
         return ""
     tit = inline(G["titulo"])   # *cursiva* → <em>: la palabra en --turbio
     f, alt = getattr(CFG, "TURBIO_FOTO_BANDA", (None, ""))
-    img = T.foto(f, alt, "(max-width: 1024px) 100vw, 520px", clase="grifo__img") if f else T.pieza_tipografica("Vino turbio", "de grifo", "grifo__tipo")
+    # En /vino-turbio/ la banda va justo bajo la cabecera y su foto es el LCP: sin carga diferida y con prioridad (Bruno M2, Turing M1)
+    img = T.foto(f, alt, "(max-width: 1024px) 100vw, 520px", prioridad=(url_pagina == URLS.get("turbio")), clase="grifo__img") if f else T.pieza_tipografica("Vino turbio", "de grifo", "grifo__tipo")
     bt, bu = G["boton"]
     boton1 = T.boton(bt, bu, "btn--blanco") if bu != url_pagina else T.btn_tarifa("btn--blanco", "Solicitar tarifa del turbio", f"{URLS['contacto']}?interes=vino-turbio")
-    return f"""<section class="grifo" aria-labelledby="grifo-tit" data-grifo>
+    # Pieza visual sin explicar el sistema (David/Álvaro, 09/10/2026): la foto de las cuncas con una medida de barril al lado
+    # (escala de 50 litros que se llena con el scroll en ordenador; llena en táctil y con movimiento reducido). Clavado solo en
+    # la home (data-grifo-pin) y más corto (Jean Paul M-1, Emil M5): en /vino-turbio/ entra de una vez.
+    clavo = ' data-grifo-pin' if url_pagina == "/" else ""
+    medida = ('<span class="grifo__medida" aria-hidden="true"><span class="grifo__medida-tope">50 L</span>'
+              '<span class="grifo__medida-tubo"><span class="grifo__nivel" data-nivel></span></span><span class="grifo__medida-base">0</span></span>')
+    return f"""<section class="grifo" aria-labelledby="grifo-tit" data-grifo{clavo}>
  <div class="contenedor grifo__in">
-  <figure class="grifo__foto">{img}<span class="grifo__nivel" aria-hidden="true" data-nivel></span></figure>
+  <figure class="grifo__foto">{img}{medida}</figure>
   <div class="grifo__txt">
    <p class="antetitulo antetitulo--claro">{esc(G["etiqueta"])}</p>
    <h2 class="h2 grifo__tit" id="grifo-tit" data-lineas>{tit}</h2>
@@ -534,7 +596,7 @@ def casa(sec):
  <div class="contenedor casa">
   {img}
   <div class="casa__txt">
-   <p class="antetitulo">Tres generaciones</p>
+   <p class="antetitulo">Desde 1979</p>
    <h2 class="h2">{esc(plano(sec['h2']))}</h2>
    <div class="prosa prosa--grande">{render_bloques(sec['bl'])}</div>
    {f'<dl class="hitos">{hitos}</dl>' if hitos else ""}
@@ -546,7 +608,9 @@ def casa(sec):
 
 # ---------- Reparto: texto + píldoras de municipios + foto (o pieza tipográfica) ----------
 def reparto(sec):
-    mun = "".join(f'<li>{esc(m)}</li>' for m in getattr(CFG, "REPARTO_MUNICIPIOS", []))
+    # Las píldoras enlazan a la página de la provincia (Jean Paul M-3, Dani C-15: parecían botones y no hacían nada)
+    u_prov = next((u for u, n in MUNICIPIOS if "provincia" in n.lower()), MUNICIPIOS[0][0] if MUNICIPIOS else None)
+    mun = "".join((f'<li><a href="{u_prov}" data-municipio="{A(m)}">{esc(m)}</a></li>' if u_prov else f'<li>{esc(m)}</li>') for m in getattr(CFG, "REPARTO_MUNICIPIOS", []))
     f, alt = getattr(CFG, "REPARTO_FOTO", (None, ""))
     img = f'<figure class="reparto__foto" data-zoom>{T.foto(f, alt, "(max-width: 1024px) 100vw, 40vw")}</figure>' if f else f'<div class="reparto__foto">{T.pieza_tipografica("Provincia de Madrid", "Reparto", "reparto__tipo")}</div>'
     return f"""<section class="seccion seccion--hueso reparto-sec" id="{slug(sec['h2'])}">
@@ -576,31 +640,75 @@ def formulario(interes=None, compacto=False):
     for pr in CAT:
         intereses[pr["slug"]] = pr["nombre"]
     msg = f"Me interesa: {intereses[interes]}." if interes and interes in intereses else ""
+    # Dani C-03: patrón del teléfono válido en Chrome (modo «v») con «title» concreto; los motivos del servidor se traducen
+    # a texto por campo (data-motivos → main.js); el campo trampa tiene un nombre sin sentido (Dani C-02)
+    patron = F.get("telefono_patron") or r"\+?[0-9]([ .\-\(\)]?[0-9]){8,14}"
+    motivos = dict(F.get("errores", {}))
+    motivos.setdefault("envio", F["error_texto"])
+    motivos.setdefault("datos", "Revise los campos marcados y vuelva a enviar.")
+    ok_enl = F.get("ok_enlace")
+    ok_enl_html = f' <a href="{A(ok_enl[1])}">{esc(ok_enl[0])}</a>.' if ok_enl else ""
+    trampa = F.get("trampa") or "contacto_alt"
     return f"""<form class="formulario rv" action="/enviar.php" method="post" aria-label="Solicitud de tarifa" data-intereses='{A(json.dumps(intereses, ensure_ascii=False))}'>
- <div class="aviso aviso--ok" id="form-ok" hidden><strong>{esc(F["ok_titulo"])}</strong> {esc(F["ok_texto"])}</div>
- <div class="aviso aviso--error" id="form-error" hidden><strong>{esc(F["error_titulo"])}</strong> {esc(F["error_texto"])}</div>
+ <div class="aviso aviso--ok" id="form-ok" hidden role="status"><strong>{esc(F["ok_titulo"])}</strong> {esc(F["ok_texto"])}{ok_enl_html}</div>
+ <div class="aviso aviso--error" id="form-error" hidden role="alert" data-motivos='{A(json.dumps(motivos, ensure_ascii=False))}'><strong>{esc(F["error_titulo"])}</strong> <span data-error-texto>{esc(F["error_texto"])}</span></div>
  <input type="hidden" name="tipo" value="contacto"><input type="hidden" name="pagina" value=""><input type="hidden" name="t" value="">
  <label>Nombre<input type="text" name="nombre" autocomplete="name" required maxlength="80" placeholder="Cómo quiere que le llamemos"></label>
- <label>Negocio<input type="text" name="negocio" autocomplete="organization" required maxlength="80" placeholder="Nombre de su bar, restaurante o tienda"></label>
+ <label>Negocio<input type="text" name="negocio" autocomplete="organization" required maxlength="80" placeholder="{A(F.get("negocio_ph") or "Nombre de su local")}"></label>
  <div class="fila-form">
   <label>Tipo de negocio<select name="tipo_negocio" required data-tipo-negocio><option value="">Elija una opción</option>{tipos}</select></label>
-  <label>Teléfono<input type="tel" name="telefono" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()\\-]{{9,20}}" maxlength="20" placeholder="Le llamamos o le escribimos a este número"></label>
+  <label>Teléfono<input type="tel" name="telefono" autocomplete="tel" inputmode="tel" required pattern="{A(patron)}" title="{A(F.get("telefono_title") or "Escriba un teléfono de 9 cifras")}" maxlength="20" placeholder="{A(F.get("telefono_ph") or "Su teléfono")}"></label>
  </div>
  <label>{texto("form_mensaje_label")} <span class="opcional">(opcional)</span><textarea name="mensaje" maxlength="2000" placeholder="{A(texto('form_mensaje_ph'))}" data-mensaje>{esc(msg)}</textarea></label>
- <label class="trampa" aria-hidden="true">Web<input type="text" name="web" tabindex="-1" autocomplete="off"></label>
+ <label class="trampa" aria-hidden="true">No rellenar<input type="text" name="{A(trampa)}" tabindex="-1" autocomplete="off"></label>
  <div class="acciones">{T.boton_form(F["boton"])}</div>
  <p class="confianza">{esc(F["confianza"])} <span data-particular hidden>{esc(F["confianza_particular"])}</span></p>
  <p class="casilla casilla--info">{esc(F["informativa"])}<a href="{URL_PRIVACIDAD}">Política de privacidad</a>.</p>
 </form>"""
 
 
-def tarifa(sec, p, interes=None):
-    """«Pida su tarifa»: ficha de contacto a la izquierda (teléfono grande, WhatsApp, horario, correo) y formulario a la derecha."""
+def tarifa(sec, p, interes=None, portada=False):
+    """«Pida su tarifa»: ficha de contacto a la izquierda (teléfono grande, WhatsApp, horario, correo) y formulario a la derecha.
+    portada=True: versión de primera pantalla de /contacto/ (H1, migas, campo con onda)."""
     ps = intro_parrafos(sec["bl"]) if sec else []
     txt = "".join(f"<p>{inline(x)}</p>" for x in ps)
     # En la home, el antetítulo del formulario es la pregunta de la tabla de Dani (el pie, pegado debajo, va compacto)
     fp = T.frase_pie(p["url"], datos.tipo_de(p["url"])) or ("", "", "", "")
     pregunta = fp[0]
+    # En /contacto/ (portada=True) esta sección ES la primera pantalla: un solo titular (el H1 de la página, Jean Paul M-10),
+    # migas, el formulario a la derecha ya a la vista (Dani C-09) y el cierre en onda de las cabeceras. El ancla #tarifa va en
+    # el formulario, para que en móvil aterrice en él y no en el teléfono.
+    if portada:
+        intro, _ = secciones(p["bloques"])
+        ps0 = intro_parrafos(intro)
+        txt = (f'<p class="entradilla">{inline(ps0[0])}</p>' if ps0 else "") + "".join(f"<p>{inline(x)}</p>" for x in ps0[1:])
+        et, _ = etiqueta_y_entrada(p)
+        C = getattr(CFG, "CABECERAS", {}).get("contacto", {})
+        tinte = C.get("tinte", "#F4F2EC")
+        fondo = ""
+        if C.get("fondo"):
+            paisaje = T.foto(C["fondo"], "", "(max-width: 1024px) 100vw, 70vw", clase="cab-int__paisaje").replace(' loading="lazy"', "")
+            fondo = f'<div class="cab-int__fondo" aria-hidden="true">{paisaje}</div>'
+        return f"""<section class="cab-int cab-int--marea cab-int--tinte tarifa-sec tarifa-sec--portada" style="--tinte:{tinte}">
+ {fondo}
+ <div class="contenedor">
+  {migas_html(p['url'])}
+  <div class="tarifa">
+   <div class="tarifa__txt">
+    <p class="antetitulo">{et}</p>
+    <h1 class="h1 h1--int">{esc(p['h1'])}</h1>
+    <div class="prosa">{txt}</div>
+    <a class="tel-grande tel" href="tel:{N['telefono_e164']}" data-zona="tarifa">{N['telefono']}</a>
+    <p class="tarifa__datos">{esc(texto("contacto_tambien"))} · <a href="mailto:{N['email']}">{N['email']}</a><br>{N['horario_texto']}. {esc(texto("contacto_horario_extra"))}</p>
+    {T.estado()}
+    <div class="acciones" data-acciones>{T.btn_whatsapp("btn--linea", t="Escribir por WhatsApp")}{T.btn_llamar("btn--linea")}</div>
+   </div>
+   <div class="tarifa__form" id="tarifa">{formulario(interes)}</div>
+  </div>
+ </div>
+ {T.onda(C.get("onda", "ribera"), "var(--base)", "cab-int__onda")}
+</section>
+"""
     return f"""<section class="seccion tarifa-sec" id="tarifa">
  <div class="contenedor tarifa">
   <div class="tarifa__txt">
@@ -626,23 +734,55 @@ def cab_interior(p, t, etiqueta=None, tinte=None, nombre_pr="", slug_pr="", con_
     ps = intro_parrafos(intro)
     entr = f'<p class="entradilla">{inline(ps[0])}</p>' if ps else ""
     resto = "".join(f"<p>{inline(x)}</p>" for x in ps[1:])
-    estilo = f' style="--tinte:{tinte}"' if tinte else ""
-    racimo = f'<div class="cab-int__racimo" aria-hidden="true">{T.simbolo_trazado("cab-int__sim")}</div>' if tinte else ""
     bot = f'<div class="acciones" data-acciones>{botones(p["url"], t, nombre_pr, slug_pr)}</div>{confianza_html()}' if con_botones else ""
-    return f"""<section class="cab-int{' cab-int--tinte' if tinte else ''} {clase}"{estilo}>
+    # v2 (paso 36, Jean Paul M-2 + encargo de Álvaro): campo de color con paisaje lavado o pieza propia (botellas con alfa,
+    # foto real en arco, palabras) y cierre en onda; cada tipo con su variante (config.CABECERAS). El H1 ya no se anima
+    # fuera de la portada (Emil M3). El racimo trazado sale de aquí: en los hubs lo sustituyen las botellas de su D.O.
+    C = getattr(CFG, "CABECERAS", {})
+    cab = C.get(p["url"]) or C.get(t) or {}
+    tinte = tinte or cab.get("tinte")
+    estilo = f' style="--tinte:{tinte}"' if tinte else ""
+    fondo = ""
+    if cab.get("fondo"):   # decorativo y por encima del pliegue: sin carga diferida (sin fetchpriority, que es para la pieza)
+        paisaje = T.foto(cab["fondo"], "", "(max-width: 1024px) 100vw, 70vw", clase="cab-int__paisaje").replace(' loading="lazy"', "")
+        fondo = f'<div class="cab-int__fondo" aria-hidden="true">{paisaje}</div>'
+    pieza, modo = cab.get("pieza"), ""
+    if pieza == "botellas_do":
+        pieza = ("botellas", getattr(CFG, "DENOMINACION_BOTELLAS", {}).get(slug_pr, []))
+    if isinstance(pieza, tuple) and pieza[0] == "botellas" and pieza[1]:
+        modo = "botellas"
+        bots = "".join(T.producto_img_pronta(f, "", "(max-width: 767px) 24vw, (max-width: 1024px) 16vw, 140px", "cab-int__botella") for f in pieza[1])
+        pieza_html = f'<div class="cab-int__pieza cab-int__botellas cab-int__botellas--{len(pieza[1])}" aria-hidden="true">{bots}</div>'
+    elif isinstance(pieza, tuple) and pieza[0] == "arco":
+        modo = "arco"
+        pieza_html = f'<figure class="cab-int__pieza cab-int__arco">{T.foto(pieza[1], pieza[2], "(max-width: 767px) 80vw, (max-width: 1024px) 40vw, 420px", prioridad=True)}</figure>'
+    elif isinstance(pieza, tuple) and pieza[0] == "palabras":
+        modo = "palabras"
+        pals = "".join(f'<span style="--i:{i}">{esc(x)}</span>' for i, x in enumerate(pieza[1]))
+        pieza_html = f'<div class="cab-int__pieza cab-int__palabras" aria-hidden="true">{pals}</div>'
+    elif isinstance(pieza, tuple) and pieza[0] == "cunca":
+        modo = "cunca"
+        pieza_html = (f'<figure class="cab-int__pieza cab-int__cunca">{T.foto(pieza[1], pieza[2], "(max-width: 767px) 70vw, 360px", prioridad=True, clase="cab-int__cunca-foto")}'
+                      f'{T.producto_img_pronta(pieza[3], "", "(max-width: 767px) 30vw, 150px", "cab-int__cunca-botella")}</figure>')
+    else:
+        pieza_html = ""
+    onda = T.onda(cab.get("onda", "ola"), cab.get("siguiente", "var(--base)"), "cab-int__onda")
+    return f"""<section class="cab-int cab-int--marea{' cab-int--tinte' if tinte else ''}{f' cab-int--{modo}' if modo else ''} {clase}"{estilo}>
+ {fondo}
  <div class="contenedor">
   {migas_html(p['url'])}
   <div class="cab-int__grid">
    <div class="cab-int__txt">
     <p class="antetitulo">{et}</p>
-    <h1 class="h1 h1--int" data-palabras>{esc(p['h1'])}</h1>
+    <h1 class="h1 h1--int">{esc(p['h1'])}</h1>
     {entr}
     {f'<div class="prosa cab-int__resto">{resto}</div>' if resto else ""}
     {bot}
    </div>
-   {racimo}
+   {pieza_html}
   </div>
  </div>
+ {onda}
 </section>
 """
 
@@ -782,29 +922,47 @@ def datos_producto(pr):
 
 def ficha_pagina(p, t, normales, cta):
     pr = datos.producto(p["url"]) or {"nombre": p["h1"], "slug": p["url"].strip("/").split("/")[-1], "familia": "vino"}
+    T.CTX["producto"] = pr["nombre"]   # el WhatsApp de esta página lleva el nombre del vino/licor (paso 38, punto 16)
     intro, _ = secciones(p["bloques"])
     ps = intro_parrafos(intro)
     img = T.producto_img(pr["foto"], pr["alt"], "(max-width: 900px) 70vw, 420px", "ficha__img" + (" ficha__img--foto" if not pr["foto"].endswith(".png") else ""), prioridad=True) if pr.get("foto") else T.pieza_tipografica(pr["nombre"], pr.get("formato", ""), "ficha__tipo")
     do_nombre = DEN[pr["do"]][0] if pr.get("do") in DEN else None
-    etiqueta = f"D.O. {do_nombre}" if do_nombre else ("Vino turbio gallego" if pr.get("familia") == "turbio" else ("Licores Pousada · garrafa de 3 litros" if pr.get("familia") == "licor" else "Vino sin denominación de origen"))
+    # Bierzo no lleva sello D.O. para este producto (paso 38, Bruno N-2): «Zona de» en vez de «D.O.»
+    sin_do = pr.get("do") in getattr(CFG, "DENOMINACIONES_SIN_DO", set())
+    etiqueta = (f"Zona de {do_nombre}" if sin_do else f"D.O. {do_nombre}") if do_nombre else ("Vino turbio gallego" if pr.get("familia") == "turbio" else ("Licores Pousada · garrafa de 3 litros" if pr.get("familia") == "licor" else "Vino sin denominación de origen"))
     enlace_do = f'<a class="enlace-flecha" href="{URLS["denominacion"]}{pr["do"]}/">Todos los vinos de {esc(do_nombre)} {T.ico("flecha-derecha")}</a>' if do_nombre else (f'<a class="enlace-flecha" href="{URLS["turbio"]}">Todo sobre el vino turbio {T.ico("flecha-derecha")}</a>' if pr.get("familia") == "turbio" else (f'<a class="enlace-flecha" href="{URLS["licores"]}">Todos los licores {T.ico("flecha-derecha")}</a>' if pr.get("familia") == "licor" else f'<a class="enlace-flecha" href="{URLS["catalogo"]}">Todo el catálogo {T.ico("flecha-derecha")}</a>'))
     provisional = ' <span class="prov" title="Foto provisional, recortada del catálogo">foto provisional</span>' if pr.get("provisional") else ""
-    cab = f"""<section class="ficha">
+    # v2 (paso 36): la primera pantalla de la ficha es un campo con el tinte de su D.O. y cierre en onda; la botella con alfa
+    # va de pie, sin caja y sin zoom (Emil M4), pisando la onda; los recortes JPG van en arco. La tabla «Ficha» pasa a una
+    # banda de datos bajo la onda (con peso, no bajo el pliegue de la columna). La etiqueta «foto provisional» no se publica.
+    C = getattr(CFG, "CABECERAS", {}).get(t, {})
+    tinte = DEN[pr["do"]][3] if pr.get("do") in DEN else C.get("tinte", "#F4F2EC")
+    alfa = bool(pr.get("foto")) and pr["foto"].endswith(".png")
+    cab = f"""<section class="ficha cab-int--marea ficha--marea{' ficha--alfa' if alfa else ' ficha--arco'}" style="--tinte:{tinte}">
  <div class="contenedor">
   {migas_html(p['url'])}
   <div class="ficha__grid">
-   <figure class="ficha__foto" data-zoom>{img}</figure>
+   <figure class="ficha__foto">{img}</figure>
    <div class="ficha__txt">
     <p class="antetitulo">{esc(etiqueta)}</p>
-    <h1 class="h1 h1--ficha" data-palabras>{esc(p['h1'])}</h1>
+    <h1 class="h1 h1--ficha">{esc(p['h1'])}</h1>
     {f'<p class="entradilla">{inline(ps[0])}</p>' if ps else ""}
     <div class="acciones" data-acciones>{botones(p["url"], t, pr["nombre"], pr["slug"])}</div>
+    <div class="aviso aviso--tarifa">
+     <strong>Cómo funciona la tarifa</strong>
+     <p>Al rellenar el formulario o al llamarnos, nos pondremos en contacto con usted para prepararle una tarifa a medida de su local. Sin compromiso: usted decide si hace el primer pedido.</p>
+    </div>
     {confianza_html()}
-    <p class="antetitulo ficha__datos-h">{esc(texto("ficha_datos"))}{provisional}</p>
-    {datos_producto(pr)}
-    {enlace_do}
    </div>
   </div>
+ </div>
+ {T.onda(C.get("onda", "ribera"), "var(--base)", "cab-int__onda")}
+</section>
+<section class="ficha-datos" aria-labelledby="ficha-datos-tit">
+ <div class="contenedor">
+  <p class="antetitulo" id="ficha-datos-tit">{esc(texto("ficha_datos"))}</p>
+  {datos_producto(pr)}
+  {enlace_do}
  </div>
 </section>
 """
@@ -837,7 +995,8 @@ def hub_pagina(p, t, normales, cta):
     if t == "denominacion":
         k = p.get("denominacion")
         nom, uva, _, tinte = DEN.get(k, (nombre(p["url"]), "", "", None))
-        cuerpo.append(cab_interior(p, t, getattr(CFG, "DENOMINACION_ETIQUETA", "D.O. {nombre}").format(nombre=nom) + (f" · {uva}" if uva else ""), tinte, nom, k))
+        plantilla_et = "Zona de {nombre}" if k in getattr(CFG, "DENOMINACIONES_SIN_DO", set()) else getattr(CFG, "DENOMINACION_ETIQUETA", "D.O. {nombre}")
+        cuerpo.append(cab_interior(p, t, plantilla_et.format(nombre=nom) + (f" · {uva}" if uva else ""), tinte, nom, k))
         titulo_rej = texto("do_vinos_titulo", nombre=nom)
     elif t == "turbio":
         cuerpo.append(cab_interior(p, t))
@@ -890,6 +1049,7 @@ def pagina(p):
     intro, secs = secciones(p["bloques"])
     pb = pueblo_de(p["url"]) if t == "municipio" else None
     T.CTX["pueblo"] = pb
+    T.CTX["producto"] = None   # se fija dentro de ficha_pagina; en el resto de páginas, ninguno
     cuerpo, cta = [], None
     normales = []
     for k, s in enumerate(secs):
@@ -925,11 +1085,14 @@ def pagina(p):
         cuerpo.append(faq_html(p["faq"]))
         cuerpo.append(tarifa(cta, p))
     elif t == "contacto":
-        cuerpo.append(cab_interior(p, t, con_botones=False))
-        cuerpo.append(tarifa(None, p, interes="__url__"))
+        # un solo titular: la sección de tarifa es la primera pantalla (Jean Paul M-10, Dani C-09)
+        cuerpo.append(tarifa(None, p, interes="__url__", portada=True))
         if normales:
             cuerpo.append(lectura(p, normales))
         cuerpo.append(faq_html(p["faq"]))
+        # «Cómo funciona la tarifa» (paso 38, punto 7): si el texto trae una última sección (CTA_ULTIMO la coge como
+        # cta), se cierra la página con ella en vez de perderla — antes esta rama no usaba cta en absoluto.
+        cuerpo.append(cierre(cta, p, t))
     elif t == "catalogo":
         cuerpo += catalogo_pagina(p, normales)
         cuerpo.append(faq_html(p["faq"]))
@@ -954,14 +1117,16 @@ def pagina(p):
     if t == "home" and PO.get("foto"):
         b = PO["foto"].rsplit(".", 1)[0]
         ws = T.anchos_foto(PO["foto"])
-        pre = (", ".join(f"/img/{b}-{x}.webp {x}w" for x in ws), "(max-width: 1024px) 100vw, 54vw")
+        pre = (", ".join(f"/img/{b}-{x}.webp {x}w" for x in ws), "(max-width: 1024px) 100vw, 70vw")
     # Si la última pieza es el formulario de tarifa (inicio, contacto), el pie no repite la frase de la tabla de llamadas
     compacto = bool(cuerpo) and 'class="seccion tarifa-sec"' in cuerpo[-1]
     return montar(T.cabeza(p, schema_de(p), robots, precarga=pre) + T.cabecera(p["url"]) + "".join(cuerpo) + T.pie(p["url"], t, nombre_pr, slug_pr, compacto=compacto))
 
 
 def montar(h):
-    """El sprite de la página (solo los iconos que usa) se inserta al abrir <body>."""
+    """El sprite de la página (solo los iconos que usa) se inserta al abrir <body>. El aviso de cookies de la base se
+    sustituye por el compacto de Pousada (plantilla.aviso_cookies: Jean Paul A-2, Dani C-08)."""
+    h = re.sub(r'<div class="cookies" id="cookies".*?</div>\n</div>', lambda m: T.aviso_cookies(), h, count=1, flags=re.S)
     return h.replace("<!--SPRITE-->", T.sprite(h), 1)
 
 
@@ -979,7 +1144,9 @@ def legales():
 def pagina_legal(url, titulo, md):
     """Legales en markdown (## apartados, ### subapartados, listas, tablas): se pintan con el mismo render que las páginas."""
     T.CTX["pueblo"] = None
-    p = {"url": url, "title": f"{titulo} | {N['nombre']}", "meta": f"{titulo} de {DOMINIO.split('//')[1]}: titular, condiciones y datos de contacto de {N['nombre']}, distribuidor de vinos para hostelería en Madrid.", "h1": titulo}
+    # Sufijo de marca en el title: una sola forma en las 53 páginas (paso 38 v3, Matías/Bruno B1 arrastrado 3 vueltas):
+    # «| Pousada» (nombre_corto), la forma mayoritaria y más corta, también aquí en vez de «| Vinos Gallegos Pousada»
+    p = {"url": url, "title": f"{titulo} | {N['nombre_corto']}", "meta": f"{titulo} de {DOMINIO.split('//')[1]}: titular, condiciones y datos de contacto de {N['nombre']}, distribuidor de vinos para hostelería en Madrid.", "h1": titulo}
     NOMBRE_CORTO[url] = titulo
     bl = datos.bloques(md)
     partes = []
@@ -996,7 +1163,7 @@ def pagina_legal(url, titulo, md):
 
 def pagina_404():
     T.CTX["pueblo"] = None
-    p = {"url": "/404/", "title": f"Página no encontrada | {N['nombre']}", "meta": "Esta página no existe.", "h1": "Esta página no existe"}
+    p = {"url": "/404/", "title": f"Página no encontrada | {N['nombre_corto']}", "meta": "Esta página no existe.", "h1": "Esta página no existe"}
     schema = {"@context": "https://schema.org", "@graph": [negocio_schema()]}
     return montar(T.cabeza(p, schema, "noindex, follow") + T.cabecera("") + f"""<section class="cab-int"><div class="contenedor"><p class="antetitulo">Error 404</p><h1 class="h1 h1--int">Esta página no existe</h1>
 <p class="entradilla">{texto("error_texto")}</p>
@@ -1025,7 +1192,7 @@ def fecha_mod(ruta):
 def escribir(url, contenido):
     ruta = os.path.join(SITIO, url.strip("/"), "index.html") if url != "/" else os.path.join(SITIO, "index.html")
     os.makedirs(os.path.dirname(ruta), exist_ok=True)
-    open(ruta, "w", encoding="utf-8").write(contenido)
+    open(ruta, "w", encoding="utf-8").write(rellena_cifras(contenido))
 
 
 def main():
@@ -1044,7 +1211,12 @@ def main():
     sm = "".join(f"<url><loc>{DOMINIO}{u}</loc><lastmod>{f}</lastmod></url>" for u, f in urls)
     open(os.path.join(SITIO, "sitemap.xml"), "w", encoding="utf-8").write(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
+    # Rastreadores de IA: decisión escrita (Turing M1, opción A «visibilidad máxima»). Todos abiertos, también los de
+    # entrenamiento (GPTBot, ClaudeBot, Google-Extended, CCBot…): el contenido de producto es en gran parte de bodega y lo que
+    # vale es que los asistentes conozcan la marca. Si Álvaro cambia de opinión, aquí se añaden los Disallow por agente.
     open(os.path.join(SITIO, "robots.txt"), "w", encoding="utf-8").write(
+        "# Rastreadores de IA (ChatGPT, Claude, Perplexity, Gemini, Copilot…): abiertos a propósito, también para entrenamiento.\n"
+        "# Decisión: visibilidad máxima (auditoría GEO del 08/10/2026, opción A). Fecha: 09/10/2026. Se revisa si cambia la política.\n"
         f"User-agent: *\nAllow: /\nDisallow: /enviar.php\n\nSitemap: {DOMINIO}/sitemap.xml\n")
     datos_neg = [f"- Nombre: {N['nombre']} ({N['razon_social']}).",
                  f"- Dirección: {N['calle']}, {N['cp']} {N['localidad']} ({N['provincia']}).",
@@ -1069,7 +1241,8 @@ def main():
         llms += ["", "## Catálogo (sin precios: se piden por tarifa)"] + [f"- [{pr['nombre']}]({DOMINIO}{pr['url']}): {POR_URL[pr['url']]['meta']}" for pr in CAT if pr["url"] in POR_URL]
     if PUEBLO:
         llms += ["", "## Zonas"] + [f"- [{v}]({DOMINIO}{k})" for k, v in PUEBLO.items() if k in POR_URL]
-    open(os.path.join(SITIO, "llms.txt"), "w", encoding="utf-8").write("\n".join(llms) + "\n")
+    # llms.txt también pasa por los marcadores {n_vinos} / {n_licores} (las cadenas LLMS de config.py los pueden llevar)
+    open(os.path.join(SITIO, "llms.txt"), "w", encoding="utf-8").write(rellena_cifras("\n".join(llms)) + "\n")
     print(f"build: {len(PAGINAS)} páginas + {len(legales())} legales + 404 · sitemap con {len(urls)} URLs")
 
 

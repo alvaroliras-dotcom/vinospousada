@@ -1,5 +1,5 @@
 URL: /comprar/geron-joven/
-Title: Gerón Joven, tinto joven D.O. Rioja | Vinos Pousada
+Title: Gerón Joven, tinto joven D.O. Rioja | Pousada
 Meta description: Gerón Joven, tinto joven de la D.O. Rioja con tempranillo y garnacha: afrutado, con regaliz y taninos suaves. Caja de 6 para hostelería en Madrid.
 Keyword principal: Gerón Joven Rioja
 H1: Gerón Joven, vino tinto joven de la D.O. Rioja
@@ -15,9 +15,9 @@ Gerón Joven es un vino tinto joven de la D.O. Rioja, elaborado con tempranillo 
 
 ## Características
 
-Gerón Joven es el tinto de Rioja pensado para el consumo diario. El catálogo lo describe como un vino afrutado, sabroso y equilibrado, con notas de regaliz y taninos redondeados, elaborado con tempranillo y garnacha, y lo elabora la bodega Viñedos del Carmen. Está en la misma línea que el Crianza, pero sin el componente de madera que este incorpora.
+Gerón Joven es el tinto de Rioja pensado para el consumo diario. Es un vino afrutado, sabroso y equilibrado, con notas de regaliz y taninos redondeados, elaborado con tempranillo y garnacha por la bodega Viñedos del Carmen. Está en la misma línea que el Crianza, pero sin el componente de madera que este incorpora.
 
-En copa tiene color rojo cereza con ribete granate, limpio y brillante. La nariz es de fruta madura, con especias y notas de regaliz. En boca es sabroso y afrutado, con taninos redondeados y un final agradable, y la ficha lo califica de muy fácil de beber. No busca la profundidad de un crianza: su virtud es la facilidad, la fruta y la ausencia de aristas.
+En copa tiene color rojo cereza con ribete granate, limpio y brillante. La nariz es de fruta madura, con especias y notas de regaliz. En boca es sabroso y afrutado, con taninos redondeados, un final agradable y resulta muy fácil de beber. No busca la profundidad de un crianza: su virtud es la facilidad, la fruta y la ausencia de aristas.
 
 Con 13,5 % vol., comparte graduación con el Crianza, y esto importa a la hora de servir: aunque es joven, no es un vino ligero en alcohol. Comparte también su temperatura de servicio, 14 °C. Esa temperatura realza la fruta y hace que resulte más refrescante, útil en terraza o en meses cálidos.
 
@@ -40,7 +40,7 @@ FAQ
 Tempranillo y garnacha, de la D.O. Rioja.
 
 **¿A qué temperatura se sirve?**
-A 14 °C, según el catálogo.
+A 14 °C.
 
 **¿Cuál es la diferencia con Gerón Crianza?**
 Es un tinto joven, afrutado y de taninos redondeados, sin la madera del Crianza. Comparten uvas, denominación y graduación (13,5 % vol.).

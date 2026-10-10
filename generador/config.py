@@ -83,14 +83,17 @@ NEGOCIO = {
     "devuelve_llamada": "de 8 a 20 h",
     "cambia_equipos": None,
     "cid": "0",                          # ⚑ CID de la ficha de Google pendiente (paso 3): sin él no hay mapa ni enlace a reseñas
-    "lat": 40.3459, "lng": -3.8298,      # ⚑ aproximado (Alcorcón); se sustituye por el de la ficha
+    "lat": 40.3459, "lng": -3.8298,      # ⚑ aproximado (Alcorcón); se sustituye por el del pin de la ficha (5 o más decimales)
+    "geo_aproximado": True,              # mientras sea True (o el CID sea 0) el JSON-LD NO lleva geo ni hasMap (Matías L-04, Turing A2)
+    "email_aviso": "",                   # ⚑ segundo buzón para un aviso corto por cada solicitud (el de Álvaro el primer mes); vacío = sin aviso
+    "zona_servida": "Madrid",            # areaServed del JSON-LD: la provincia (AdministrativeArea «Madrid»); la sede (Alcorcón) va en address
     "schema_tipo": "WholesaleStore",     # distribuidor mayorista con local; subtipo de LocalBusiness
     "servicio_tipo": "Distribución de vinos y licores para hostelería",
     "precio": None,                      # sin precios en la web
     "pago": "Transferencia, Bizum, tarjeta y efectivo",
     "knows_about": ["Vinos gallegos", "Vino turbio", "D.O. Rías Baixas", "D.O. Ribeiro", "D.O. Valdeorras", "D.O. Monterrei",
                     "Licores gallegos", "Distribución a hostelería"],
-    "persona": {"nombre": "David Pousada", "id": "david", "cargo": "Gerente", "credenciales": []},
+    "persona": None,                     # sin Person en el JSON-LD: el cliente no quiere su nombre en la web (David, 09/10/2026); el apellido nunca tuvo fuente
 }
 
 # Fuentes que se precargan (recursos/fuentes/<familia>-latin-<peso>-<estilo>.woff2 → /fuentes/<familia>-<peso>[-italic].woff2).
@@ -110,11 +113,48 @@ MARCA = {
 # ---------- Objeto de portada (Rayo). Pousada no lleva objeto: portada tipográfica + foto en caja ----------
 OBJETO_PORTADA = {"tipo": None, "imagen": None, "en_banda": False}
 
-# Portada de la home (pieza «portada con foto en caja», Antra index-7 sobre Jesper A1)
+# Portada de la home · v2 (Jean Paul, paso 36, Anexo A de 05-JEAN-PAUL-DISENO.md + encargo de Álvaro del 09/10/2026):
+# campo de color con la Praia das Catedrais lavada (blanco y negro teñido de la marca, recursos/fotos/, hecha con lavar.py
+# a partir de 03-FOTOS/01-ORIGINALES/web-vieja-completa/2020/06/02-playas-galicia.jpg, 2048×1162), cinco botellas limpias
+# que se salen por abajo y un cierre en onda («marea»), no un rectángulo. Sin foto en caja y sin paralaje.
 PORTADA = {
-    "foto": "distribuidor-vinos-gallegos-madrid-portada.jpg",   # recursos/fotos/ · ⚑ foto de banco de la web vieja hasta tener la del barril con grifo
-    "alt": "Botella de vino, copa, sacacorchos y corchos sobre pizarra",
-    "confianza": "Sin pedido mínimo · De lunes a viernes, de 8 a 20 h · Fuera de horario, David coge el móvil",
+    "foto": "paisaje-praia-das-catedrais-lavado.jpg",   # recursos/fotos/ · decorativa (alt vacío) · ⚑ licencia de la foto de banco por confirmar
+    "alt": "",
+    "botellas": ["terras-vellas-albarino-rias-baixas.png", "da-vina-galega-albarino-rias-baixas.png", "don-indalecio-verdejo-rueda.png",
+                 "castel-de-fornos-albarino-rias-baixas.png", "penalagua-tinto-joven-ribera-del-duero.png"],   # recursos/producto/, sin defectos visibles; en móvil salen las 3 primeras
+    "onda": "marea",
+    "confianza": "Sin pedido mínimo · De lunes a viernes, de 8 a 20 h · Fuera de horario, cogemos el móvil",   # sin nombres (David, 09/10/2026)
+}
+
+# Cabeceras interiores · v2 (Jean Paul M-2 + encargo de Álvaro): la primera pantalla de cada tipo de página lleva imagen o
+# pieza propia y el mismo cierre de onda (otra variante por tipo). Claves: el tipo de página (datos.tipo_de) o la URL.
+#   fondo:  paisaje lavado de recursos/fotos/ que se funde detrás (o None)
+#   pieza:  ("botellas", [archivos de recursos/producto/ con alfa]) · ("arco", archivo de recursos/fotos/, alt) · ("palabras", [...]) ·
+#           ("cunca", foto de recursos/fotos/, alt, botella con alfa) · "botellas_do" (las de DENOMINACION_BOTELLAS) · None
+#   tinte:  color del campo (las D.O. usan el suyo de DENOMINACIONES) · onda: variante de plantilla.ONDAS · siguiente: fondo del bloque de debajo
+CABECERAS = {
+    "catalogo":     {"fondo": "paisaje-uvas-lavado.jpg", "pieza": ("botellas", ["torremoron-tinto-joven-ribera-del-duero.png", "castel-de-fornos-albarino-rias-baixas.png", "don-indalecio-verdejo-rueda.png", "terras-vellas-albarino-rias-baixas.png"]), "tinte": "#EAF5F3", "onda": "ola"},
+    "denominacion": {"fondo": "paisaje-vinedo-lavado.jpg", "pieza": "botellas_do", "onda": "ola"},
+    "turbio":       {"fondo": None, "pieza": ("cunca", "vino-turbio-gallego-cunca-ribadavia.jpg", "Cunca de vino turbio sobre una barra de mármol", "faladoiro-vino-turbio-ribadavia.png"), "tinte": "#E4F3F1", "onda": "marea", "siguiente": "var(--oscuro)"},
+    "licores":      {"fondo": None, "pieza": ("arco", "licores-gallegos-garrafa-3-litros-hosteleria.jpg", "Garrafa de 3 litros de crema de orujo Pousada"), "tinte": "#F4F2EC", "onda": "costa"},
+    "servicio":     {"fondo": "paisaje-praia-das-catedrais-lavado.jpg", "pieza": ("arco", "vino-turbio-gallego-cuncas-mesa.jpg", "Cuncas de vino turbio sobre una mesa de madera"), "tinte": "#F4F2EC", "onda": "ola"},
+    "/distribuidor-vinos-hosteleria-madrid/": {"fondo": "paisaje-praia-das-catedrais-lavado.jpg", "pieza": ("palabras", ["Alcorcón", "Móstoles", "Leganés", "Getafe", "Fuenlabrada", "Pozuelo", "Alcalá", "Madrid"]), "tinte": "#F4F2EC", "onda": "costa"},
+    "/distribuidor-vinos-hosteleria-alcorcon/": {"fondo": None, "pieza": ("arco", "almacen-vinos-pousada-alcorcon.jpg", "Almacén de Vinos Gallegos Pousada en Alcorcón, con palés de cajas de vino"), "tinte": "#F4F2EC", "onda": "ribera"},
+    "empresa":      {"fondo": "paisaje-praia-das-catedrais-lavado.jpg", "pieza": ("arco", "almacen-vinos-pousada-alcorcon.jpg", "Almacén de Vinos Gallegos Pousada en Alcorcón, con palés de cajas de vino"), "tinte": "#F4F2EC", "onda": "costa"},
+    "contacto":     {"fondo": "paisaje-praia-das-catedrais-lavado.jpg", "pieza": None, "tinte": "#F4F2EC", "onda": "ribera"},
+    "ficha":        {"fondo": None, "pieza": "producto", "tinte": "#F4F2EC", "onda": "ribera"},   # el tinte real es el de su D.O.
+    "licor":        {"fondo": None, "pieza": "producto", "tinte": "#F4F2EC", "onda": "ribera"},
+}
+# Botellas (con alfa y sin defectos a tamaño medio) que asoman en la cabecera de cada D.O.; 1 a 3 por hub
+DENOMINACION_BOTELLAS = {
+    "rias-baixas": ["castel-de-fornos-albarino-rias-baixas.png", "terras-vellas-albarino-rias-baixas.png", "da-vina-galega-albarino-rias-baixas.png"],
+    "ribeiro": ["gran-lavandeira-treixadura-ribeiro.png", "lagar-de-san-blas-blanco-ribeiro.png"],
+    "valdeorras": ["lagar-de-cigur-godello-valdeorras.png", "camino-das-estrelas-blanco-valdeorras.png"],
+    "monterrei": ["aunios-godello-monterrei.png"],
+    "bierzo": ["quinta-grande-godello-bierzo.png"],
+    "rueda": ["don-indalecio-verdejo-rueda.png"],
+    "ribera-del-duero": ["penalagua-tinto-joven-ribera-del-duero.png", "torremoron-tinto-joven-ribera-del-duero.png"],
+    "rioja": ["geron-crianza-rioja.png", "geron-joven-tinto-rioja.png"],
 }
 
 # ---------- Estructura de URLs (paso 22) ----------
@@ -135,7 +175,7 @@ MUNICIPIOS = [("/distribuidor-vinos-hosteleria-madrid/", "provincia de Madrid"),
 PREFIJOS_MUNICIPIO = ["Distribuidor de vinos para hostelería en"]
 MUNICIPIO_ANCLA = "Reparto en {pueblo}"
 # Municipios que se citan en la zona de reparto (PROMESAS: toda la provincia; estos son los de la orden de Álvaro)
-REPARTO_MUNICIPIOS = ["Alcorcón", "Móstoles", "Leganés", "Getafe", "Fuenlabrada", "Pozuelo de Alarcón", "Alcalá de Henares"]
+REPARTO_MUNICIPIOS = ["Madrid", "Alcorcón", "Móstoles", "Leganés", "Getafe", "Fuenlabrada", "Pozuelo de Alarcón", "Alcalá de Henares"]
 REPARTO_FOTO = ("furgoneta-reparto-vinos-madrid-PROVISIONAL.jpg", "Furgoneta de reparto de Vinos Gallegos Pousada delante de la sede de Alcorcón")  # ⚑ PROVISIONAL
 
 # Denominaciones (hubs): clave → (nombre, uva o tipo que la define, descripción corta para rejillas, tinte de fondo)
@@ -150,6 +190,9 @@ DENOMINACIONES = {
     "rioja": ("Rioja", "Crianza y joven", "Tempranillo y garnacha, en crianza y en joven", "#F6EDEA"),
 }
 DENOMINACION_ETIQUETA = "D.O. {nombre}"   # etiqueta de la cabecera de cada hub
+# Bierzo no es una D.O. para este producto (Quinta Grande es «vino de Castilla y León · zona del Bierzo», sin sello D.O.):
+# estas claves usan «Zona de {nombre}» en vez de «D.O. {nombre}» en cabeceras y antetítulos (paso 38, Bruno N-2).
+DENOMINACIONES_SIN_DO = {"bierzo"}
 
 # La estantería de la home (pieza clavada que avanza de lado): una entrada por hub, en este orden.
 # (url, título, subtítulo, foto de recursos/producto/ o None, oscura)
@@ -165,7 +208,7 @@ ESTANTERIA = [
     ("/vino-turbio/", "Vino turbio", "Barril de 50 litros", "faladoiro-vino-turbio-ribadavia.png", True),
     ("/licores/", "Licores Pousada", "Garrafa de 3 litros", "crema-de-orujo-gallega-garrafa-3-litros.jpg", False),
 ]
-ESTANTERIA_ETIQUETA = "26 vinos y 6 licores"   # 7 si Álvaro mantiene el vodka caramelo
+ESTANTERIA_ETIQUETA = "{n_vinos} vinos y {n_licores} licores"   # cifras que cuenta el generador (fichas publicadas), nunca fijas (David, 09/10/2026)
 ESTANTERIA_NOTA = "Ordenados por origen. Cada entrada lleva a sus fichas."
 CINTA_PORTADA = ["Rías Baixas", "Ribeiro", "Valdeorras", "Monterrei", "Bierzo", "Rueda", "Ribera del Duero", "Rioja", "Vino turbio", "Licores Pousada"]
 CINTA_SECUNDARIA = None
@@ -176,13 +219,13 @@ TURBIO_FOTO = ("vino-turbio-gallego-cunca-ribadavia.jpg", "Cunca de vino turbio 
 TURBIO_FOTO_BANDA = ("vino-turbio-gallego-cuncas-mesa.jpg", "Cuncas de vino turbio sobre una mesa de madera")
 LICORES_FOTO = ("licores-gallegos-garrafa-3-litros-hosteleria.jpg", "Garrafa de 3 litros de crema de orujo Pousada")
 CASA_FOTO = ("almacen-vinos-pousada-alcorcon.jpg", "Almacén de Vinos Gallegos Pousada en Alcorcón, con palés de cajas de vino", "El almacén, en Alcorcón")
-CASA_HITOS = [("1979", "La funda el abuelo de David"), ("1983", "La amplía su padre"), ("Hoy", "Sigue en la familia")]
+CASA_HITOS = [("1979", "Se funda en Alcorcón"), ("Hoy", "Sigue en la familia")]   # sin generaciones ni nombres fuera de Nosotros (David, 09/10/2026)
 
 # Banda oscura «El grifo del turbio» (pieza del motivo del cliente, FIRMA §4). La palabra en --turbio va entre *cursivas*.
 GRIFO = {
     "etiqueta": "El producto de la casa",
     "titulo": "Vino turbio gallego, *muy frío y de grifo*",
-    "texto": "De la zona de Ribadavia, en barril de 50 litros, con serpentín. Fue idea del padre de David y sigue siendo uno de los productos de la casa.",
+    "texto": "De la zona de Ribadavia, en barril de 50 litros, porque es lo que piden en hostelería. Sigue siendo uno de los productos de la casa.",   # sin «con serpentín» ni padre de David, sin explicar el sistema (David, 09/10/2026)
     "boton": ("Ver el vino turbio", "/vino-turbio/"),
 }
 
@@ -222,7 +265,7 @@ PIE_FRASES = {
     "/": ("¿Me sirve este proveedor para mi local?", "Pida su tarifa", "tarifa", "llamar"),
     "/distribuidor-vinos-gallegos-hosteleria/": ("¿Cómo empiezo a trabajar con ellos?", "Solicite su tarifa", "tarifa", "llamar"),
     "/distribuidor-vinos-hosteleria-madrid/": ("¿Reparten en mi municipio?", "Repartimos en su municipio", "llamar", "tarifa"),
-    "/distribuidor-vinos-hosteleria-alcorcon/": ("¿Con quién hablo?", "Hable con David", "llamar", "whatsapp"),
+    "/distribuidor-vinos-hosteleria-alcorcon/": ("¿Con quién hablo?", "Hable con nosotros", "llamar", "whatsapp"),   # sin nombres (David, 09/10/2026)
     "/catalogo/": ("¿Cómo pido lo que he visto?", "El pedido se hace con nosotros", "tarifa", "llamar"),
     "/vino-turbio/": ("¿Me compensa poner el barril?", "Pida la tarifa del turbio", ("Solicitar tarifa del turbio", "/contacto/?interes=vino-turbio"), "llamar"),
     "/licores/": ("¿Lo añado al mismo pedido?", "Añádalos al mismo pedido", ("Solicitar tarifa", "/contacto/?interes=licores"), "llamar"),
@@ -233,7 +276,7 @@ PIE_FRASES = {
 PIE_FRASES_TIPO = {
     "ficha": ("¿Lo quiero en mi carta?", "Pida la tarifa de este vino", ("Solicitar tarifa", "/contacto/?interes={slug}"), "whatsapp"),
     "licor": ("¿Lo añado al mismo pedido?", "Pida la tarifa de este licor", ("Solicitar tarifa", "/contacto/?interes={slug}"), "whatsapp"),
-    "denominacion": ("¿Qué vinos de esta zona me encajan?", "Vea los vinos de esta zona", ("Ver los vinos", "#vinos"), "tarifa"),
+    "denominacion": ("¿Qué vinos de esta zona me encajan?", "Pida la tarifa de esta zona", ("Solicitar tarifa", "/contacto/?interes=vinos"), "llamar"),
 }
 PIE_SUB = "Cuéntenos qué tipo de local tiene y qué le interesa: vinos, turbio, licores. Le atendemos de lunes a viernes, de 8 a 20 h."
 
@@ -242,13 +285,29 @@ FORMULARIO = {
     "tipos_negocio": ["Bar", "Restaurante", "Tienda", "Particular"],
     "intereses": {"vinos": "vinos gallegos", "vino-turbio": "vino turbio", "licores": "licores"},   # ?interes=… → mensaje prerrelleno; un slug de producto → su nombre
     "boton": "Enviar solicitud de tarifa",
-    "confianza": "Sin pedido mínimo · De 8 a 20 h · Fuera de horario, David coge el móvil",
+    "confianza": "Sin pedido mínimo · De 8 a 20 h · Fuera de horario, cogemos el móvil",   # sin nombres (David, 09/10/2026)
     "confianza_particular": "Para particulares, el mínimo es una caja.",
     "informativa": "Sus datos los usa VINOS GALLEGOS POUSADA S.L. solo para responder a su solicitud (art. 6.1.b RGPD) y los guarda como máximo un año. Derechos en info@vinospousada.es · ",
+    # Confirmación (Dani C-16): sin nombres y sin plazo que PROMESAS.md no respalde (solo el horario de 8 a 20 h); con siguiente paso
     "ok_titulo": "Solicitud recibida",
-    "ok_texto": "Gracias. Le respondemos de 8 a 20 h; si tiene prisa, llame o escriba por WhatsApp al 666 631 615. Fuera de horario, David coge el móvil.",
+    "ok_texto": "Gracias. Le contestamos en horario de 8 a 20 h. Si tiene prisa, llame o escriba por WhatsApp al 666 631 615.",
+    "ok_enlace": ("Mientras tanto, vea el catálogo", "/catalogo/"),
     "error_titulo": "No hemos podido enviar su solicitud",
     "error_texto": "Ha fallado el envío. Sus datos no se han perdido: pruebe de nuevo en unos segundos o, si lo prefiere, llámenos o escríbanos por WhatsApp al 666 631 615, o por correo a info@vinospousada.es.",
+    # Mensajes concretos por motivo (Dani C-03): enviar.php devuelve ?enviado=0&motivo=<clave> y main.js pone el texto
+    "errores": {
+        "nombre": "Falta su nombre. Escríbalo y vuelva a enviar; lo demás se ha conservado.",
+        "telefono": "Revise el teléfono: tiene que tener 9 cifras, por ejemplo 666 631 615 (vale con +34, espacios, puntos o guiones).",
+        "negocio": "Falta el nombre de su bar, restaurante o tienda.",
+        "tipo_negocio": "Elija el tipo de negocio: bar, restaurante, tienda o particular.",
+        "enlaces": "El mensaje no puede llevar enlaces ni direcciones web. Quítelos y vuelva a enviar.",
+    },
+    # Teléfono: patrón válido en Chrome (modo «v»: paréntesis, punto y guion escapados), +34 opcional, de 9 a 15 cifras con separadores
+    "telefono_patron": r"\+?[0-9]([ .\-\(\)]?[0-9]){8,14}",
+    "telefono_title": "Escriba un teléfono de 9 cifras, por ejemplo 666 631 615",
+    "telefono_ph": "Para llamarle o escribirle",
+    "negocio_ph": "Nombre de su local",
+    "trampa": "contacto_alt",            # campo trampa antispam: nombre sin sentido para que ningún gestor de contraseñas lo rellene (Dani C-02)
     "buzon": "info@vinospousada.es",     # ⚑ confirmar en el paso 44 (buzón de destino, paso 6)
 }
 
@@ -299,6 +358,7 @@ TEXTOS = {
     "logo_alt": "{nombre} · Distribuidor de vinos gallegos en Alcorcón",
     "whatsapp_saludo": "Hola, escribo desde la web de Vinos Pousada",
     "whatsapp_pueblo": " (desde {pueblo})",
+    "whatsapp_producto": ", me interesa {producto}",   # el mensaje prerrelleno lleva el nombre del vino en las fichas (paso 38, punto 16)
     "etiqueta_portada": "Vinos Gallegos Pousada · Alcorcón",
     "corta_municipio": "Vinos gallegos, vino turbio y licores para la hostelería de {pueblo}. Sin pedido mínimo.",
     "corta": "Vinos gallegos, vino turbio y licores para bares y restaurantes de la provincia de Madrid. Sin pedido mínimo.",
@@ -327,12 +387,12 @@ TEXTOS = {
     "privacidad_llamada": "Usamos sus datos solo para llamarle.",
     "privacidad_form": "Usamos sus datos solo para contestarle.",
     "form_ok": "Solicitud recibida. Le respondemos de 8 a 20 h.",
-    "form_confianza": "Sin pedido mínimo · De 8 a 20 h · Fuera de horario, David coge el móvil",
+    "form_confianza": "Sin pedido mínimo · De 8 a 20 h · Fuera de horario, cogemos el móvil",
     "form_municipio_ph": "",
     "form_mensaje_label": "Mensaje",
     "form_mensaje_ph": "Qué le interesa: vinos gallegos, vino turbio, licores. Su municipio.",
     "form_boton": "Enviar solicitud de tarifa",
-    "contacto_horario_extra": "Fuera de horario, David coge el móvil.",
+    "contacto_horario_extra": "Fuera de horario, cogemos el móvil.",
     "contacto_etiqueta": "Hable con nosotros",
     "contacto_tambien": "También por WhatsApp, en el mismo número",
     "banda_etiqueta": "", "banda_titulo": "", "banda_texto": "",
@@ -359,10 +419,12 @@ TEXTOS = {
     "error_texto": "Puede que el enlace esté mal o que la página haya cambiado de sitio. Llámenos y lo vemos.",
     "llms_titulo": "# {nombre} · Distribuidor de vinos gallegos para hostelería en Madrid",
     "llms_resumen": "Distribuidor de vinos gallegos, vino turbio y licores para bares y restaurantes de toda la provincia de Madrid, con sede en Alcorcón. Sin pedido mínimo. La web no vende por internet: se pide la tarifa.",
-    "llms_horario_extra": "Fuera de horario, David coge el móvil.",
+    "llms_horario_extra": "Fuera de horario, cogemos el móvil.",
     "llms_datos": ["- Reparto: toda la provincia de Madrid. Desde cajas hasta palés. Sin pedido mínimo.",
-                   "- Catálogo: 26 vinos (Rías Baixas, Ribeiro, Valdeorras, Monterrei, Bierzo, Rueda, Ribera del Duero, Rioja y blancos sin D.O.), vino turbio en barril de 50 litros y 6 licores en garrafa de 3 litros.",
-                   "- Fundada en 1979 por el abuelo de David; ampliada en 1983 por su padre."],
+                   # El turbio (barril de 50 litros y botella) va DENTRO de {n_vinos}, no como tercera categoría aparte
+                   # de los vinos (paso 38 v3, Turing N4 arrastrado 2 vueltas): misma redacción que ya usa /catalogo/.
+                   "- Catálogo: {n_vinos} vinos (Rías Baixas, Ribeiro, Valdeorras, Monterrei, Bierzo, Rueda, Ribera del Duero, Rioja, blancos sin D.O. e incluido el vino turbio en barril de 50 litros) y {n_licores} licores en garrafa de 3 litros. La selección cambia con la temporada.",
+                   "- Fundada en 1979 en Alcorcón."],   # sin cifra fija ni padre/abuelo/David (David, 09/10/2026)
     "llms_no_hace": ["- No vende por internet ni publica precios: la tarifa se pide por el formulario, por teléfono o por WhatsApp.",
                      "- No envía fuera de la provincia de Madrid."],
     "llms_no_instala": "",

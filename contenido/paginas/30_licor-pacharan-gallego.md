@@ -11,13 +11,13 @@ Graduación: 25 % vol.
 Foto: pacharan-gallego-garrafa-3-litros.jpg
 Producto: pacharan-gallego
 ---
-El pacharán gallego de Vinos Pousada es un licor de 25 % vol. elaborado con endrinas seleccionadas, de sabor intenso y equilibrado, un clásico de nuestra tierra según el catálogo. Se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid, con reparto desde Alcorcón. Es un licor de sobremesa que se toma frío, solo o con hielo, y que completa cualquier carta de digestivos de cocina gallega. Si desea incluirlo en su local, solicite la tarifa por teléfono, correo o WhatsApp y le contestamos.
+El pacharán gallego de Vinos Pousada es un licor de 25 % vol. elaborado con endrinas seleccionadas, de sabor intenso y equilibrado, un clásico de nuestra tierra. Se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid, con reparto desde Alcorcón. Es un licor de sobremesa que se toma frío, solo o con hielo, y que completa cualquier carta de digestivos de cocina gallega. Si desea incluirlo en su local, solicite la tarifa por teléfono, correo o WhatsApp y le contestamos.
 
 ## Características
 
-El pacharán es un licor que casi todo cliente de hostelería conoce, y el de Pousada se describe en el catálogo como un licor de sabor natural, elaborado con endrinas seleccionadas, intenso y equilibrado, un clásico de nuestra tierra. Tiene 25 % vol. y se suministra en garrafa de 3 litros.
+El pacharán es un licor que casi todo cliente de hostelería conoce, y el de Pousada es un licor de sabor natural, elaborado con endrinas seleccionadas, intenso y equilibrado, un clásico de nuestra tierra. Tiene 25 % vol. y se suministra en garrafa de 3 litros.
 
-La endrina es, según el catálogo, la base de su sabor. El catálogo no ofrece más datos sobre la elaboración: Por eso la ficha se limita a lo que está confirmado: endrinas seleccionadas, 25 % vol., sabor intenso y equilibrado.
+La endrina es la base de su sabor: endrinas seleccionadas, 25 % vol., sabor intenso y equilibrado.
 
 Tampoco entramos en las propiedades del pacharán, que muchos clientes buscan en internet: no tenemos datos fiables ni vamos a atribuirle efectos sobre la salud. Para el responsable del local, lo importante es el comportamiento en servicio: se trata de un licor de graduación media, igual que el licor de café, de color rojizo oscuro, que gusta a un público amplio y que se pide tanto en mesa como en barra.
 
@@ -37,10 +37,10 @@ El pacharán gallego se suministra en garrafa de 3 litros. Repartimos en toda la
 FAQ
 
 **¿Qué graduación tiene el pacharán?**
-25 % vol., según el catálogo de Vinos Pousada.
+25 % vol.
 
 **¿Con qué se elabora?**
-Con endrinas seleccionadas, según el catálogo.
+Con endrinas seleccionadas.
 
 **¿En qué formato se suministra?**
 En garrafa de 3 litros, con reparto en la provincia de Madrid.

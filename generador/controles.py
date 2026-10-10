@@ -197,6 +197,234 @@ try:
                 if k in c and c[k] != v: err.append(f"{pg['url']}: la cabecera dice «{k}: {c[k]}» y catalogo.json «{v}»")
 except Exception as e:
     avi.append(f"catálogo: no se pudo leer ({e})")
+# ====================================================================================================================
+# Bloque del paso 36 (arreglos de la auditoría del 08/10/2026 y cambios de David del 09/10/2026). Todo se comprueba sobre
+# sitio/ (lo que se publica), no sobre el código. Cada control va en su try: si uno se rompe, avisa y no tapa a los demás.
+# ====================================================================================================================
+import datos as _datos
+from html import escape as html_escape
+_FORM = getattr(CFG, "FORMULARIO", None) or {}
+_html_de = {u: open(r, encoding="utf-8").read() for u, r in sorted(paginas.items())}
+
+
+def _ld_nodos(h):
+    """Todos los nodos del JSON-LD de una página (aplanando @graph)."""
+    out = []
+    for d in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, flags=re.S):
+        try:
+            j = json.loads(d)
+        except Exception:
+            continue
+        out += j.get("@graph", [j]) if isinstance(j, dict) else []
+    return out
+
+
+def _cadenas(x):
+    """Todas las cadenas de texto de un JSON (para buscar en ellas sin que los corchetes del JSON estorben)."""
+    if isinstance(x, str): yield x
+    elif isinstance(x, dict):
+        for v in x.values(): yield from _cadenas(v)
+    elif isinstance(x, list):
+        for v in x: yield from _cadenas(v)
+
+
+# 1 · Medidas reales de las imágenes (Bruno A3): width/height declarados = archivo de sitio/img/ y cada descriptor «w» del
+#     srcset (img y source) = ancho real de su archivo. Antes del arreglo: 91 de 201 etiquetas mal; objetivo 0.
+try:
+    from PIL import Image as _Im
+    _med = {}
+
+    def _medida_real(src):
+        ruta = os.path.join(SITIO, src.lstrip("/").split("?")[0])
+        if ruta not in _med:
+            try:
+                with _Im.open(ruta) as im: _med[ruta] = im.size
+            except Exception: _med[ruta] = None
+        return _med[ruta]
+
+    _n_img = _n_mal = 0
+    for url, h in _html_de.items():
+        for m in re.finditer(r"<(img|source)\b([^>]*)>", h):
+            a = dict(re.findall(r'([a-z-]+)="([^"]*)"', m.group(2)))
+            src = a.get("src", "")
+            if m.group(1) == "img" and src.startswith("/img/"):
+                _n_img += 1
+                real = _medida_real(src)
+                if real:
+                    try: decl = (int(a.get("width", 0)), int(a.get("height", 0)))
+                    except ValueError: decl = (0, 0)
+                    if decl != real:
+                        _n_mal += 1; err.append(f"{url}: {src} declara {decl[0]}×{decl[1]} y el archivo mide {real[0]}×{real[1]}")
+            for parte in a.get("srcset", "").split(","):
+                p2 = parte.strip().split()
+                if len(p2) == 2 and p2[1].endswith("w") and p2[0].startswith("/img/"):
+                    r2 = _medida_real(p2[0])
+                    if r2 and str(r2[0]) != p2[1][:-1]:
+                        _n_mal += 1; err.append(f"{url}: srcset {p2[0]} dice {p2[1]} y el archivo mide {r2[0]} px de ancho")
+    print(f"Imágenes de producto y fotos: {_n_img} etiquetas <img>, {_n_mal} con medida o srcset distintos del archivo (Bruno A3; objetivo 0)")
+except ImportError:
+    avi.append("control de medidas de imagen: falta Pillow")
+except Exception as e:
+    avi.append(f"control de medidas de imagen: no se pudo ejecutar ({e})")
+
+# 2 · La primera imagen de la página no carga en diferido donde es el LCP: inicio, fichas, licores y /vino-turbio/ (Bruno M2)
+try:
+    for url, h in _html_de.items():
+        if not url.endswith("/"): continue
+        if _datos.tipo_de(url) in ("home", "turbio", "ficha", "licor"):
+            # solo la imagen que va en la cabecera de la página (antes del primer H2 real): una ficha sin foto propia tiene su
+            # primera <img> en «También le puede interesar», bajo el pliegue, y ahí el diferido es lo correcto
+            cab = re.split(r"<h2\b(?![^>]*class=\"sr\")", h.split("<main", 1)[-1], 1)[0]
+            m = re.search(r"<img\b[^>]*>", cab)
+            if m and 'loading="lazy"' in m.group(0): err.append(f"{url}: la primera imagen carga en diferido y es el LCP (quitar loading=lazy; Bruno M2)")
+except Exception as e:
+    avi.append(f"control del LCP: no se pudo ejecutar ({e})")
+
+# 3 · Marcas de botón del texto fuente («[Solicitar tarifa] [Llamar al …]») en el texto visible o en el JSON-LD (Matías L-09)
+try:
+    _marca = re.compile(r"\[(?!LINK )[^\]\n]{1,60}\](?!\()")
+    for url, h in _html_de.items():
+        vis = re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>|<style.*?</style>", "", h, flags=re.S))
+        m = _marca.search(vis)
+        if m: err.append(f"{url}: marca de botón o corchetes sueltos en el texto «{m.group(0)}» (Matías L-09)")
+        for nodo in _ld_nodos(h):
+            for s in _cadenas(nodo):
+                if _marca.search(s): err.append(f"{url}: marca de botón dentro del JSON-LD «{_marca.search(s).group(0)}»"); break
+except Exception as e:
+    avi.append(f"control de marcas de botón: no se pudo ejecutar ({e})")
+
+# 4 · PROMESAS.md del 09/10/2026: ni «David» ni «más de 200 restaurantes» en nada que se publique (HTML entero, llms.txt,
+#     enviar.php, JS). Y los marcadores {n_vinos}/{n_licores} tienen que haberse rellenado.
+try:
+    _publicos = dict(_html_de)
+    for f in ("llms.txt", "enviar.php", "robots.txt", os.path.join("js", "main.js"), os.path.join("js", "tema.js")):
+        r = os.path.join(SITIO, f)
+        if os.path.exists(r): _publicos["/" + f.replace(os.sep, "/")] = open(r, encoding="utf-8", errors="replace").read()
+    for url, h in _publicos.items():
+        if re.search(r"\bDavid\b", h): err.append(f"{url}: aparece «David» (PROMESAS 09/10/2026: el nombre no sale en ninguna página, formulario, JSON-LD ni llms.txt)")
+        if re.search(r"más de 200|200 restaurantes|doscientos restaurantes", h, re.I): err.append(f"{url}: «200 restaurantes» (PROMESAS 09/10/2026: ahora es «más de 100 restaurantes en Madrid»)")
+        if "{n_vinos}" in h or "{n_licores}" in h: err.append(f"{url}: marcador {{n_vinos}}/{{n_licores}} sin rellenar")
+        # (la cifra de vinos/licores ya la cuenta el generador con {n_vinos}/{n_licores} — build.py, cifras_marca();
+        #  no se compara aquí contra un número literal porque hoy coincide con el real y daría falsos positivos.
+        #  Si cambia el número de fichas publicadas sin que el texto se mueva, lo delata el propio build al no
+        #  encontrar el marcador. «Gama de siete/seis» sí es un resto fijo de redacción, no una cifra calculada:
+        if re.search(r"\bgama de (siete|seis)\b", h, re.I):
+            err.append(f"{url}: «gama de siete/seis» como cifra fija de redacción (David 09/10/2026: no se cuenta a mano)")
+except Exception as e:
+    avi.append(f"control de PROMESAS 09/10: no se pudo ejecutar ({e})")
+
+# 4b · Más del 09/10/2026: padre/abuelo/generaciones solo en /nosotros/ (y ahí sin nombres propios de personas); «foto
+#     provisional» fuera de la vista pública; restos de trabajo que delatan la fuente del texto («según el catálogo»,
+#     «la web vieja lo presentaba», «no las inventamos», «Álvaro confirma»).
+try:
+    _NOMBRES_PROPIOS = ("David",)   # el único nombre propio que podría colarse en «Nosotros»
+    for url, h in _html_de.items():
+        vis = re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>|<style.*?</style>", "", h, flags=re.S))
+        if url != "/nosotros/" and re.search(r"\bpadre\b|\babuelo\b|\bgeneraci[oó]n", vis, re.I):
+            err.append(f"{url}: «padre»/«abuelo»/«generación» fuera de /nosotros/ (PROMESAS 09/10/2026)")
+        if url == "/nosotros/":
+            for nom in _NOMBRES_PROPIOS:
+                if re.search(rf"\b{nom}\b", vis): err.append(f"{url}: nombre propio «{nom}» en Nosotros (David 09/10/2026: sin nombres, aunque sí la historia familiar)")
+        if re.search(r"foto provisional", vis, re.I):
+            err.append(f"{url}: «foto provisional» en la vista pública (David 09/10/2026: se quita hasta que lleguen las fotos)")
+        for frase in (r"según el catálogo", r"la web vieja lo presentaba", r"no las inventamos",
+                      r"Álvaro confirma", r"nosotros no la elaboramos"):
+            if re.search(frase, vis, re.I): err.append(f"{url}: resto de trabajo «{frase}» (auditoría 08/10/2026, hallazgo ALTA 1)")
+except Exception as e:
+    avi.append(f"control de restos y generaciones (09/10/2026): no se pudo ejecutar ({e})")
+
+# 5 · JSON-LD (Bruno A2, Matías L-04/L-07/L-08, Turing A2/M2): sin Product ni FAQPage; sin Person si NEGOCIO["persona"] es None;
+#     sin geo/hasMap/sameAs de la ficha mientras el CID sea 0 o las coordenadas sean aproximadas; areaServed siempre con la
+#     provincia (AdministrativeArea), nunca solo la sede.
+try:
+    _geo_ok = NEGOCIO.get("cid") not in ("0", "", None) and not NEGOCIO.get("geo_aproximado")
+    _zona = NEGOCIO.get("zona_servida") or NEGOCIO["provincia"]
+    for url, h in _html_de.items():
+        nodos = _ld_nodos(h)
+        tipos = {n.get("@type") for n in nodos}
+        if "Product" in tipos: err.append(f"{url}: JSON-LD con Product sin oferta (Bruno A2: fuera hasta que haya precios o reseñas)")
+        if "FAQPage" in tipos: err.append(f"{url}: JSON-LD con FAQPage (Matías L-07: fuera; las preguntas siguen en la página)")
+        for n in nodos:
+            if n.get("@type") == NEGOCIO["schema_tipo"]:
+                if not _geo_ok and ("geo" in n or "hasMap" in n): err.append(f"{url}: geo/hasMap publicados con CID 0 o coordenadas aproximadas (Matías L-04, Turing A2)")
+                if not NEGOCIO.get("persona") and any(isinstance(v, dict) and v.get("@type") == "Person" for v in n.values()):
+                    err.append(f"{url}: Person en el JSON-LD sin persona confirmada en config.py (Turing A2)")
+            if "areaServed" in n:
+                a = n["areaServed"] if isinstance(n["areaServed"], list) else [n["areaServed"]]
+                if not any(isinstance(x, dict) and x.get("@type") == "AdministrativeArea" and x.get("name") == _zona for x in a):
+                    err.append(f"{url}: areaServed de {n.get('@type')} sin la provincia «{_zona}» (Matías L-08, Turing M2)")
+except Exception as e:
+    avi.append(f"control del JSON-LD: no se pudo ejecutar ({e})")
+
+# 6 · Medición (Dani C-01): un solo nombre por evento, en castellano; clic_cta_tarifa existe; el envío cuenta una vez;
+#     data-gtm igual en todas las páginas y al de config.py (vacío = no carga nada; pendiente de dato).
+try:
+    _js = {f: open(os.path.join(SITIO, "js", f), encoding="utf-8").read() for f in ("main.js", "tema.js") if os.path.exists(os.path.join(SITIO, "js", f))}
+    _todo_js = "\n".join(_js.values())
+    for f, j in _js.items():
+        for viejo in re.findall(r'event:\s*"(click_[a-z_]+|envio_formulario|solicitud_llamada|form_error)"', j):
+            err.append(f"js/{f}: evento con nombre viejo «{viejo}» (tabla de Dani: clic_llamar, clic_whatsapp, clic_cta_tarifa, formulario_enviado, formulario_error, filtro_catalogo)")
+    if 'event: "clic_cta_tarifa"' not in _todo_js: err.append("js/main.js: falta el evento clic_cta_tarifa del botón «Solicitar tarifa» (Dani C-01)")
+    for ev in ("clic_llamar", "clic_whatsapp", "formulario_error", "filtro_catalogo"):
+        if f'"{ev}"' not in _todo_js: err.append(f"js: falta el evento {ev} (Dani C-01)")
+    _n_env = len(re.findall(r'event:\s*"formulario_enviado"', _todo_js))
+    if _n_env != 1: err.append(f"js: formulario_enviado se empuja {_n_env} veces (tiene que ser 1: antes contaba doble)")
+    _gtms = {re.search(r'<html[^>]*data-gtm="([^"]*)"', h).group(1) for h in _html_de.values() if re.search(r'<html[^>]*data-gtm="([^"]*)"', h)}
+    if _gtms != {CFG.GTM_ID}: err.append(f"data-gtm en las páginas {sorted(_gtms)} ≠ GTM_ID de config.py «{CFG.GTM_ID}»")
+    if not CFG.GTM_ID: pend.append("config.py: GTM_ID vacío (paso 7/45): el código mide (dataLayer) pero no carga ningún contenedor; falta el ID de Álvaro/Iñaki")
+except Exception as e:
+    avi.append(f"control de medición: no se pudo ejecutar ({e})")
+
+# 7 · Formulario (Dani C-02, C-03, C-16): patrón del teléfono de config con su title, campo trampa con nombre sin sentido,
+#     textos de error por motivo, confirmación sin plazo que PROMESAS no respalde; enviar.php sin marcadores y con la misma trampa.
+try:
+    _trampa = _FORM.get("trampa") or "contacto_alt"
+    _patron = _FORM.get("telefono_patron")
+    for url, h in _html_de.items():
+        if '<form class="formulario' not in h: continue
+        tel = re.search(r'<input type="tel"[^>]*>', h)
+        if not tel: err.append(f"{url}: formulario sin campo de teléfono"); continue
+        if _patron and f'pattern="{html_escape(_patron)}"' not in tel.group(0): err.append(f"{url}: el patrón del teléfono no es el de config.py (Dani C-03)")
+        if 'title="' not in tel.group(0): err.append(f"{url}: el teléfono no lleva title con el ejemplo de formato (Dani C-03)")
+        if f'name="{_trampa}"' not in h: err.append(f"{url}: falta el campo trampa «{_trampa}» (Dani C-02)")
+        if 'name="web"' in h: err.append(f"{url}: el campo trampa sigue llamándose «web» (los gestores de contraseñas lo rellenan; Dani C-02)")
+        if "data-motivos=" not in h: err.append(f"{url}: el aviso de error no lleva los textos por motivo (data-motivos; Dani C-03)")
+        ok = re.search(r'<div class="aviso aviso--ok"[^>]*>(.*?)</div>', h, flags=re.S)
+        if ok and re.search(r"\b(24|48)\s*h|hoy mismo|mañana|en menos de", ok.group(1), re.I): err.append(f"{url}: la confirmación promete un plazo que PROMESAS.md no respalda (Dani C-16)")
+    _php = open(os.path.join(SITIO, "enviar.php"), encoding="utf-8").read() if os.path.exists(os.path.join(SITIO, "enviar.php")) else ""
+    if not _php: err.append("sitio/enviar.php no existe")
+    else:
+        _sin = sorted(set(re.findall(r"__[A-Z_]+__", _php)) - {"__DIR__", "__FILE__", "__LINE__"})   # constantes mágicas de PHP, no marcadores
+        if _sin: err.append(f"enviar.php: marcadores sin rellenar {_sin}")
+        if f"$_POST['{_trampa}']" not in _php: err.append(f"enviar.php: no lee el campo trampa «{_trampa}» que escribe el formulario")
+        if "motivo=" not in _php: err.append("enviar.php: no devuelve el motivo del rechazo (Dani C-02: ningún descarte silencioso)")
+    if not NEGOCIO.get("email_aviso"): pend.append("config.py: NEGOCIO[\"email_aviso\"] vacío: sin aviso corto a un segundo buzón (el de Álvaro el primer mes; Dani C-02)")
+    pend.append(f"formulario: buzón de destino {_FORM.get('buzon') or NEGOCIO['email']} por confirmar y envío real por probar en el hosting (paso 44; Dani C-02)")
+except Exception as e:
+    avi.append(f"control del formulario: no se pudo ejecutar ({e})")
+
+# 8 · Archivos de servidor y públicos (Bruno A4/M6, Turing M1): .htaccess con las redirecciones de config, sin X-Robots-Tag,
+#     negando vercel.json y comprimiendo text/javascript; resenas.json sin claves internas; robots.txt con la decisión sobre IA.
+try:
+    _ht = open(os.path.join(SITIO, ".htaccess"), encoding="utf-8").read() if os.path.exists(os.path.join(SITIO, ".htaccess")) else ""
+    if not _ht: err.append("sitio/.htaccess no existe (sin él, las 29 URLs viejas dan 404 el día de publicar; Bruno A4)")
+    else:
+        for v, n in getattr(CFG, "REDIRECCIONES", []):
+            if f" {n} [L,R=301]" not in _ht: err.append(f".htaccess: falta la redirección {v} → {n}")
+        if "X-Robots-Tag" in _ht: err.append(".htaccess: lleva X-Robots-Tag (el noindex es solo de la vista previa, vercel.json; Turing M1)")
+        if '<Files "vercel.json">' not in _ht: err.append(".htaccess: no niega vercel.json (Bruno M6)")
+        if "text/javascript" not in _ht: err.append(".htaccess: la compresión y la caché no cubren text/javascript (Bruno M6)")
+    _rj = os.path.join(SITIO, "resenas.json")
+    if os.path.exists(_rj):
+        _claves = [k for k in json.load(open(_rj, encoding="utf-8")) if str(k).startswith("_")]
+        if _claves: err.append(f"resenas.json público con claves internas {_claves} (Bruno M6)")
+    _rb = open(os.path.join(SITIO, "robots.txt"), encoding="utf-8").read() if os.path.exists(os.path.join(SITIO, "robots.txt")) else ""
+    if "Rastreadores de IA" not in _rb: err.append("robots.txt: falta el comentario con la decisión sobre rastreadores de IA y su fecha (Turing M1)")
+    if "Disallow: /enviar.php" not in _rb: err.append("robots.txt: enviar.php sin Disallow")
+    if not os.path.exists(os.path.join(RAIZ, "herramientas", "PUBLICAR.md")): avi.append("falta herramientas/PUBLICAR.md (lista del día de publicar; Bruno A4)")
+except Exception as e:
+    avi.append(f"control de archivos de servidor: no se pudo ejecutar ({e})")
+
 print(f"Páginas HTML: {len(paginas)}")
 print(f"ERRORES: {len(err)}"); [print("  ✗", e) for e in err[:80]]
 print(f"AVISOS: {len(avi)}"); [print("  ·", a) for a in avi[:80]]
