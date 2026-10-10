@@ -3,8 +3,12 @@
    Tokens de 07-FIRMA-GRAFICA/FIRMA.md (modo claro): Fraunces (titulares) + Instrument Sans (texto), acento turquesa del
    logotipo en tres valores, una sola banda oscura (el turbio) y pie oscuro. La maqueta del paso 21 (maqueta/estilos.css)
    es la referencia de medidas.
-   Contrastes (WCAG): --acento-fuerte #1F6F69 sobre blanco 6,2:1 · --apagado #727B79 sobre blanco 4,8:1 ·
-   --acento #6DC2B9 sobre --oscuro #12302D 6,9:1 · blanco sobre --acento-fuerte 6,2:1.
+   Contrastes (WCAG, corregidos en el paso 36 · Anexo B de 09-AUDITORIA/05-JEAN-PAUL-DISENO.md): --acento-fuerte #1F6F69
+   sobre blanco 6,2:1 · --apagado (--t3) #5F6866 sobre blanco 5,7:1 y sobre hueso 5,1:1 · placeholder #6F7876 4,5:1 ·
+   borde de campo #7F8886 3,6:1 · foco sobre oscuro #6DC2B9 6,8:1 sobre --oscuro · --acento #6DC2B9 sobre --oscuro 6,9:1 ·
+   blanco sobre --acento-fuerte 6,2:1.
+   v2 (paso 36): portada y cabeceras con «línea de marea» (campo de color + paisaje lavado o pieza propia + cierre en onda,
+   nunca un rectángulo), botones protegidos para táctil y movimiento reducido, clavados solo con html.con-clavo (tema.js).
    ===================================================================== */
 @font-face{font-family:"Fraunces";font-style:normal;font-weight:500;font-display:swap;src:url(/fuentes/fraunces-500.woff2) format("woff2")}
 @font-face{font-family:"Fraunces";font-style:normal;font-weight:600;font-display:swap;src:url(/fuentes/fraunces-600.woff2) format("woff2")}
@@ -29,7 +33,12 @@
   --acento-txt:#FFFFFF;      /* texto sobre --acento-fuerte */
   --acento-texto:#1F6F69;    /* acento como texto sobre blanco */
   --turbio:#E9D77C;          /* el color del vino en la cunca: solo dentro de la banda oscura */
-  --t1:#17201F; --t2:#3E4745; --t3:#727B79; --t4:#B6BCBA;
+  --t1:#17201F; --t2:#3E4745; --t3:#5F6866; --t4:#B6BCBA;   /* --t3: 5,7:1 sobre blanco (A-4); --t4 solo para la mitad gris de los H2 */
+  --ph:#6F7876;              /* placeholder: 4,5:1 sobre blanco */
+  --linea-campo:#7F8886;     /* borde de campo: 3,6:1 sobre blanco, 3,3:1 sobre hueso */
+  --foco-claro:#6DC2B9;      /* anillo de foco sobre fondos oscuros (6,8:1 sobre --oscuro) */
+  --ease-fina:cubic-bezier(.23,1,.32,1);     /* salida fuerte (Emil): pulsación, rodillo, apariciones */
+  --ease-cajon:cubic-bezier(.32,.72,0,1);    /* curva de cajón (Emil): menú móvil */
   --ico-acento:var(--acento-fuerte);
   --gutter:16px;
   --r-s:12px; --r-m:24px; --r-l:24px; --r-xl:24px;
@@ -50,6 +59,8 @@
 .btn--blanco{color:var(--oscuro)}
 .btn--linea{border-color:var(--t1);color:var(--t1)}
 :focus-visible{outline-color:var(--acento-fuerte)}
+/* Foco visible sobre lo oscuro (A-4): banda del turbio, pie, menú, tarjetas oscuras */
+.grifo :focus-visible,.pie--oscuro :focus-visible,.menu :focus-visible,.caja--turbio :focus-visible,.estante--oscuro:focus-visible,.btn--oscuro:focus-visible{outline-color:var(--foco-claro)}
 .estrellas,.vineta,.etiqueta__sim,.cinta__sep{color:var(--acento)}
 .estado.abierto i{background:#1E9B57}
 
@@ -87,30 +98,44 @@ code{font:inherit;font-size:.95em;background:var(--hueso);padding:1px 6px;border
 .prosa,.datos dd,.tabla-datos td,.pie__col,.tarifa__datos,.casilla{overflow-wrap:anywhere}
 .ficha,.cab-int,.lectura,.cierre-sec,.rejilla-sec,.relacionados-sec,.faq-sec{overflow-x:clip}
 
-/* Botones: píldora 56 (52 en móvil), 16 px / 600, relleno que se desliza (Antra) + texto que rueda (base GYF) */
-.btn{--alto:52px;padding:0 24px;font-size:15px;font-weight:600;border-width:1.5px;font-family:var(--f);position:relative;overflow:hidden;isolation:isolate}
+/* Botones: píldora 56 (52 en móvil), 16 px / 600, relleno que se desliza (Antra) + texto que rueda (base GYF).
+   Emil A1: el color del texto y el relleno cambian SIEMPRE juntos y solo con ratón fino (nunca blanco sobre blanco al
+   tocar o con movimiento reducido). Emil M1: rodillo a 12 ms por letra y 320 ms. Emil M2: responde al pulsar (scale .97). */
+.btn{--alto:52px;padding:0 24px;font-size:15px;font-weight:600;border-width:1.5px;font-family:var(--f);position:relative;overflow:hidden;isolation:isolate;transition:background-color .3s,color .3s,border-color .3s,transform 160ms var(--ease-fina)}
 @media (min-width:768px){.btn{--alto:56px;padding:0 28px;font-size:16px}}
 .btn--peq{--alto:44px;padding:0 20px;font-size:15px}
 .btn--grande{--alto:60px;font-size:17px}
+.btn--mini{--alto:32px;padding:0 12px;font-size:12.5px;border-width:1.5px;justify-content:center;white-space:nowrap}
 .btn::before{content:"";position:absolute;inset:0;background:var(--barrido,transparent);transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease);z-index:-1}
-@media (hover:hover) and (prefers-reduced-motion:no-preference){.btn:hover::before{transform:scaleX(1)}}
 .btn--acento{--barrido:#185a55}
 .btn--linea{--barrido:var(--t1)}
-.btn--linea:hover{color:#fff;--ico-acento:#fff}
 .btn--blanco{--barrido:var(--acento-claro)}
 .btn--linea-claro{--barrido:#fff;border-color:rgba(255,255,255,.7)}
-.btn--linea-claro:hover{color:var(--oscuro);--ico-acento:var(--oscuro)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover::before{transform:scaleX(1)}
+  .btn--linea:hover{color:#fff;--ico-acento:#fff}
+  .btn--linea-claro:hover{color:var(--oscuro);--ico-acento:var(--oscuro)}
+  .btn:hover .btn__ico .ico+.ico{transition-delay:0s}
+}
+.btn:active{transform:scale(.97)}
+.btn__a span,.btn__b span{transition:transform 320ms var(--ease-fina);transition-delay:calc(var(--i) * 12ms)}
+.btn__ico .ico{transition:transform 300ms var(--ease-fina)}
 .btn .btn__pre,.btn .btn__ico{position:relative}
 .btn{max-width:100%}.btn__txt,.btn__a,.btn__b{flex-wrap:wrap}
+.btn:disabled{opacity:.6;cursor:progress}
+/* Todo lo pulsable responde al pulsar (Emil M2) */
+.estante,.filtros button,.redondo,.prod a,.enl a,.etiquetas li a,.municipios a,.caja--pulsable,.menu__cerrar,.cab__burger{transition-property:transform;transition-duration:160ms;transition-timing-function:var(--ease-fina)}
+.estante:active,.filtros button:active,.prod a:active,.enl a:active,.etiquetas li a:active,.municipios a:active,.caja--pulsable:active{transform:scale(.97)}
+.redondo:active,.menu__cerrar:active,.cab__burger:active{transform:scale(.94)}
 
 /* ---------- 3. Cabecera: barra con menú horizontal (ordenador) + capa a pantalla completa (móvil). Siempre a la vista ---------- */
 .cab{padding-top:0;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s,background-color .3s}
-.cab__in{height:var(--cab-alto);gap:16px;transition:height .3s}
+.cab__in{height:var(--cab-alto);gap:12px}
 .cab.con-fondo{padding:0;background:rgba(255,255,255,.96);border-bottom-color:var(--linea);box-shadow:none}
 @media (min-width:768px){.cab.con-fondo .cab__in{height:72px}}
 .cab__logo{text-decoration:none;color:var(--t1);flex:none}
 .marca{display:inline-flex;align-items:center;gap:12px;line-height:1}
-.marca__sim{height:var(--logo-alto);width:auto;color:var(--acento);transition:height .3s}
+.marca__sim{height:var(--logo-alto);width:auto;color:var(--acento)}
 .cab.con-fondo .marca__sim{height:calc(var(--logo-alto) * .9)}
 .marca__txt{display:flex;flex-direction:column;gap:4px}
 .marca__ante{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)}
@@ -118,17 +143,21 @@ code{font:inherit;font-size:.95em;background:var(--hueso);padding:1px 6px;border
 .cab__nav{display:none;margin-left:auto}
 .cab__nav ul{display:flex;gap:26px}
 .cab__nav a{font-size:15px;font-weight:500;color:var(--t1);text-decoration:none;position:relative;padding:6px 0;white-space:nowrap}
-.cab__nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--acento);transition:width .3s var(--ease)}
-.cab__nav a:hover::after,.cab__nav a[aria-current]::after{width:100%}
-.cab__der{gap:14px}
-.cab__tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--t1);text-decoration:none;font-size:15px;white-space:nowrap}
-.cab__tel .ico{width:18px;height:18px;color:var(--acento-fuerte)}
+/* subrayado por transform, no por width (Emil B1) */
+.cab__nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--acento);transform:scaleX(0);transform-origin:0 50%;transition:transform .25s var(--ease-fina)}
+.cab__nav a[aria-current]::after{transform:scaleX(1)}
+@media (hover:hover){.cab__nav a:hover::after{transform:scaleX(1)}}
+.cab__der{gap:10px}
+/* Teléfono de la cabecera: número visible desde 360 px y zona pulsable de 44 px (Jean Paul M-8, Dani C-10) */
+.cab__tel{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 4px;font-weight:600;color:var(--t1);text-decoration:none;font-size:14px;white-space:nowrap}
+.cab__tel .ico{width:20px;height:20px;color:var(--acento-fuerte)}
 .cab__tel span{display:none}
 .btn--cab{display:none}
 .cab__burger{background:transparent;width:44px;height:44px}
 .cab__burger span{background:var(--t1)}
-@media (min-width:520px){.cab__tel span{display:inline}}
-@media (min-width:768px){.btn--cab{display:inline-flex}}
+@media (min-width:360px){.cab__tel span{display:inline}}
+@media (min-width:520px){.btn--cab{display:inline-flex;--alto:40px;padding:0 14px;font-size:14px}}
+@media (min-width:768px){.cab__tel{font-size:15px}.btn--cab{--alto:44px;padding:0 20px;font-size:15px}.cab__der{gap:14px}}
 @media (min-width:1025px){
   .cab__nav{display:block}
   .cab__nav ul{gap:20px}
@@ -147,27 +176,60 @@ code{font:inherit;font-size:.95em;background:var(--hueso);padding:1px 6px;border
 .menu__logo .marca__ante{color:rgba(255,255,255,.6)}
 @media (max-width:359px){.menu__logo .marca__txt{display:flex}}
 .menu__grandes a{font-family:var(--ft);font-weight:500;letter-spacing:-.01em}
-.menu__grandes a[aria-current] span,.menu__grandes a:hover span,.menu__cols a:hover{color:var(--acento)}
+.menu__grandes a[aria-current] span{color:var(--acento)}
+@media (hover:hover){.menu__grandes a:hover span,.menu__cols a:hover{color:var(--acento)}}
+@media (hover:none){.menu__grandes a:hover:not([aria-current]) span,.menu__cols a:hover{color:inherit}}
 .menu__cerrar{border-color:rgba(255,255,255,.3)}
+/* Menú móvil a 380 ms con curva de cajón; cierre a 220 ms sin escalonado (Emil A5) */
+.menu{transition:transform 220ms var(--ease-cajon),visibility 0s 220ms}
+.menu.abierta{transition:transform 380ms var(--ease-cajon)}
+.menu__grandes a span{transition:transform 180ms var(--ease-fina)}
+.menu.abierta .menu__grandes a span{transition:transform 320ms var(--ease-fina) calc(var(--i) * 35ms + 90ms)}
 
-/* ---------- 4. Portada: titular + foto grande en caja que sobresale por la derecha (Antra index-7, Jesper A1) ---------- */
-.portada{padding-top:calc(var(--cab-alto) + 28px);overflow:clip;background:var(--base)}
-.portada__in{display:grid;gap:32px;align-items:center}
-.portada__txt{display:grid;gap:18px;align-content:start}
+/* ---------- 4. Portada v2 «línea de marea» (paso 36): campo de color con la Praia das Catedrais lavada, cinco botellas
+   de pie que se salen por abajo y cierre en onda. Sin foto en caja, sin paralaje. ---------- */
+/* El cierre: un SVG del color del bloque siguiente, pegado al borde inferior; ancho (1440) o estrecho (390) según la pantalla */
+.onda{position:absolute;left:0;right:0;bottom:-1px;height:calc(var(--onda-h,64px) + 1px);line-height:0;pointer-events:none;z-index:1}
+.onda__svg{display:block;width:100%;height:100%}
+.onda__svg path{fill:var(--onda-color,var(--base))}
+.onda__svg--estrecha{display:none}
+@media (max-width:767px){.onda__svg--ancha{display:none}.onda__svg--estrecha{display:block}}
+.portada{position:relative;isolation:isolate;--onda-h:clamp(44px,8vw,112px);padding-top:calc(var(--cab-alto) + 24px);padding-bottom:calc(var(--onda-h) + 8px);background:var(--base)}
+.portada--marea{background:linear-gradient(168deg,#FFFFFF 0%,#F3F9F8 36%,#DCEEEB 100%)}
+.portada__fondo{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.portada__fondo picture{position:absolute;inset:0;display:block}
+.portada__paisaje img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;mix-blend-mode:multiply;opacity:.55;
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 92%);mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 92%)}
+.portada__in{display:grid;gap:12px;align-items:end;position:relative}
+.portada__txt{display:grid;gap:18px;align-content:start;position:relative;z-index:2}
 .portada__txt .acciones{margin-top:10px}
 .portada__entr{margin-top:6px}
-.portada__foto{margin:0 calc(-1 * var(--gutter)) 0 0;position:relative}
-.portada__foto picture{display:block;overflow:hidden;border-radius:var(--r-m) 0 0 var(--r-m);box-shadow:0 24px 60px rgba(18,48,45,.18)}
-.portada__foto img{width:100%;height:280px;object-fit:cover;object-position:60% 50%;display:block;will-change:transform}
-@media (min-width:768px){.portada{padding-top:calc(var(--cab-alto) + 40px)}.portada__foto img{height:clamp(300px,48vw,460px)}}
-@media (min-width:1025px){
-  .portada{padding-top:calc(var(--cab-alto) + 64px)}
-  .portada__in{grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:48px}
-  .portada__txt{padding:24px 0 64px}
-  .portada__foto{margin:0 calc(-1 * (100vw - min(100vw,var(--contenedor))) / 2 - var(--gutter)) 0 0}
-  .portada__foto img{height:clamp(420px,52vw,680px)}
+.h1--portada{font-size:clamp(2.5rem,4.6vw,4.4rem)}
+/* Las botellas: de pie, con sombra de contacto, pisando la onda (su base queda por debajo del borde del campo) */
+.portada__botellas{display:flex;align-items:flex-end;justify-content:center;position:relative;z-index:2;height:clamp(210px,34vw,520px);margin-bottom:calc(-1 * var(--onda-h) - 22px);padding-top:8px}
+.portada__botella{display:block;height:100%;flex:none}
+.portada__botella img{height:100%;width:auto;filter:drop-shadow(0 22px 24px rgba(18,48,45,.26))}
+.portada__botella+.portada__botella{margin-left:-14px}
+.portada__botella:nth-child(1){height:86%}
+.portada__botella:nth-child(2){height:96%}
+.portada__botella:nth-child(3){height:100%}
+.portada__botella:nth-child(4){height:92%}
+.portada__botella:nth-child(5){height:84%}
+@media (max-width:767px){
+  .portada__botellas{height:230px;margin-top:6px}
+  .portada__botella:nth-child(n+4){display:none}
+  .portada__botella+.portada__botella{margin-left:-10px}
 }
-@media (min-width:1600px){.portada__foto{margin-right:calc(-1 * var(--gutter))}.portada__foto picture{border-radius:var(--r-m)}}
+@media (min-width:768px){.portada{padding-top:calc(var(--cab-alto) + 40px)}}
+@media (min-width:1025px){
+  .portada{padding-top:calc(var(--cab-alto) + 56px)}
+  .portada__fondo picture{left:30%}
+  .portada__paisaje img{opacity:.85;object-position:50% 45%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 42%),linear-gradient(180deg,#000 58%,transparent 100%);-webkit-mask-composite:source-in;
+    mask-image:linear-gradient(90deg,transparent 0,#000 42%),linear-gradient(180deg,#000 58%,transparent 100%);mask-composite:intersect}
+  .portada__in{grid-template-columns:minmax(0,52fr) minmax(0,48fr);gap:40px}
+  .portada__txt{padding:0 0 16px}
+}
 /* Palabras del titular que entran de abajo (A1): el JS parte en .pal y anima; sin JS, quietas */
 .js [data-palabras] .pal{display:inline-block}
 .js.con-gsap [data-palabras]:not(.listo) .pal{opacity:0}
@@ -199,10 +261,13 @@ code{font:inherit;font-size:.95em;background:var(--hueso);padding:1px 6px;border
 .estante--oscuro{background:var(--oscuro);color:#fff;border-color:var(--oscuro)}
 .estante--oscuro .estante__sub{color:rgba(255,255,255,.7)}
 .estante--oscuro .estante__tit{color:#fff}
-/* Clavada en ordenador: la pista deja de desplazarse con la rueda y la mueve el scroll de la página (tema.js) */
+/* Clavada en ordenador: la pista deja de desplazarse con la rueda y la mueve el scroll de la página (tema.js).
+   v3 (paso 38, Emil N-1): depende de .con-clavo (que tema.js solo añade cuando crea el pin de verdad), no de
+   .con-gsap a secas — con con-gsap, el ancho ganaba la condición pero no el alto, y en portátiles bajos
+   (≥1025px de ancho, <700px de alto) la pista se extendía sin que nada la moviera, quedando recortada. */
 @media (min-width:1025px){
-  .js.con-gsap .estanteria__clavo{overflow:hidden}
-  .js.con-gsap .estanteria__pista{overflow:visible;width:max-content;scroll-snap-type:none;padding-right:var(--gutter);will-change:transform}
+  .js.con-clavo .estanteria__clavo{overflow:hidden}
+  .js.con-clavo .estanteria__pista{overflow:visible;width:max-content;scroll-snap-type:none;padding-right:var(--gutter);will-change:transform}
 }
 
 /* ---------- 6. Bloque partido (texto que se enciende, C1) ---------- */
@@ -313,11 +378,11 @@ code{font:inherit;font-size:.95em;background:var(--hueso);padding:1px 6px;border
 .tarifa__datos a{color:var(--acento-fuerte)}
 .formulario{background:var(--hueso);border-radius:var(--r-m);padding:24px;gap:16px}
 label{font-size:14px;font-weight:600;color:var(--t1)}
-input,textarea,select{width:100%;min-height:52px;padding:14px 16px;border-radius:12px;border:1px solid var(--linea);background:#fff;font:inherit;font-size:16px;color:var(--t1)}
+input,textarea,select{width:100%;min-height:52px;padding:14px 16px;border-radius:12px;border:1px solid var(--linea-campo);background:#fff;font:inherit;font-size:16px;color:var(--t1)}
 select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#17201F 50%),linear-gradient(135deg,#17201F 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:44px}
 input:focus,textarea:focus,select:focus{outline:none;border-color:var(--acento-fuerte);box-shadow:0 0 0 3px rgba(109,194,185,.3)}
 textarea{min-height:120px}
-::placeholder{color:var(--t4)}
+::placeholder{color:var(--ph)}
 .formulario .acciones{margin-top:4px}
 .formulario .btn{width:100%;justify-content:center}
 .formulario .confianza{margin-top:0}
@@ -326,6 +391,14 @@ textarea{min-height:120px}
 .aviso{font-size:15px}
 .aviso strong{display:block;margin-bottom:4px;font-family:var(--ft);font-size:1.25rem;font-weight:500}
 .aviso--ok{background:#E4F3F1;color:#12302D}
+/* Bloque de apoyo «Cómo funciona la tarifa» en la ficha de producto (paso 38, punto 7; subido junto a los botones de
+   acción en el paso 38 v3, Jean Paul M-11: antes vivía al fondo, entre la ficha técnica, y se perdía como un párrafo
+   más justo donde más hacía falta — al lado del CTA, para sostener la ausencia de precio). Vive ahora dentro de
+   .ficha__txt (que ya pone 18px de separación entre bloques, de ahí que no lleve «margin»), con un acento de color en
+   el borde izquierdo para distinguirlo del texto corrido en vez de fundirse con él. */
+.aviso--tarifa{background:var(--hueso);color:var(--t2);border:1px solid var(--linea);border-left:3px solid var(--acento);border-radius:var(--r-s);padding:14px 18px}
+.aviso--tarifa strong{display:block;margin-bottom:4px;font-family:var(--ft);font-size:1.0625rem;font-weight:500;color:var(--t1)}
+.aviso--tarifa p{margin:0;font-size:14.5px;line-height:1.5}
 .formulario--hecho{min-height:420px;display:grid;align-content:start}
 @media (min-width:600px){.fila-form{grid-template-columns:1fr 1fr}}
 @media (min-width:768px){.formulario{padding:40px}}
@@ -340,10 +413,42 @@ textarea{min-height:120px}
 .migas ol{font-size:14px;margin-bottom:22px}
 .migas a{color:var(--t3)}
 .cab-int--tinte{background:var(--tinte,var(--hueso));padding-bottom:clamp(48px,6vw,96px);overflow:clip}
+/* v3 (paso 38): el campo de color «marea» necesita contexto de posición para el fondo absoluto — sin esto el paisaje
+   lavado caía en flujo normal (bloque a ancho completo, alto nativo ~900px) y empujaba el H1 fuera de pantalla en
+   catálogo, los 8 hubs de D.O., hostelería, Madrid, Alcorcón, Nosotros y contacto: la misma familia de fallo que las
+   botellas sin contener, pero en el fondo decorativo en vez de en la pieza. */
+.cab-int--marea{position:relative;isolation:isolate}
+.cab-int__fondo{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.cab-int__fondo picture{position:absolute;inset:0;display:block}
+.cab-int__paisaje img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;mix-blend-mode:multiply;opacity:.55;
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 45%,transparent 95%);mask-image:linear-gradient(180deg,#000 0,#000 45%,transparent 95%)}
+@media (min-width:1025px){
+  .cab-int__fondo picture{left:20%}
+  .cab-int__paisaje img{opacity:.8;object-position:50% 45%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%),linear-gradient(180deg,#000 62%,transparent 100%);-webkit-mask-composite:source-in;
+    mask-image:linear-gradient(90deg,transparent 0,#000 38%),linear-gradient(180deg,#000 62%,transparent 100%);mask-composite:intersect}
+}
 .cab-int__racimo{display:none;justify-self:end;color:var(--acento);opacity:.9}
 .cab-int__sim{width:clamp(180px,22vw,300px);height:auto}
 @media (min-width:1000px){.cab-int__grid{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}.cab-int__txt{grid-column:1;grid-row:1}.cab-int__racimo{grid-column:2;grid-row:1}}
 @media (min-width:1025px){.cab-int--tinte .cab-int__racimo{display:block}}
+/* v3 (paso 38, Jean Paul N-1): contener las botellas de cabecera de /catalogo/ y los 8 hubs de D.O. — sin esto se pintan a tamaño nativo (hasta 213x840) y hunden el H1 */
+.cab-int__pieza.cab-int__botellas{display:flex;align-items:flex-end;justify-content:flex-end;gap:8px;justify-self:end;grid-column:2;grid-row:1}
+.cab-int__botella{display:block;height:clamp(140px,16vw,240px);width:auto;flex:0 0 auto}
+.cab-int__botella img{display:block;height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(23,32,31,.18))}
+@media (max-width:999px){.cab-int__pieza.cab-int__botellas{display:none}}
+/* v3 (paso 38): el resto de piezas (turbio, licores, servicio, Madrid, Alcorcón, Nosotros) tampoco tenían CSS —
+   misma familia de fallo, contenidas igual que las botellas, en la columna derecha de la cabecera */
+.cab-int__pieza.cab-int__arco,.cab-int__pieza.cab-int__cunca{grid-column:2;grid-row:1;justify-self:end;margin:0;width:100%;max-width:320px;position:relative}
+.cab-int__arco{border-radius:var(--r-m);overflow:hidden}
+.cab-int__arco img{display:block;width:100%;height:260px;object-fit:cover}
+.cab-int__cunca-foto{border-radius:var(--r-m);overflow:hidden;margin:0}
+.cab-int__cunca-foto img{display:block;width:100%;height:260px;object-fit:cover}
+.cab-int__cunca-botella{position:absolute;right:-10px;bottom:-16px;height:160px;width:auto}
+.cab-int__cunca-botella img{display:block;height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(23,32,31,.18))}
+.cab-int__pieza.cab-int__palabras{grid-column:2;grid-row:1;justify-self:end;display:flex;flex-wrap:wrap;gap:10px;max-width:320px;justify-content:flex-end}
+.cab-int__palabras span{font-family:var(--ft);font-weight:500;font-size:clamp(15px,1.5vw,19px);padding:7px 15px;border-radius:999px;background:var(--base);border:1px solid var(--linea);color:var(--t1)}
+@media (max-width:999px){.cab-int__pieza.cab-int__arco,.cab-int__pieza.cab-int__cunca,.cab-int__pieza.cab-int__palabras{display:none}}
 @media (min-width:768px){.cab-int{padding-top:calc(var(--cab-alto) + 40px)}}
 .cab-int--legal{padding-bottom:24px}
 .legal{max-width:760px}
@@ -477,6 +582,32 @@ textarea{min-height:120px}
 .subir{background:var(--base);color:var(--t1)}
 .barra-movil{background:rgba(255,255,255,.96)}
 .cookies{border:1px solid var(--linea)}
+/* Aviso de cookies compacto (Jean Paul A-2): texto y botones EN LA MISMA FILA (no uno encima del otro), para que el
+   alto del aviso sea el del más alto de los dos, no la suma (el paso 38 v2 cambió el texto a compacto pero olvidó
+   darle su propio CSS: sin esto .cookies__acc se apilaba igual que el aviso largo de la base y no ganaba nada de alto) */
+.cookies--compacto{padding:10px 14px;gap:10px;display:flex;flex-wrap:wrap;align-items:center}
+.cookies--compacto p{margin:0;line-height:1.3;font-size:.8125rem;flex:1 1 200px;min-width:0}
+.cookies__acc{display:flex;flex-wrap:nowrap;gap:6px;flex:0 0 auto}
+/* Las dos redacciones del aviso: la larga de siempre, y una corta que solo se usa cuando hay que anclar el aviso
+   bajo la cabecera (ver más abajo) y necesita caber en una franja estrecha sin perder el enlace a la política */
+.cookies__txt-corta{display:none}
+/* Aviso de cookies: no tapar un botón de conversión (paso 38, Dani C-08 v2→v3: sigue tapando en 1280×650, 1366×657,
+   1536×730 en portátil y, en v3, también el WhatsApp de /contacto/ y el «Llamar» de portada en móvil a 390×844).
+   El aviso anclado abajo compite siempre con el CTA del final del primer scroll y con la barra fija del móvil: en
+   estos anchos/altos concretos se ancla arriba, justo bajo la cabecera (la única zona sin nada fijo en ninguna
+   plantilla), y se comprime a una fila para no alcanzar el H1, que empieza justo debajo. */
+@media (min-width:900px) and (max-height:760px){
+  .cookies{top:calc(var(--cab-alto) + 10px);bottom:auto;max-width:560px}
+  .cookies--compacto .btn--mini{--alto:28px;padding:0 10px;font-size:11.5px}
+}
+@media (max-width:899px){
+  .cookies{top:calc(var(--cab-alto) + 8px);bottom:auto;left:16px;right:16px}
+  .cookies--compacto{padding:8px 12px;gap:8px}
+  .cookies--compacto p{font-size:.75rem;flex-basis:130px}
+  .cookies__txt-larga{display:none}
+  .cookies__txt-corta{display:inline}
+  .cookies--compacto .btn--mini{--alto:26px;padding:0 8px;font-size:11px}
+}
 .saltar{background:var(--acento-fuerte)}
 html{scroll-padding-top:calc(var(--cab-alto) + 16px)}
 .js .rv{transform:translateY(50px)}

@@ -6,11 +6,11 @@ H1: Vino del Bierzo para hostelería: godello de la zona del Bierzo
 Plantilla: hub-do
 Denominacion: bierzo
 ---
-Si busca vino del Bierzo para hostelería, en Vinos Gallegos Pousada tiene un godello de la zona para su carta: un blanco de otra región, vecina de Galicia, con una uva que ya conocen quienes sirven blancos gallegos. Distribuimos desde Alcorcón a restaurantes, bares y comercios de la provincia de Madrid, sin pedido mínimo, y la web no vende por internet: usted pide la tarifa y le atendemos. En esta página encontrará qué es la zona del Bierzo, qué esperar de su godello en copa y la referencia que servimos.
+Si busca vino del Bierzo para hostelería, en Vinos Gallegos Pousada tiene un godello de la zona para su carta: un blanco de una región vecina de Galicia, con una uva que ya conocen quienes sirven blancos gallegos. Lo repartimos desde Alcorcón a restaurantes y bares de la provincia de Madrid, sin pedido mínimo. Aquí tiene qué es el Bierzo, cómo es su godello y la referencia que servimos.
 
 ## Qué es la zona del Bierzo
 
-El Bierzo es una comarca del noroeste de la provincia de León, en Castilla y León, que linda con Galicia. Su paisaje de valle rodeado de montaña y su vecindad con Valdeorras explican por qué comparte con las denominaciones gallegas dos de sus uvas: el godello, para los blancos, y la mencía, para los tintos. El catálogo de Pousada ilustra la portada de este apartado con un castillo, un viñedo en otoño y uvas tintas, y la sitúa dentro de los vinos de Castilla y León.
+El Bierzo es una comarca del noroeste de la provincia de León, en Castilla y León, que linda con Galicia. Su paisaje de valle rodeado de montaña y su vecindad con Valdeorras explican por qué comparte con las denominaciones gallegas dos de sus uvas: el godello, para los blancos, y la mencía, para los tintos.
 
 Para quien trabaja vino gallego, el Bierzo es una forma natural de ampliar la carta sin cambiar de uva: el cliente que pide un godello o un mencía de Valdeorras entiende enseguida un vino del Bierzo. Y para quien busca algo distinto de lo gallego, es una región diferente con una uva familiar.
 
@@ -18,11 +18,11 @@ En nuestro catálogo, el Bierzo está representado por Quinta Grande Godello. Si
 
 ## Uvas y estilo de vinos
 
-El godello del Bierzo es un blanco de color pajizo con toques verdosos, de nariz con fruta blanca (la ficha cita pera y manzana verde) y notas minerales. En boca destaca por su estructura: es un vino sencillo y equilibrado, con un final largo y mineral y una textura donde conviven la frescura y cierta untuosidad. Con 13 % vol., aguanta platos con algo de cuerpo.
+El godello del Bierzo es un blanco de color pajizo con toques verdosos, de nariz con fruta blanca, pera y manzana verde, y notas minerales. En boca destaca por su estructura: es un vino sencillo y equilibrado, con un final largo y mineral y una textura donde conviven la frescura y cierta untuosidad. Con 13 % vol., aguanta platos con algo de cuerpo.
 
 Es un estilo distinto del de un albariño: menos perfumado, más de fruta y mineralidad, de los que acompañan bien un pescado blanco a la plancha, un arroz de marisco o una tabla de quesos de sabor suave. En una carta por copas, resulta cómodo como segundo blanco junto a un albariño o un treixadura, porque ofrece estructura donde aquellos aportan perfume.
 
-El catálogo recomienda servirlo entre 8 y 10 °C, es decir, frío pero sin llegar a la temperatura de nevera profunda, que apagaría la fruta.
+Se sirve entre 8 y 10 °C: frío, pero sin llegar a la temperatura de nevera profunda, que apagaría la fruta.
 
 ## Nuestras referencias de Bierzo
 
@@ -42,4 +42,4 @@ El godello para los blancos y la mencía para los tintos, las mismas uvas que se
 No: el Bierzo está en la provincia de León, en Castilla y León, aunque limita con Galicia y comparte con ella sus dos uvas más conocidas.
 
 **¿A qué temperatura se sirve el godello del Bierzo?**
-Según la ficha de Quinta Grande Godello, entre 8 y 10 °C. En cubitera con agua y hielo se mantiene bien durante el servicio.
+Quinta Grande Godello se sirve entre 8 y 10 °C. En cubitera con agua y hielo se mantiene bien durante el servicio.

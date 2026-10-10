@@ -6,19 +6,19 @@ H1: Vino Rueda verdejo para hostelería: D.O. Rueda
 Plantilla: hub-do
 Denominacion: rueda
 ---
-Si busca vino Rueda verdejo para hostelería, en Vinos Gallegos Pousada servimos un verdejo de la denominación de origen Rueda, un blanco fresco que encaja en el aperitivo, en la barra y con pescados y mariscos. Aunque somos especialistas en vino gallego, completamos la carta con algunas denominaciones de otras regiones. Distribuimos desde Alcorcón a restaurantes, bares y comercios de la provincia de Madrid, sin pedido mínimo. La web no vende por internet: pida la tarifa y le atendemos. Aquí le explicamos qué es Rueda, qué diferencia hay con el albariño y qué verdejo tenemos.
+Un verdejo de la denominación de origen Rueda, Don Indalecio: el blanco fresco que encaja en el aperitivo, en la barra y con pescados y mariscos. Somos especialistas en vino gallego, pero completamos la carta con algunas denominaciones de otras regiones. Lo repartimos desde Alcorcón a restaurantes y bares de la provincia de Madrid, sin pedido mínimo.
 
 ## Qué es la D.O. Rueda
 
-La denominación de origen Rueda está en Castilla y León, en la cuenca del Duero, sobre todo en la provincia de Valladolid. Es la gran zona de vinos blancos de la meseta y está asociada a una uva: el verdejo. Eso explica por qué tanta gente busca juntos «Rueda» y «verdejo», incluso como si fueran lo mismo.
+La denominación de origen Rueda está en Castilla y León, en la cuenca del Duero, sobre todo en la provincia de Valladolid. Es la gran zona de vinos blancos de la meseta y está asociada a una uva: el verdejo. Por eso muchos clientes piden «un Rueda» y «un verdejo» como si fueran lo mismo.
 
-No lo son, y conviene distinguirlo en sala. Rueda es el lugar y el sistema de control de calidad; el verdejo es la uva de la zona. La denominación admite otras variedades blancas, de modo que no todo vino de Rueda es verdejo, aunque en la práctica el verdejo domina la zona y es lo que el cliente espera cuando pide «un Rueda».
+No lo son. Rueda es el lugar y el sistema de control de calidad; el verdejo es la uva de la zona. La denominación admite otras variedades blancas, de modo que no todo vino de Rueda es verdejo, aunque en la práctica el verdejo domina la zona y es lo que el cliente espera cuando pide «un Rueda».
 
-La portada que el catálogo de Pousada dedica a esta denominación muestra un monasterio, un viñedo y uvas blancas. En el catálogo figura con una única referencia, Don Indalecio, un verdejo 100 % elaborado por Bodegas Copaboca. Es un blanco que no necesita presentación: el cliente lo conoce, lo pide por su nombre y se entiende a la primera.
+Nuestra referencia de Rueda es Don Indalecio, un verdejo 100 % elaborado por Bodegas Copaboca. Es un blanco que no necesita presentación: el cliente lo conoce, lo pide por su nombre y se entiende a la primera.
 
 ## Uvas y estilo de vinos
 
-El verdejo da blancos secos, frescos y de acidez agradable. En copa suele mostrar un color pajizo con tonos verdosos y una nariz de fruta tropical, piña y melocotón sobre un fondo herbáceo que es característico de la variedad. Es lo que recoge la ficha de Don Indalecio, de 12 % vol.
+El verdejo da blancos secos, frescos y de acidez agradable. En copa suele mostrar un color pajizo con tonos verdosos y una nariz de fruta tropical, piña y melocotón sobre un fondo herbáceo que es característico de la variedad. Así es Don Indalecio, de 12 % vol.
 
 Es un estilo distinto del albariño. El verdejo es más herbáceo y de fruta tropical; el albariño, más cítrico y de acidez más marcada. Por eso funcionan bien juntos en una misma carta: el albariño para la mesa de pescado y marisco, el verdejo como blanco de aperitivo, de ensalada y de barra.
 
@@ -28,11 +28,13 @@ El perfil es el de un vino de servicio habitual: joven, directo y fácil de vend
 
 - [Don Indalecio Verdejo](/comprar/don-indalecio-verdejo/): verdejo 100 % de Bodegas Copaboca, seco y fresco, con fruta tropical y fondo herbáceo, de 12 % vol.; caja de 6 botellas.
 
-Si buscaba el Rueda verdejo Musgo, ya no lo distribuimos. Nuestra referencia de Rueda es ahora [Don Indalecio](/comprar/don-indalecio-verdejo/), un verdejo que ocupa el mismo sitio en la carta: blanco seco y fresco, pensado para servir por copa. Si tenía el Musgo en su carta y quiere comprobar que el cambio le encaja, pida la tarifa o llámenos al 666 631 615 y se lo contamos.
+Si tenía en su carta el Rueda verdejo Musgo, ya no lo distribuimos: Don Indalecio ocupa el mismo sitio, blanco seco y fresco para servir por copa.
 
 ## Para su carta
 
-Un verdejo de Rueda es una apuesta segura para la carta de un restaurante o un bar: reconocible, fresco y fácil de vender por copa. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede añadirlo a un pedido de blancos gallegos. Díganos qué tipo de local tiene y qué platos acompaña, y le recomendamos cómo combinarlo con nuestros albariños y godellos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Un verdejo de Rueda es una apuesta segura para la carta de un restaurante o un bar: reconocible, fresco y fácil de vender por copa. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede añadirlo a un pedido de blancos gallegos.
+
+Díganos qué tipo de local tiene y qué platos acompaña, y le recomendamos cómo combinarlo con nuestros albariños y godellos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ
@@ -44,4 +46,4 @@ No. Rueda es la denominación de origen, es decir, la zona y sus normas; el verd
 El verdejo suele ser más herbáceo y de fruta tropical; el albariño, más cítrico y de acidez más viva. Funcionan bien juntos en una carta con dos blancos de rotación.
 
 **¿Con qué se sirve un verdejo de Rueda?**
-Según la ficha de Don Indalecio, como aperitivo y con pescados, mariscos y ensaladas. Se sirve fresco.
+Don Indalecio va bien como aperitivo y con pescados, mariscos y ensaladas. Se sirve fresco, entre 8 y 10 °C.

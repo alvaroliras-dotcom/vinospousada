@@ -1,5 +1,5 @@
 URL: /comprar/da-vina-galega/
-Title: Da Viña Galega Albariño Rías Baixas: precio y tarifa
+Title: Da Viña Galega, albariño Rías Baixas para hostelería | Pousada
 Meta description: Da Viña Galega, albariño 100 % D.O. Rías Baixas de Adega Valdés, en caja de 6 botellas. Solicite tarifa para su restaurante o bar en Madrid.
 Keyword principal: da viña galega albariño rías baixas precio
 H1: Da Viña Galega Albariño D.O. Rías Baixas para hostelería
@@ -11,38 +11,36 @@ Graduación: 12,5 % vol.
 Foto: da-vina-galega-albarino-rias-baixas.png
 Producto: da-vina-galega
 ---
-Da Viña Galega es un albariño 100 % de la D.O. Rías Baixas, de la subzona de Ulla, elaborado por Adega Valdés. Un blanco fresco y de diseño moderno que resuelve la carta de la hostelería con un albariño de denominación de uso habitual. Si busca el precio de Da Viña Galega Albariño Rías Baixas para su restaurante, bar o tienda, aquí encontrará los datos de la referencia. En Vinos Gallegos Pousada lo distribuimos en caja de 6 botellas de 75 cl a la provincia de Madrid. La web no vende online: solicite tarifa o llámenos y le atendemos desde Alcorcón.
+Da Viña Galega es un albariño 100 % de la D.O. Rías Baixas, de la subzona de Ulla, elaborado por Adega Valdés. Floral, cítrico y suave en boca: el albariño de denominación que se vende solo por copa. Para pescados blancos, mariscos y arroces de marisco. Caja de 6 botellas.
 
-## Características
+## Cómo es en copa
 
-En la copa se ve amarillo limón, limpio y brillante, con destellos verdosos. Es el color de un albariño joven en plenitud: claro, vivo, con el reflejo verdoso que sugiere acidez y frescura.
+En la copa se ve amarillo limón, limpio y brillante, con destellos verdosos: el color de un albariño joven en plenitud.
 
-La nariz es intensa y floral. El catálogo cita flores blancas como gardenias y azahar, frutas de pepita como pera y manzana, y cítricos, con el limón al frente. Es una combinación muy reconocible del albariño: flor, fruta de pepita y cítrico, con la intensidad suficiente para que el aroma llegue a la mesa antes de servir la copa.
+La nariz es intensa y floral: flores blancas como gardenias y azahar, frutas de pepita como pera y manzana, y cítricos, con el limón al frente. Es la combinación más reconocible del albariño, con la intensidad suficiente para que el aroma llegue a la mesa antes de servir la copa.
 
-En boca la textura es suave y envolvente, con equilibrio y una acidez refrescante, y un final delicado y persistente. Es un trago amable, sin aristas, donde la acidez refresca y la suavidad redondea. Tiene 12,5 % vol. de graduación.
+En boca la textura es suave y envolvente, con equilibrio y una acidez refrescante, y un final delicado y persistente. Un trago amable, sin aristas, donde la acidez refresca y la suavidad redondea.
 
-El vino es 100 % albariño, de la D.O. Rías Baixas, y el catálogo precisa que es de la subzona de Ulla. Está elaborado por Adega Valdés, y la web anterior de la casa lo describía como un vino fresco y moderno tanto en su gusto como en su diseño. El albariño es la uva emblemática de las Rías Baixas, y la denominación respalda el origen del vino.
-
-En resumen, un albariño de perfil clásico y botella actual: floral, cítrico, suave en boca y de final limpio. Funciona cuando se busca un albariño de denominación que no necesite explicación y se defienda por sí solo en la carta.
-
-Es, además, un vino de lectura fácil para el cliente: flor blanca, pera, manzana y limón, justo lo que se espera de un albariño. Esa claridad ayuda a quien recomienda el vino en sala y a quien lo pide por primera vez, porque la cata coincide con la idea que ya tiene del albariño. Su aspecto en la mesa, con la botella actual de la casa, completa la propuesta.
+Adega Valdés lo elabora en la subzona de Ulla, dentro de la D.O. Rías Baixas, y la botella es de las que lucen en mesa: perfil clásico en copa, imagen actual en la mesa.
 
 ## Maridaje y servicio
 
-El catálogo lo recomienda con pescados blancos, mariscos, arroces de marisco y quesos. Es un blanco para mesa de mar: la acidez refrescante limpia el paladar entre mariscos y la suavidad acompaña bien a un arroz. La ficha da una temperatura de servicio de 6 a 12 °C, un rango amplio; como criterio práctico, quedarse en la zona fresca del rango para destacar su frescura y subir algo si se quiere que se abran las flores. Tiene 12,5 % vol. y se presenta en botella de 75 cl.
+Va con pescados blancos, mariscos, arroces de marisco y quesos. Es un blanco para mesa de mar: la acidez refrescante limpia el paladar entre mariscos y la suavidad acompaña bien a un arroz. La temperatura de servicio es de 6 a 12 °C; en la parte baja del rango destaca la frescura, un poco más arriba se abren las flores.
 
 ## Para su carta
 
-Da Viña Galega encaja en cartas que necesitan un albariño de la D.O. Rías Baixas accesible, con buena imagen en mesa y respuesta fácil en la venta por copa o por botella. Es una referencia útil para restaurantes de pescado y marisco, arrocerías y locales con clientela que pide albariño por nombre. Se sirve en caja de 6 botellas de 75 cl. Para conocer la tarifa, rellene el formulario de solicitud o llame al 666 631 615. Distribuimos a la hostelería de la provincia de Madrid desde Alcorcón. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Da Viña Galega encaja en la carta que necesita un albariño de la D.O. Rías Baixas accesible, con buena imagen en mesa y respuesta fácil en la venta por copa o por botella. Para el cliente, la cata coincide con la idea que ya tiene del albariño: flor blanca, pera, manzana y limón. Eso ayuda a quien lo recomienda y a quien lo pide por primera vez.
+
+Si busca un albariño de la misma denominación en caja de 12, mire [Castel de Fornos](/comprar/castel-de-fornos/). Para conocer la tarifa, rellene el formulario o llame al 666 631 615. Distribuimos a la hostelería de la provincia de Madrid desde Alcorcón.
 
 ---
 FAQ
 
-**¿Quién elabora Da Viña Galega?**
-Adega Valdés, según el catálogo, en la subzona de Ulla de la D.O. Rías Baixas.
+**¿Qué es la subzona de Ulla?**
+Una de las subzonas de la D.O. Rías Baixas, en el interior, hacia el río Ulla. Es la procedencia de Da Viña Galega; nuestros otros dos albariños con bodega conocida, Castel de Fornos y Terras Vellas, son del valle del Salnés.
 
-**¿Es 100 % albariño?**
-Sí, es un albariño 100 %, de 12,5 % vol.
+**¿Hay pedido mínimo?**
+No. Viene en caja de 6 botellas, un formato cómodo para probarlo por copa sin acumular fondo, y se suma a cualquier otro pedido del catálogo.
 
-**¿A qué temperatura se sirve?**
-Entre 6 y 12 °C, según la ficha del catálogo.
+**¿Cuánto cuesta Da Viña Galega?**
+El precio por botella, IVA no incluido, va en la tarifa. Pídala por el formulario, por teléfono o por WhatsApp. En esta web no publicamos precios ni se compra por internet.

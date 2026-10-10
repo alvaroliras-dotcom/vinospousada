@@ -5,19 +5,19 @@ Keyword principal: distribuidor de vinos gallegos para restaurantes
 H1: Distribuidor de vinos gallegos para restaurantes y bares
 Plantilla: servicio
 ---
-Somos Vinos Gallegos Pousada, distribuidores de vinos gallegos, vino turbio y licores para la hostelería de la provincia de Madrid. Desde Alcorcón servimos a más de 200 restaurantes de Madrid. Si busca un proveedor que le atienda por teléfono, le sirva lo que necesite y no le exija un pedido mínimo, hablemos.
+Somos Vinos Gallegos Pousada, distribuidores de vinos gallegos, vino turbio y licores para la hostelería de la provincia de Madrid. Desde Alcorcón servimos a más de 100 restaurantes en Madrid. Si busca un proveedor que le atienda por teléfono, le sirva lo que necesite y no le exija un pedido mínimo, hablemos.
 
 
 ## Qué hace un distribuidor de vinos gallegos por su local
 
 Un restaurante necesita varias cosas de quien le suministra el vino: que tenga las referencias que pide la carta, que reparta donde está el local y que se pueda hablar con una persona cuando hay un cambio. Es lo que intentamos cubrir. Compramos a bodegas gallegas y de otras zonas, tenemos el género y se lo llevamos. Usted se dedica a la sala y a la cocina.
 
-Nuestra casa es familiar: la fundó en 1979 el abuelo de David y hoy la dirige él. No trabajamos con intermediarios en el trato diario: quien le atiende conoce el catálogo.
+Vinos Gallegos Pousada se fundó en 1979 en Alcorcón. Quien le atiende conoce el género y conoce el reparto.
 
 ## Qué puede pedirnos
 
 - **Vinos.** Albariño, godello, treixadura, mencía y otras variedades de las denominaciones Rías Baixas, Ribeiro, Valdeorras y Monterrei, además de vinos del Bierzo, de Rueda, de Ribera del Duero y de Rioja. Vea el [catálogo completo](/catalogo/).
-- **Vino turbio gallego.** De la zona de Ribadavia, servido muy frío, de grifo, con serpentín, en barril de 50 litros. Más información en [vino turbio](/vino-turbio/).
+- **Vino turbio gallego.** De la zona de Ribadavia, en barril de 50 litros, servido muy frío y de grifo. Más información en [vino turbio](/vino-turbio/).
 - **Licores y aguardientes.** Licores Pousada en garrafa de 3 litros, con la crema de orujo, el orujo blanco y el aguardiente de hierbas, entre otros. Están en [licores](/licores/).
 
 ## Cómo se hace un pedido
@@ -30,11 +30,11 @@ Nuestra casa es familiar: la fundó en 1979 el abuelo de David y hoy la dirige �
 
 No hay pedido mínimo. El pago se hace por transferencia, Bizum, tarjeta o efectivo. Servimos desde cajas hasta palés, así que puede empezar con poco y ajustar después. Si usted es particular, el mínimo es una caja: escríbanos o llámenos y le damos el precio.
 
-La tarifa se pide a David directamente; en esta web no publicamos precios ni se compra online.
+La tarifa se pide directamente a la empresa, con el precio por botella de cada referencia, IVA no incluido; en esta web no publicamos precios ni se compra online.
 
 ## Reparto y horario
 
-Repartimos en toda la provincia de Madrid. Le atendemos de lunes a viernes, de 8 a 20 h. Fuera de horario, David coge el móvil. Si quiere ver la cobertura con detalle, consulte [reparto en la provincia de Madrid](/distribuidor-vinos-hosteleria-madrid/) o nuestra [sede en Alcorcón](/distribuidor-vinos-hosteleria-alcorcon/).
+Repartimos en toda la provincia de Madrid. Le atendemos de lunes a viernes, de 8 a 20 h. Fuera de horario, cogemos el móvil. Si quiere ver la cobertura con detalle, consulte [reparto en la provincia de Madrid](/distribuidor-vinos-hosteleria-madrid/) o nuestra [sede en Alcorcón](/distribuidor-vinos-hosteleria-alcorcon/).
 
 ## Para quién trabajamos
 

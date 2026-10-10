@@ -1,5 +1,5 @@
 URL: /comprar/aunios-godello/
-Title: Aunios Godello D.O. Monterrei: precio y tarifa | Pousada
+Title: Aunios Godello, D.O. Monterrei para hostelería | Pousada
 Meta description: Aunios Godello, 100 % godello de la D.O. Monterrei, 13 % vol., en caja de 6 botellas de 75 cl. Solicite tarifa para su local en Madrid.
 Keyword principal: aunios godello monterrei precio
 H1: Aunios Godello D.O. Monterrei para hostelería
@@ -11,38 +11,36 @@ Graduación: 13 % vol.
 Foto: aunios-godello-monterrei.png
 Producto: aunios-godello
 ---
-Aunios Godello es un vino blanco 100 % godello de la D.O. Monterrei, de carácter atlántico-continental, fresco, elegante y de gran equilibrio. Una forma de ampliar la carta de blancos gallegos más allá del albariño con una variedad de perfil distinto: fruta de hueso y fondo mineral. Si busca el precio de Aunios Godello Monterrei para su restaurante, bar o tienda, aquí tiene la ficha con todos los datos. En Vinos Gallegos Pousada lo distribuimos en caja de 6 botellas de 75 cl en la provincia de Madrid. La web no vende online: solicite tarifa o llámenos y le atendemos desde Alcorcón.
+Aunios Godello es un 100 % godello de la D.O. Monterrei, de carácter atlántico-continental: fruta de hueso, fondo mineral y una boca con estructura. El blanco gallego para quien ya tiene albariño y quiere un segundo blanco distinto. Para pescados de sabor, arroces y quesos suaves. Caja de 6 botellas.
 
-## Características
+## Cómo es en copa
 
-A la vista es un amarillo pajizo con destellos dorados, limpio y brillante. Es algo más cálido que el albariño joven, y esos destellos dorados sugieren mayor volumen en boca.
+A la vista es un amarillo pajizo con destellos dorados, limpio y brillante. Es algo más cálido que el albariño joven, y esos destellos dorados anticipan volumen en boca.
 
-En nariz es elegante y complejo. El catálogo describe notas de fruta de hueso madura, como melocotón y albaricoque, flores blancas y un fondo mineral que recuerda a la pizarra. Frente al cítrico y la flor del albariño, aquí manda la fruta carnosa, y el fondo mineral aporta una frescura de piedra que lo hace distinto en la carta.
+En nariz es elegante y complejo: fruta de hueso madura, como melocotón y albaricoque, flores blancas y un fondo mineral que recuerda a la pizarra. Frente al cítrico y la flor del albariño, aquí manda la fruta carnosa, y el fondo mineral aporta una frescura de piedra que lo hace distinto en la carta.
 
-En boca es amplio y sabroso, con buena estructura y acidez bien integrada. El final es largo y persistente, con agradable frescura y mineralidad. La acidez está presente pero no agresiva, y esa integración lo hace cómodo de beber y agradecido con la comida. Tiene 13 % vol. de graduación.
+En boca es amplio y sabroso, con buena estructura y acidez bien integrada. El final es largo y persistente, con agradable frescura y mineralidad. La acidez está presente pero no agresiva, y esa integración lo hace cómodo de beber y agradecido con la comida.
 
-La uva es el godello al 100 %, una de las variedades blancas más emblemáticas de Galicia, y el vino es de la D.O. Monterrei, una denominación gallega del interior de la provincia de Ourense. El catálogo lo describe como un vino de carácter atlántico-continental, que expresa con fidelidad la personalidad de la denominación. No indica bodega ni subzona, de modo que no las mencionamos.
-
-El resultado es un blanco de godello de buena estructura y fondo mineral, con un perfil más carnoso y menos cítrico que el albariño, que da variedad a la carta de blancos gallegos y se maneja con soltura en la mesa.
-
-Para la sala, la comparación con el albariño es el mejor argumento de venta: mismo origen gallego, otra uva y otro carácter. Quien ya conoce los blancos de Rías Baixas encontrará aquí fruta más carnosa, mineralidad y una boca de más estructura, y quien pide godello por primera vez descubrirá un blanco gallego de perfil distinto.
+La D.O. Monterrei es una denominación gallega del interior de la provincia de Ourense, junto a la frontera con Portugal. Allí el godello es la uva blanca de referencia.
 
 ## Maridaje y servicio
 
-El catálogo lo recomienda con mariscos, pescados, arroces y quesos suaves. Con su estructura, es un vino que admite pescados de más sabor y arroces, y su fruta de hueso va bien con quesos suaves. Se sirve entre 8 y 10 °C. Tiene 13 % vol. de graduación y se presenta en botella de 0,75 L. Con pescados de sabor medio y quesos suaves, la fruta de hueso y la mineralidad se complementan, y también acompaña bien unos arroces.
+Va con mariscos, pescados, arroces y quesos suaves. Con su estructura admite pescados de más sabor y arroces, y su fruta de hueso acompaña bien un queso suave. Se sirve entre 8 y 10 °C.
 
 ## Para su carta
 
-Aunios Godello permite ofrecer un godello de denominación gallega, con una cata distinta a la del albariño, en carta de restaurante, arrocería o local con clientela que ya pide godello por nombre. Se sirve en caja de 6 botellas de 75 cl. Para pedir tarifa, rellene el formulario o llame al 666 631 615. Distribuimos a la hostelería de la provincia de Madrid desde Alcorcón. Se puede combinar en carta con Aunios Albariño, de la misma marca. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Aunios Godello permite ofrecer un godello de denominación gallega, con una cata distinta de la del albariño, en un restaurante, una arrocería o un local con clientela que ya pide godello por su nombre. Para la sala, la comparación con el albariño es el mejor argumento: mismo origen gallego, otra uva y otro carácter.
+
+Se combina en carta con [Aunios Albariño](/comprar/aunios-albarino/), de la misma marca, y con los [godellos de Valdeorras](/denominaciones/valdeorras/) si quiere comparar dos denominaciones. Para pedir la tarifa, rellene el formulario o llame al 666 631 615. Distribuimos a la hostelería de la provincia de Madrid desde Alcorcón.
 
 ---
 FAQ
 
-**¿Qué uva lleva Aunios Godello?**
-Godello al 100 %, de la D.O. Monterrei.
+**¿En qué se diferencia un godello de Monterrei de uno de Valdeorras?**
+Son dos denominaciones gallegas distintas con la misma uva blanca. Aunios Godello, de Monterrei, tiene carácter atlántico-continental, con fruta de hueso y fondo de pizarra. En Valdeorras tenemos tres godellos de estilos distintos para comparar.
 
-**¿A qué temperatura se sirve?**
-Entre 8 y 10 °C.
+**¿Cómo se pide y cuánto cuesta?**
+Solicite la tarifa por el formulario, por teléfono o por WhatsApp: le llega con el precio por botella de cada referencia, IVA no incluido. Después, el pedido se hace por WhatsApp, por teléfono o por correo.
 
-**¿En qué formato se distribuye?**
-Caja de 6 botellas de 75 cl, con 13 % vol.
+**¿Puedo pedir solo una caja para probarlo?**
+Sí. No hay pedido mínimo y la caja es de 6 botellas, pensada para probar sin acumular fondo. Si le funciona, ajustamos el ritmo con su reparto habitual.

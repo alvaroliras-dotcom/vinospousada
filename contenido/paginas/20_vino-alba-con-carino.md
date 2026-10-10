@@ -1,5 +1,5 @@
 URL: /comprar/alba-con-carino/
-Title: Alba con Cariño vino blanco selección: precio | Pousada
+Title: Alba con Cariño, blanco selección para hostelería | Pousada
 Meta description: Alba con Cariño, vino blanco joven y aromático con albariño, 12 % vol., en caja de 12 botellas. Solicite tarifa para su local en Madrid.
 Keyword principal: alba con cariño vino blanco precio
 H1: Alba con Cariño, vino blanco joven y aromático para hostelería
@@ -11,38 +11,36 @@ Graduación: 12 % vol.
 Foto: alba-con-carino-vino-blanco-seleccion.png
 Producto: alba-con-carino
 ---
-Alba con Cariño es un vino blanco joven, elegante y aromático, elaborado en parte con uvas de albariño seleccionadas, procedentes de viñedos de la zona gallega. Una opción de selección para la hostelería que quiere un blanco gallego de buen cuerpo y trago amable. Si busca Alba con Cariño vino blanco precio para su restaurante, bar o tienda, en Vinos Gallegos Pousada lo distribuimos en caja de 12 botellas de 75 cl en la provincia de Madrid. La web no vende online: solicite tarifa o llame y le atendemos desde Alcorcón.
+Alba con Cariño es un blanco gallego de selección, joven y aromático, elaborado en parte con albariño. Un paso por encima del blanco básico de la casa: más cuerpo, el mismo trago fácil. Para mariscos, arroces y carnes blancas. Lo servimos en caja de 12 botellas a la hostelería de la provincia de Madrid.
 
-## Características
+## Cómo es en copa
 
-El color es amarillo pajizo, limpio y brillante, el de un blanco joven bien conservado. No busca la intensidad cromática, sino la limpieza, y eso se nota cuando se sirve en copa fina y a buena temperatura.
+El color es amarillo pajizo, limpio y brillante, el de un blanco joven bien conservado. La nariz va por el lado de la fruta verde y el limón, con un fondo fresco muy agradable: un perfil cítrico y vivo que despierta el apetito en los primeros minutos de una comida.
 
-La nariz va por el lado de la fruta verde y el limón, con un fondo fresco muy agradable. Es un perfil cítrico y vivo que despierta el apetito, ideal para los primeros minutos de una comida. Frente a otros blancos más tropicales o florales, aquí manda la frescura limpia: fruta verde, limón y poco más, pero bien dicho.
+En boca es joven, equilibrado y fresco, con una agradable sensación untuosa. Ese matiz es lo que lo distingue: además de la acidez, tiene un punto de untuosidad que le da cuerpo y lo hace más redondo que un blanco ligero convencional. Muy rico y fácil de beber.
 
-En boca el catálogo lo describe como joven, equilibrado y fresco, con una agradable sensación untuosa. Ese matiz es lo que lo distingue: además de la acidez fresca, tiene un punto de untuosidad que le da cuerpo y lo hace más redondo que un blanco ligero convencional. Es muy rico y fácil de beber, con 12 % vol. de graduación.
-
-La uva es el albariño en parte, con viñedos de la zona gallega. El catálogo no lo adscribe a ninguna denominación de origen ni precisa la subzona, por lo que lo presentamos como un vino blanco de selección, de origen gallego, con albariño como uva destacada. El albariño es la variedad emblemática de las Rías Baixas y aporta ese carácter fresco y aromático que se reconoce en la copa.
-
-Es, en suma, un vino sincero, fácil de beber y con un toque de untuosidad, que refleja la frescura de la tierra gallega y que se maneja bien en una carta donde conviven mariscos, pescados, arroces y quesos.
-
-Para quien lo sirve, ese equilibrio entre frescura y untuosidad es útil: permite ofrecerlo como blanco de más cuerpo sin salir de un perfil joven y aromático. El catálogo lo califica de elegante y sincero, y en copa se entiende bien por qué: es fácil de describir, fácil de recomendar y fácil de repetir.
+La uva destacada es el albariño, en parte, de viñedos de la zona gallega. Se comercializa sin denominación de origen: es un blanco de selección, de origen gallego, con el carácter fresco y aromático que se reconoce en el albariño.
 
 ## Maridaje y servicio
 
-El catálogo lo recomienda con mariscos, pescados, quesos, arroces y carnes blancas. Esa amplitud lo convierte en un blanco versátil de carta: acompaña unos mariscos igual que un arroz o unas carnes blancas. La temperatura de servicio indicada es de 10 a 11 °C, algo más templada que la de otros blancos jóvenes, lo que ayuda a que se aprecie la untuosidad y el fondo frutal. Tiene 12 % vol. de graduación y se sirve en botella de 75 cl.
+Va con mariscos, pescados, quesos, arroces y carnes blancas. Esa amplitud lo convierte en un blanco versátil de carta: acompaña un plato de marisco igual que un arroz o una carne blanca.
+
+Se sirve entre 10 y 11 °C, algo más templado que otros blancos jóvenes, para que se aprecien la untuosidad y el fondo frutal.
 
 ## Para su carta
 
-Alba con Cariño encaja en negocios que quieren dar un paso por encima del blanco básico, con un vino de selección y algo más de cuerpo, sin complicaciones de servicio. Va bien en menú del día de mayor nivel, carta de vinos por copa y mesas de marisco y arroz. Se sirve en caja de 12 botellas de 75 cl. Para pedir la tarifa, utilice el formulario de contacto o llame al 666 631 615; distribuimos a la hostelería de la provincia de Madrid desde Alcorcón. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Alba con Cariño encaja en el local que quiere dar un paso por encima del blanco básico, con un vino de selección y algo más de cuerpo, sin complicaciones de servicio. Funciona en un menú del día de mayor nivel, en la carta por copas y en las mesas de marisco y arroz.
+
+Si ya trabaja [Alba Cosechero](/comprar/alba-cosechero/), este es el escalón siguiente de la misma casa. Para pedir la tarifa, utilice el formulario de contacto o llame al 666 631 615: distribuimos a la hostelería de la provincia de Madrid desde Alcorcón.
 
 ---
 FAQ
 
-**¿Qué uva lleva Alba con Cariño?**
-Está elaborado en parte con uvas de albariño seleccionadas de viñedos de la zona gallega.
+**¿Cuánto cuesta Alba con Cariño?**
+El precio por botella, IVA no incluido, va en la tarifa. Pídala por el formulario, por teléfono o por WhatsApp y se la enviamos con el resto de referencias. En esta web no publicamos precios.
 
-**¿A qué temperatura se sirve?**
-Entre 10 y 11 °C.
+**¿Qué diferencia hay entre Alba con Cariño y Alba Cosechero?**
+Los dos son blancos de albariño sin denominación de origen. Alba con Cariño es la selección: más untuoso y con más cuerpo, para un menú o una carta de mayor nivel. Alba Cosechero es el blanco de servicio diario.
 
-**¿Cómo se presenta para hostelería?**
-En caja de 12 botellas de 75 cl, con 12 % vol.
+**¿Cuánto tengo que pedir?**
+No hay pedido mínimo. Viene en caja de 12 botellas y puede combinarla con cualquier otra referencia del catálogo en el mismo reparto.

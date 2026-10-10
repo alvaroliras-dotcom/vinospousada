@@ -6,19 +6,19 @@ H1: Vino Valdeorras para hostelería: godello y mencía
 Plantilla: hub-do
 Denominacion: valdeorras
 ---
-Si busca vino Valdeorras para hostelería, en Vinos Gallegos Pousada tiene seis referencias de la denominación: cuatro blancos, casi todos de godello, y dos tintos de mencía. Valdeorras es zona de godello, la uva blanca que se ha hecho un nombre entre los blancos gallegos, y de mencía para los tintos. Distribuimos desde Alcorcón a restaurantes, bares y comercios de toda la provincia de Madrid, sin pedido mínimo. Aquí le contamos qué es la D.O. Valdeorras, qué esperar de cada estilo y cómo pedirnos la tarifa.
+Seis referencias de la D.O. Valdeorras para su carta: cuatro blancos, casi todos de godello, y dos tintos de mencía. Valdeorras es la zona del godello, la uva blanca que se ha hecho un nombre entre los blancos gallegos. Vinos Gallegos Pousada las reparte desde Alcorcón a restaurantes y bares de toda la provincia de Madrid, sin pedido mínimo.
 
 ## Qué es la D.O. Valdeorras
 
 La denominación de origen Valdeorras se encuentra en el extremo oriental de la provincia de Ourense, en la cuenca del río Sil, y es vecina del Bierzo leonés. Es una de las zonas gallegas donde el godello tiene más protagonismo, hasta el punto de que la denominación se asocia a esta uva, junto con la mencía para los tintos.
 
-Las fichas del catálogo hablan de viñedos de ladera sobre suelos de pizarra y esquisto, algunos de altura: en el caso de Roandi, entre 500 y 600 metros. Son rasgos que se traducen en vinos blancos frescos, con fondo mineral, y en tintos de fruta viva.
+Son viñedos de ladera sobre suelos de pizarra y esquisto, algunos de altura: en el caso de Roandi, entre 500 y 600 metros. Rasgos que se traducen en vinos blancos frescos, con fondo mineral, y en tintos de fruta viva.
 
-En nuestra tarifa, Valdeorras es la denominación con más referencias de godello, y permite construir una carta de blancos gallegos sin depender solo del albariño. Como la denominación define el lugar y no la uva, conviene explicarlo a su equipo de sala: pedir «un Valdeorras» es pedir un vino de esta zona, y lo habitual será un godello blanco o un mencía tinto, según la ficha de cada referencia.
+Valdeorras es la denominación con más godellos de nuestra carta, y permite construir una carta de blancos gallegos sin depender solo del albariño. Como la denominación define el lugar y no la uva, conviene explicarlo a su equipo de sala: pedir «un Valdeorras» es pedir un vino de esta zona, y lo habitual será un godello blanco o un mencía tinto.
 
 ## Uvas y estilo de vinos
 
-El godello da blancos de color pajizo, de fruta blanca y de hueso, con frescura y un fondo mineral. En nuestra tarifa hay tres estilos. Uno limpio y directo, como Lagar de Cigur, de godello al 100 %. Otro con más cuerpo, como Alento de Roandi, de cepas viejas y elaborado sobre sus lías. Y un ensamblaje, Camiño das Estrelas, que mezcla godello con dona branca y palomino.
+El godello da blancos de color pajizo, de fruta blanca y de hueso, con frescura y un fondo mineral. Tenemos tres estilos. Uno limpio y directo, como Lagar de Cigur, de godello al 100 %. Otro con más cuerpo, como Alento de Roandi, de cepas viejas y elaborado sobre sus lías. Y un ensamblaje, Camiño das Estrelas, que mezcla godello con dona branca y palomino.
 
 La mencía es la uva tinta de la zona. Da tintos de frutos rojos y cerezas, frescos y de buen equilibrio. Flavia es un tinto joven con mencía como uva principal (85 %) y cinco meses de barrica de roble americano; Bancales Mencía es un tinto de mencía con paso por barrica, más redondo y especiado.
 
@@ -35,13 +35,15 @@ En sala, el godello es la respuesta a quien quiere un blanco gallego distinto de
 
 ## Para su carta
 
-Un godello de Valdeorras da a su carta un blanco gallego con identidad propia, y un mencía joven, un tinto fresco para las carnes y los guisos. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede probar una referencia junto con el resto de su pedido. Díganos qué tipo de cocina trabaja y le proponemos qué godello y qué tinto encajan mejor. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Un godello de Valdeorras da a su carta un blanco gallego con identidad propia, y un mencía joven, un tinto fresco para las carnes y los guisos. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede probar una referencia junto con el resto de su pedido.
+
+Díganos qué tipo de cocina trabaja y le proponemos qué godello y qué tinto encajan mejor. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ
 
 **¿Qué uvas se usan en Valdeorras?**
-La uva blanca de referencia es el godello y la tinta, la mencía. En nuestro catálogo también hay un blanco que mezcla godello con dona branca y palomino.
+La uva blanca de referencia es el godello y la tinta, la mencía. En nuestra carta hay también un blanco que mezcla godello con dona branca y palomino.
 
 **¿En qué se diferencia el godello del albariño?**
 Son dos uvas gallegas de zonas distintas. El albariño, emblema de las Rías Baixas, da blancos de aroma muy marcado y acidez viva; el godello da blancos con más fondo mineral y, a menudo, algo más de cuerpo.

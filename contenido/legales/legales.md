@@ -64,7 +64,7 @@ El titular no se hace responsable del contenido de los sitios de terceros a los 
 
 ## 9. Legislación aplicable y jurisdicción
 
-Las presentes condiciones se rigen por la legislación española, en particular por la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI). Para la resolución de cualquier controversia, y salvo que la ley imponga otro fuero, las partes se someten a los juzgados y tribunales de Madrid capital. Álvaro confirma el fuero (alternativa: los del domicilio del Usuario cuando sea consumidor, que es lo que impone la ley en ese caso).
+Las presentes condiciones se rigen por la legislación española, en particular por la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI). Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales de Madrid capital, salvo que la ley imponga otro fuero (por ejemplo, el del domicilio del Usuario cuando este sea consumidor).
 
 
 Última actualización: octubre de 2026 (versión 1, vista previa).
@@ -112,7 +112,7 @@ Cuando rellena el formulario de la web, recogemos: **nombre, nombre de su negoci
 
 **Base jurídica:** la aplicación de medidas precontractuales a petición suya (artículo 6.1.b del RGPD). Por eso no le pedimos marcar ninguna casilla de consentimiento: la base del tratamiento es su propia solicitud. Si actúa en nombre de una empresa, el tratamiento de sus datos de contacto profesional se ampara además en el interés legítimo del Responsable en mantener relaciones comerciales (artículo 6.1.f del RGPD y artículo 19 de la LOPDGDD).
 
-El formulario se envía por correo electrónico al buzón del Responsable.  u otro que diga David.
+El formulario se envía por correo electrónico al buzón del Responsable.
 
 ### 4.2 Teléfono, WhatsApp y correo electrónico
 
@@ -145,13 +145,13 @@ No cedemos sus datos a terceros, salvo obligación legal (por ejemplo, a la Admi
 
 Acceden a los datos, como **encargados del tratamiento** y con un contrato que les obliga a tratarlos solo según nuestras instrucciones, los proveedores que necesitamos para que la web y el correo funcionen:
 
-- **Google Ireland Ltd.** (Google Tag Manager y Google Analytics 4), solo si acepta las cookies de medición. Google puede transferir datos a Estados Unidos; esa transferencia se ampara en la decisión de adecuación del Marco de Privacidad de Datos UE-EE. UU. (Data Privacy Framework), al que Google LLC está adherido, y en las cláusulas contractuales tipo de la Comisión Europea. Álvaro confirma si en la web nueva se activa también la etiqueta de conversiones de Google Ads (paso 7 y 45); si es así, se añade aquí.
-- **Vercel Inc.** aloja únicamente la **vista previa** de la web durante su construcción, que no es pública ni se indexa; no interviene en la web publicada. [Esta línea se suprime del texto publicado si la producción no pasa por Vercel; se deja aquí para que Álvaro decida.]
+- **Google Ireland Ltd.** (Google Tag Manager y Google Analytics 4), solo si acepta las cookies de medición. Google puede transferir datos a Estados Unidos; esa transferencia se ampara en la decisión de adecuación del Marco de Privacidad de Datos UE-EE. UU. (Data Privacy Framework), al que Google LLC está adherido, y en las cláusulas contractuales tipo de la Comisión Europea.
+- **Vercel Inc.** aloja únicamente la **vista previa** de la web durante su construcción, que no es pública ni se indexa; no interviene en la web publicada.
 
 
 ## 7. Plazo de conservación
 
-- **Solicitudes de tarifa que no acaban en pedido:** mientras se atiende la solicitud y, como máximo, **un año** desde el último contacto, para poder retomar la conversación si usted vuelve a interesarse. Después se suprimen. (Plazo propuesto; lo decide Álvaro con David.)
+- **Solicitudes de tarifa que no acaban en pedido:** mientras se atiende la solicitud y, como máximo, **un año** desde el último contacto, para poder retomar la conversación si usted vuelve a interesarse. Después se suprimen.
 - **Clientes:** mientras dure la relación comercial y, después, los plazos que exige la ley: seis años para la documentación mercantil (artículo 30 del Código de Comercio) y cuatro para la fiscal (artículo 66 de la Ley General Tributaria), bloqueados y solo a disposición de las autoridades.
 - **Datos de navegación:** los que indica cada cookie en la [Política de cookies](/politica-de-cookies/).
 

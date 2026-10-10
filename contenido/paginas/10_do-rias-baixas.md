@@ -6,19 +6,19 @@ H1: Vino Rías Baixas para hostelería: albariños de la D.O.
 Plantilla: hub-do
 Denominacion: rias-baixas
 ---
-Si busca vino Rías Baixas para hostelería, en Vinos Gallegos Pousada tiene cuatro albariños de la denominación para su carta, desde un blanco de servicio habitual hasta uno de cepas centenarias. Somos distribuidores de vinos y licores gallegos con sede en Alcorcón y repartimos a restaurantes, bares y comercios de toda la provincia de Madrid, sin pedido mínimo. La web no vende por internet: usted nos pide la tarifa, elige sus referencias y se las llevamos. Aquí encontrará qué es la D.O. Rías Baixas, qué esperar de un albariño en copa y las referencias que servimos.
+Cuatro albariños de la D.O. Rías Baixas para su carta, desde el blanco de servicio diario hasta uno de cepas centenarias. Vinos Gallegos Pousada los reparte desde Alcorcón a restaurantes y bares de toda la provincia de Madrid, sin pedido mínimo. Aquí tiene qué es la denominación, qué esperar de un albariño en copa y las referencias que servimos.
 
 ## Qué es la D.O. Rías Baixas
 
 La denominación de origen Rías Baixas es una de las más reconocidas de Galicia y la que ha dado fama al albariño. Se sitúa en el litoral atlántico gallego, sobre todo en la provincia de Pontevedra, y su influencia marítima, con clima húmedo y suave, explica el carácter de sus blancos: frescos, aromáticos y de buena acidez, pensados para el pescado y el marisco.
 
-En el catálogo de Pousada, los albariños de la denominación citan dos procedencias concretas: el valle del Salnés (Terras Vellas y Castel de Fornos) y la subzona de Ulla (Da Viña Galega). Es una buena muestra de que no todos los albariños se parecen: la parcela, la edad de las cepas y la bodega marcan diferencias reales en copa.
+Nuestros albariños de la denominación vienen de dos procedencias concretas: el valle del Salnés (Terras Vellas y Castel de Fornos) y la subzona de Ulla (Da Viña Galega). No todos los albariños se parecen: la parcela, la edad de las cepas y la bodega marcan diferencias reales en copa.
 
-Conviene no confundir denominación y uva. Rías Baixas es el lugar y el sistema de control de calidad; albariño es la uva con la que se elaboran sus vinos más conocidos. Y no todo vino de albariño lleva la denominación: en nuestro catálogo hay blancos de albariño sin D.O., que no presentamos como Rías Baixas. Los cuatro de esta página sí la llevan en su ficha.
+Rías Baixas es el lugar y el sistema de control de calidad; albariño es la uva con la que se elaboran sus vinos más conocidos. No todo vino de albariño lleva la denominación: tenemos blancos de albariño sin D.O., que no presentamos como Rías Baixas. Los cuatro de esta página sí la llevan.
 
 ## Uvas y estilo de vinos
 
-La uva protagonista es el albariño. En copa suele dar vinos de color pajizo con reflejos verdosos, aromas de fruta blanca y cítricos, a veces con notas florales, y una acidez viva que deja la boca limpia. Es lo que recogen las fichas del catálogo: carácter atlántico, frescura y equilibrio.
+La uva protagonista es el albariño. En copa suele dar vinos de color pajizo con reflejos verdosos, aromas de fruta blanca y cítricos, a veces con notas florales, y una acidez viva que deja la boca limpia: carácter atlántico, frescura y equilibrio.
 
 Dentro de la misma uva hay estilos distintos. Un albariño de servicio habitual, joven y directo, funciona en el aperitivo y en el menú del día. Otro de cepas centenarias y selección manual de la uva, como Terras Vellas, tiene más expresión y se defiende en una carta con más recorrido. Son blancos para servir frescos, con pescados, mariscos, arroces y entrantes de barra.
 
@@ -33,7 +33,9 @@ Para el responsable de sala, el albariño tiene una ventaja práctica: el client
 
 ## Para su carta
 
-Si quiere incorporar un albariño de Rías Baixas a su carta, o ampliar el que ya tiene, pídanos la tarifa. Puede rellenar el formulario de contacto o llamar al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede combinar referencias de distintas denominaciones en un mismo pedido. Cuéntenos qué tipo de local tiene y qué nivel de vino busca, y le proponemos una selección de albariños y otros blancos gallegos que encaje con su cocina. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Si quiere incorporar un albariño de Rías Baixas a su carta, o ampliar el que ya tiene, pídanos la tarifa. Puede rellenar el formulario de contacto o llamar al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede combinar referencias de distintas denominaciones en un mismo pedido.
+
+Cuéntenos qué tipo de local tiene y qué nivel de vino busca, y le proponemos una selección de albariños y otros blancos gallegos que encaje con su cocina. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

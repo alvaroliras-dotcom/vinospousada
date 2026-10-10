@@ -1,5 +1,5 @@
 URL: /comprar/don-indalecio-verdejo/
-Title: Don Indalecio Verdejo D.O. Rueda | Vinos Pousada
+Title: Don Indalecio Verdejo D.O. Rueda | Pousada
 Meta description: Don Indalecio, verdejo 100 % de la D.O. Rueda, de Bodegas Copaboca. Blanco fresco para aperitivo y pescados. Reparto en Madrid; pida su tarifa.
 Keyword principal: Don Indalecio Verdejo
 H1: Don Indalecio Verdejo, vino blanco de la D.O. Rueda
@@ -15,9 +15,9 @@ Don Indalecio es un vino blanco joven de la D.O. Rueda, elaborado por Bodegas Co
 
 ## Características
 
-La ficha de Don Indalecio lleva el sello «D.O. Rueda · 100 % Verdejo» y lo define como vino blanco joven y fresco. Lo elabora Bodegas Copaboca, cuyo nombre figura en la etiqueta. Dentro de una oferta centrada en vinos gallegos, es la referencia de Rueda del grupo: un blanco de otra denominación castellana para el cliente que pide verdejo y no albariño ni godello.
+Don Indalecio es un vino blanco joven y fresco de la D.O. Rueda, 100 % verdejo. Lo elabora Bodegas Copaboca, cuyo nombre figura en la etiqueta. Dentro de una oferta centrada en vinos gallegos, es la referencia de Rueda del grupo: un blanco de otra denominación castellana para el cliente que pide verdejo y no albariño ni godello.
 
-A la vista es amarillo paja con ligeros reflejos verdosos, limpio y brillante. En nariz domina la fruta: el catálogo habla de aromas intensos a fruta tropical, con piña y melocotón, y de toques herbáceos propios de la variedad verdejo. Es un perfil aromático y expresivo, de los que se reconocen en cuanto se acerca la copa, lo que ayuda cuando se vende por copas en barra o en terraza.
+A la vista es amarillo paja con ligeros reflejos verdosos, limpio y brillante. En nariz domina la fruta, con aromas intensos a fruta tropical, piña y melocotón, y toques herbáceos propios de la variedad verdejo. Es un perfil aromático y expresivo, de los que se reconocen en cuanto se acerca la copa, lo que ayuda cuando se vende por copas en barra o en terraza.
 
 En boca es seco y fresco, con un cuerpo equilibrado y una acidez muy agradable, y deja un final afrutado y persistente. Se mueve en 12 % vol., una graduación moderada que lo hace cómodo para consumo repetido durante una comida larga o un aperitivo. No se trata de un vino de guarda ni de madera: su razón de ser es la frescura y la fruta de la añada joven, y así debe presentarse en sala.
 
@@ -40,7 +40,7 @@ FAQ
 Verdejo al 100 %, de la D.O. Rueda.
 
 **¿Quién lo elabora?**
-Bodegas Copaboca, según la etiqueta que recoge el catálogo.
+Bodegas Copaboca, según figura en la etiqueta.
 
 **¿Cómo conviene servirlo?**
 Entre 8 y 10 °C. Con aperitivos, mariscos, pescados y ensaladas.

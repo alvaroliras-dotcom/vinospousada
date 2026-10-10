@@ -1,5 +1,5 @@
 URL: /comprar/lagar-de-san-blas/
-Title: Lagar de San Blas Ribeiro blanco: precio y tarifa
+Title: Lagar de San Blas, blanco Ribeiro para hostelería | Pousada
 Meta description: Lagar de San Blas, vino blanco joven y afrutado de la D.O. Ribeiro, en caja de 12 botellas. Pida tarifa si tiene un local de hostelería en Madrid.
 Keyword principal: lagar de san blas ribeiro precio / comprar
 H1: Lagar de San Blas, vino blanco D.O. Ribeiro
@@ -11,34 +11,36 @@ Graduación: 11,5-12 % vol.
 Foto: lagar-de-san-blas-blanco-ribeiro.png
 Producto: lagar-de-san-blas
 ---
-Lagar de San Blas es un blanco joven y afrutado de la D.O. Ribeiro, ligero y fresco, pensado para el consumo diario en hostelería. Si busca comprar Lagar de San Blas D.O. Ribeiro para su bar, restaurante o tienda, lo suministramos en caja de 12 botellas de 75 cl a locales de la provincia de Madrid. Solicite nuestra tarifa y le facilitaremos el precio por botella de esta referencia, así como el del resto de vinos blancos gallegos que distribuimos desde nuestra sede de Alcorcón, sin compromiso.
+Lagar de San Blas es un blanco joven y afrutado de la D.O. Ribeiro, de palomino (80 %) y torrontés (20 %): ligero, fresco y pensado para el consumo diario. El Ribeiro de copa, de tapa y de menú, para fritura ligera, pescado a la plancha y marisco. Caja de 12 botellas, reparto en toda la provincia de Madrid.
 
-## Características
+## Cómo es en copa
 
-Presenta un color amarillo pajizo, limpio y brillante, con reflejos verdosos que indican juventud. En nariz es fresco y afrutado: fruta blanca, con recuerdos de manzana y pera, y ligeros toques florales. Es un aroma discreto y limpio, sin artificios, que invita a probar el vino sin necesidad de explicaciones previas. Quien lo pide por copa recibe un blanco limpio y amable, sin notas que puedan chocar a un cliente poco habituado al vino gallego.
+Presenta un color amarillo pajizo, limpio y brillante, con reflejos verdosos que indican juventud.
 
-En boca es fino, suave y equilibrado, con una acidez refrescante y un final agradable y persistente. No pretende impresionar por potencia, sino acompañar: su ligereza lo hace fácil de beber a lo largo de una comida y adecuado para quienes prefieren vinos blancos sin peso. La acidez es la que mantiene la frescura y evita que el vino resulte plano. Es el tipo de blanco que se termina sin darse cuenta, ideal para mesas de varios comensales en las que se comparte la botella y no se quiere un vino que protagonice la conversación.
+En nariz es fresco y afrutado: fruta blanca, con recuerdos de manzana y pera, y ligeros toques florales. Un aroma discreto y limpio, sin artificios, que invita a probar el vino sin explicaciones previas y no choca a un cliente poco habituado al vino gallego.
 
-La composición que indica el catálogo es de 80 % palomino y 20 % torrontés, uvas tradicionales gallegas, bajo la Denominación de Origen Ribeiro. Su graduación es de entre 11,5 y 12 % vol., moderada, y se presenta en botella de 75 cl.
+En boca es fino, suave y equilibrado, con una acidez refrescante y un final agradable y persistente. No pretende impresionar por potencia, sino acompañar: su ligereza lo hace fácil de beber a lo largo de una comida. Es el tipo de blanco que se termina sin darse cuenta, para mesas de varios comensales en las que se comparte la botella.
 
-Su carácter es el de un blanco joven de uso cotidiano: sin pretensiones, bien equilibrado y con el sello de una denominación de origen. Funciona como vino de copa para el aperitivo, como acompañamiento de tapas y entrantes, o como blanco de menú, donde la ligereza y la acidez moderada se agradecen. Es, en definitiva, una opción sensata para quien necesita un blanco gallego regular y sin sorpresas. Lo importante, para un negocio con mucha rotación, es contar con una referencia estable de la que el cliente sepa qué esperar cada vez que la pide.
+Palomino y torrontés son uvas tradicionales gallegas, aquí bajo la Denominación de Origen Ribeiro. Un blanco joven de uso cotidiano: sin pretensiones, bien equilibrado y con el sello de una denominación.
 
 ## Maridaje y servicio
 
-Combina con mariscos, pescados blancos, arroces y entrantes y tapas, según el catálogo. Funciona especialmente con fritura ligera, con pescado a la plancha y con tapas frías, donde la acidez limpia el paladar. Se sirve entre 6 y 10 °C, es decir, bien frío, y mantiene su frescura durante el servicio si se deja en cubitera. Su graduación es de entre 11,5 y 12 % vol., lo que permite servirlo por copas sin que pese en sala. Una cubitera en la mesa ayuda a mantenerlo a punto durante toda la comida.
+Combina con mariscos, pescados blancos, arroces, entrantes y tapas. Funciona especialmente con fritura ligera, con pescado a la plancha y con tapas frías, donde la acidez limpia el paladar. Se sirve entre 6 y 10 °C, bien frío, y mantiene su frescura durante el servicio si se deja en cubitera.
 
 ## Para su carta
 
-Lagar de San Blas encaja como blanco de copa o de menú en locales que buscan un vino de la D.O. Ribeiro sin complicaciones, con formato de caja de 12 botellas de 75 cl, cómodo para almacenar y reponer. Para conocer el precio por botella, solicite la tarifa mediante el formulario de la web o llame al 666 631 615. Le enviaremos la lista de referencias para hostelería y podrá comparar con otros blancos del catálogo, como Finca Lavandeira blanco. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Lagar de San Blas encaja como blanco de copa o de menú en el local que busca un vino de la D.O. Ribeiro sin complicaciones. Lo importante para un negocio con mucha rotación es contar con una referencia estable de la que el cliente sepa qué esperar cada vez que la pide, y esta lo es. La caja de 12 botellas es cómoda de almacenar y de reponer.
+
+Es casi gemelo de [Finca Lavandeira blanco](/comprar/finca-lavandeira/); si duda entre los dos, se lo aclaramos con la tarifa. Para pedirla, rellene el formulario o llame al 666 631 615. Distribuimos a la hostelería de la provincia de Madrid desde Alcorcón.
 
 ---
 FAQ
 
-**¿Qué uvas lleva Lagar de San Blas?**
-Un 80 % de palomino y un 20 % de torrontés, según el catálogo.
+**¿Qué diferencia hay entre Lagar de San Blas y Finca Lavandeira blanco?**
+Muy poca: los dos son jóvenes del Ribeiro con palomino y torrontés, en caja de 12 y para servir entre 6 y 10 °C. Elija por nombre o por lo que ya conozca su clientela; si quiere, se lo aclaramos por teléfono.
 
-**¿En qué formato se vende?**
-En caja de 12 botellas de 75 cl.
+**¿Me sirve como vino de la casa?**
+Sí. Es un blanco ligero y de graduación moderada, pensado para el servicio diario: se vende por copa y se repone sin sobresaltos. Pida la tarifa y compare.
 
-**¿A qué temperatura se sirve?**
-Entre 6 y 10 °C.
+**¿Cuánto tengo que pedir?**
+No hay pedido mínimo. Viene en caja de 12 botellas y puede combinarla con cualquier otra referencia del catálogo en el mismo reparto.

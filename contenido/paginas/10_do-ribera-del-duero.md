@@ -6,19 +6,19 @@ H1: Vino Ribera del Duero para hostelería: tintos de la D.O.
 Plantilla: hub-do
 Denominacion: ribera-del-duero
 ---
-Si busca vino Ribera del Duero para hostelería, en Vinos Gallegos Pousada servimos dos tintos jóvenes de tempranillo de la denominación, para la carta de carnes, asados y cordero. Aunque somos distribuidores especializados en vino gallego, completamos el surtido con tintos de otras regiones que el cliente de un restaurante en Madrid sigue pidiendo. Repartimos desde Alcorcón en toda la provincia de Madrid, sin pedido mínimo. Si busca vinos de Ribera del Duero en Madrid para su local, aquí tiene qué es la D.O., qué esperar de cada tinto y cómo pedirnos la tarifa.
+Dos tintos jóvenes de tempranillo de la D.O. Ribera del Duero para la carta de carnes, asados y cordero. Somos distribuidores de vino gallego, pero completamos el surtido con los tintos que el cliente de un restaurante en Madrid sigue pidiendo. Repartimos desde Alcorcón en toda la provincia, sin pedido mínimo.
 
 ## Qué es la D.O. Ribera del Duero
 
 La denominación de origen Ribera del Duero se encuentra en Castilla y León, a lo largo del río Duero, en un territorio que abarca varias provincias, entre ellas Burgos y Valladolid. Es una de las grandes denominaciones de vino tinto de España, y la uva que la define es el tempranillo, que en la zona recibe nombres locales como tinto fino o tinta fina.
 
-El nombre de la uva puede confundir al camarero: Peñalagua indica «tinta fina» en su ficha y Torremorón «tempranillo», pero son la misma variedad. Es un detalle útil para la carta, porque permite explicar en una frase por qué dos vinos de apariencia distinta comparten el mismo origen varietal.
+El nombre de la uva puede confundir al camarero: Peñalagua es de «tinta fina» y Torremorón de «tempranillo», pero son la misma variedad. Es un detalle útil para la carta, porque permite explicar en una frase por qué dos vinos de apariencia distinta comparten el mismo origen varietal.
 
-El estilo asociado a la zona es el del tinto de cuerpo y estructura, de fruta madura y buena persistencia, pensado para carnes rojas y platos contundentes. Las dos referencias de nuestro catálogo son jóvenes, es decir, de elaboración sencilla y fruta protagonista, pensadas para el servicio de cada día.
+El estilo asociado a la zona es el del tinto de cuerpo y estructura, de fruta madura y buena persistencia, pensado para carnes rojas y platos contundentes. Nuestras dos referencias son jóvenes, es decir, de elaboración sencilla y fruta protagonista, pensadas para el servicio de cada día.
 
 ## Uvas y estilo de vinos
 
-El tempranillo da tintos de color granate o cereza con matices violáceos, aromas de frutos rojos y negros maduros, y, en las fichas de nuestro catálogo, notas de regaliz. En boca son suaves, equilibrados y con buena estructura, con un final largo y agradable.
+El tempranillo da tintos de color granate o cereza con matices violáceos, aromas de frutos rojos y negros maduros y notas de regaliz. En boca son suaves, equilibrados y con buena estructura, con un final largo y agradable.
 
 Las dos referencias comparten graduación (14 % vol.) y temperatura de servicio (de 16 a 18 °C). Torremorón Joven, de tempranillo al 100 %, es intenso, de fruta negra y regaliz; Peñalagua, de uva tinta fina al 100 % y elaborado por Bodegas Castillejo de Robledo, es de color rojo cereza, con aroma intenso y paso suave en boca.
 
@@ -31,16 +31,18 @@ Son tintos de cada día, que maridan con carnes rojas, cordero, asados, legumbre
 
 ## Para su carta
 
-Si su carta lleva carnes, asados o cordero y quiere un tinto de Ribera del Duero que se explique solo, pídanos la tarifa. Rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, así que puede añadir el tinto a un pedido de blancos gallegos y completar la carta en un solo reparto. Díganos qué platos de carne trabaja y le orientamos entre una referencia y la otra. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Si su carta lleva carnes, asados o cordero y quiere un tinto de Ribera del Duero que se explique solo, pídanos la tarifa. Rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, así que puede añadir el tinto a un pedido de blancos gallegos y completar la carta en un solo reparto.
+
+Díganos qué platos de carne trabaja y le orientamos entre una referencia y la otra. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ
 
 **¿Qué uva se usa en Ribera del Duero?**
-Principalmente el tempranillo, que en la zona recibe nombres locales como tinto fino o tinta fina. Las dos referencias de nuestro catálogo son 100 % de esa uva.
+Principalmente el tempranillo, que en la zona recibe nombres locales como tinto fino o tinta fina. Nuestras dos referencias son 100 % de esa uva.
 
-**¿Qué significa «tinta fina» en la etiqueta de Peñalagua?**
-Es el nombre local del tempranillo en la zona. La ficha del catálogo lo indica expresamente: uva tinta fina (tempranillo).
+**¿Qué significa «tinta fina» en Peñalagua?**
+Es el nombre local del tempranillo en la zona. Peñalagua se elabora con uva tinta fina (tempranillo) al 100 %.
 
 **¿Qué diferencia hay entre Torremorón y Peñalagua?**
 Ambos son tintos jóvenes de la misma denominación, con 14 % vol. y servicio de 16 a 18 °C. Torremorón destaca por la fruta negra y el regaliz; Peñalagua, por su aroma intenso a frutos rojos y negros y su paso suave en boca.

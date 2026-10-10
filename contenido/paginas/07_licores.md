@@ -17,11 +17,11 @@ Los licores y aguardientes Pousada se suministran en garrafa de 3 litros, el for
 - [Limoncino](/licores/limoncino/)
 - [Pacharán gallego](/licores/pacharan-gallego/)
 
-Cada ficha explica el licor, cómo se sirve y cuál es su formato. Todos se suministran en garrafa de 3 litros. En esta web no publicamos precios: se solicita la tarifa y le atendemos.
+Cada ficha explica el licor, cómo se sirve y cuál es su formato. Todos se suministran en garrafa de 3 litros. Pida la tarifa y le enviamos el precio por garrafa, IVA no incluido.
 
-## Crema de orujo, la que más nos consultan
+## Crema de orujo, el licor de la sobremesa
 
-La crema de orujo es el licor por el que más nos preguntan. Es un licor gallego suave y cremoso, de 15 % vol., que se sirve muy frío en chupito o acompañando el café. Si busca qué lleva, cuántos grados tiene o qué la diferencia de otros licores de crema, lo explicamos en la [ficha de la crema de orujo](/licores/crema-de-orujo/).
+La crema de orujo es un licor gallego suave y cremoso, de 15 % vol., que se sirve muy frío en chupito o acompañando el café. Es el licor que cierra la comida en muchos restaurantes. Cuántos grados tiene, cómo se sirve y en qué se diferencia del orujo blanco: lo explicamos en la [ficha de la crema de orujo](/licores/crema-de-orujo/).
 
 ## Para el final de la comida
 

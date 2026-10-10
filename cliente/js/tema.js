@@ -14,13 +14,13 @@
    - J3  El racimo del pie (y el de las cabeceras de D.O.) se traza (stroke-dashoffset) al entrar en pantalla.
    - Catálogo: filtros por denominación y por tipo (botones que solo aparecen con JS).
    - Formulario: mensaje prerrelleno desde ?interes=…, frase de «particular», botón «Enviando…».
-   Scrub y pin solo en ordenador con ratón (≥ 1.025 px); la cabecera siempre a la vista (los pines empiezan bajo ella). */
+   Scrub y pin solo en ordenador con ratón (≥ 1.025 px de ancho y ≥ 700 px de alto); la cabecera siempre a la vista (los pines empiezan bajo ella). */
 (function () {
   "use strict";
   var d = document, w = window, html = d.documentElement;
   var reducido = w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var raton = w.matchMedia && w.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  var escritorio = function () { return raton && w.innerWidth >= 1025; };
+  var escritorio = function () { return raton && w.innerWidth >= 1025 && w.innerHeight >= 700; };   // Emil (auditoría 08/10): sin pin en portátiles bajos
   var cabAlto = function () { var c = d.querySelector("[data-cab]"); return c ? c.offsetHeight : 84; };
 
   /* ---------- Palabras y líneas (sin SplitText) ---------- */
@@ -153,6 +153,11 @@
     if (est && clavo && pista && escritorio()) {
       var recorrido = function () { return Math.max(0, pista.scrollWidth - clavo.clientWidth); };
       if (recorrido() > 80) {
+        // v3 (paso 38, Emil N-1): con-clavo solo se añade aquí, cuando el pin se crea de verdad; así el CSS
+        // (tema.css, .js.con-clavo .estanteria__*) nunca extiende la pista sin que el JS la mueva — antes dependía
+        // de con-gsap a secas, que ganaba la condición de ancho pero no la de alto, y dejaba la pista recortada
+        // e inalcanzable en portátiles de ≥1025px de ancho y <700px de alto.
+        html.classList.add("con-clavo");
         G.to(pista, { x: function () { return -recorrido(); }, ease: "none",
           scrollTrigger: { trigger: est, start: function () { return "top " + (cabAlto() + 8); }, end: function () { return "+=" + (recorrido() + 200); },
             pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1 } });

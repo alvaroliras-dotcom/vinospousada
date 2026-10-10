@@ -1,5 +1,5 @@
 URL: /comprar/camino-das-estrelas/
-Title: Camiño das Estrelas Valdeorras blanco: tarifa
+Title: Camiño das Estrelas, blanco Valdeorras para hostelería | Pousada
 Meta description: Camiño das Estrelas, blanco de godello, dona branca y palomino de la D.O. Valdeorras, en caja de 12 botellas. Pida tarifa para su local en Madrid.
 Keyword principal: camiño das estrelas valdeorras precio / comprar
 H1: Camiño das Estrelas, vino blanco D.O. Valdeorras
@@ -11,34 +11,34 @@ Graduación: 12,5 % vol.
 Foto: camino-das-estrelas-blanco-valdeorras.png
 Producto: camino-das-estrelas
 ---
-Camiño das Estrelas es un vino blanco de la D.O. Valdeorras, elaborado con godello, dona branca y palomino en viñedos de altura sobre pizarra y esquisto. Si busca comprar Camiño das Estrelas Valdeorras para su restaurante, bar o comercio, lo suministramos en caja de 12 botellas de 75 cl a hostelería de la provincia de Madrid. Solicite nuestra tarifa y le facilitaremos el precio por botella de esta referencia, junto con el resto de blancos gallegos que distribuimos desde nuestra sede de Alcorcón.
+Camiño das Estrelas es un blanco de la D.O. Valdeorras que mezcla godello, dona branca y palomino, de viñedos de altura sobre pizarra y esquisto. El Valdeorras de uso diario: fresco, afrutado y amplio, para mariscos, pescados, arroces y entrantes. Caja de 12 botellas, reparto en toda la provincia de Madrid.
 
-## Características
+## Cómo es en copa
 
-Presenta un color amarillo pajizo brillante. En nariz hay frutas y flores blancas, con leves notas minerales y balsámicas que aportan frescura y un punto de complejidad. Esos matices balsámicos, poco habituales en un blanco joven, le dan un aire fresco y casi herbal que se agradece con platos de mar. Es un aroma limpio y abierto, de los que se reconocen enseguida en la copa, donde la fruta lidera y el fondo mineral acompaña con discreción.
+Presenta un color amarillo pajizo brillante. En nariz hay frutas y flores blancas, con leves notas minerales y balsámicas que aportan frescura y un punto de complejidad. Esos matices balsámicos, poco habituales en un blanco joven, le dan un aire fresco y casi herbal que se agradece con platos de mar.
 
-En boca es amplio, muy frutal y fresco, con un postgusto largo y persistente, que es un punto a favor en hostelería: el vino sigue presente cuando llega el plato y el cliente tiene la sensación de haber bebido algo más que un blanco de paso. Es un vino sabroso, con anchura suficiente para no resultar un blanco de aperitivo sin más, pero con la frescura que se espera de un blanco joven gallego. Se bebe con soltura, sin aristas, y resulta agradable tanto en copa suelta como durante toda una comida.
+En boca es amplio, muy frutal y fresco, con un postgusto largo y persistente. Eso es un punto a favor en hostelería: el vino sigue presente cuando llega el plato y el cliente tiene la sensación de haber bebido algo más que un blanco de paso. Sabroso, con anchura, pero con la frescura que se espera de un blanco joven gallego.
 
-El catálogo lo describe como un blanco gallego elaborado con las variedades godello, dona branca y palomino, de viñedos de altura de la D.O. Valdeorras sobre suelos de pizarra y esquisto. No se indican los porcentajes de cada variedad. El godello es la uva emblemática de la denominación, y aquí se complementa con otras dos variedades tradicionales en Galicia. Su graduación es de 12,5 % vol. y se presenta en botella de 75 cl.
-
-Su carácter es el de un blanco de ensamblaje, más versátil y menos rotundo que un godello monovarietal: fresco, afrutado, amplio y sabroso, pensado para el uso diario. Funciona como blanco de copa o de menú en cartas de cocina gallega, con la ventaja de llevar la denominación Valdeorras y el nombre sugerente de un camino, fácil de recordar y de recomendar en sala. Una opción cómoda para quien quiere godello en la carta sin salirse de un vino de uso cotidiano.
+Es un blanco de ensamblaje: el godello, uva emblemática de la denominación, se complementa con dona branca y palomino, dos variedades tradicionales en Galicia. El resultado es más versátil y menos rotundo que un godello monovarietal, pensado para el uso diario.
 
 ## Maridaje y servicio
 
-El catálogo lo recomienda con mariscos, pescados, arroces y entrantes. Es un vino de acompañamiento versátil: va bien con un entrante frío, con un pescado a la plancha o con un arroz de marisco, y su frescura limpia el paladar entre platos. La temperatura de servicio indicada es de 8 a 10 °C, bien frío, para realzar la fruta y las flores blancas. Su graduación es de 12,5 % vol., en botella de 75 cl. Admite el servicio en cubitera, sobre todo en terraza o en comidas largas.
+Va con mariscos, pescados, arroces y entrantes. Es un vino de acompañamiento versátil: un entrante frío, un pescado a la plancha o un arroz de marisco, y su frescura limpia el paladar entre platos. Se sirve entre 8 y 10 °C, bien frío, para realzar la fruta y las flores blancas. Admite el servicio en cubitera, sobre todo en terraza o en comidas largas.
 
 ## Para su carta
 
-Camiño das Estrelas encaja como blanco de Valdeorras de uso diario para locales que quieren incluir la denominación sin recurrir a un godello monovarietal. Se suministra en caja de 12 botellas de 75 cl, un formato cómodo para reposición frecuente. Para conocer el precio por botella, solicite tarifa mediante el formulario de la web o llame al 666 631 615. Le enviaremos la tarifa completa y le asesoraremos si desea combinarlo con otros blancos del catálogo, como Lagar de Cigur o Roandi. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Camiño das Estrelas encaja como blanco de Valdeorras de uso diario para el local que quiere incluir la denominación sin recurrir a un godello monovarietal. Lleva la D.O. Valdeorras y un nombre fácil de recordar y de recomendar en sala. La caja de 12 botellas es cómoda para una reposición frecuente.
+
+Si quiere compararlo con los godellos al 100 % de la misma denominación, mire [Lagar de Cigur](/comprar/lagar-de-cigur-godello/) o [Roandi](/comprar/vino-godello-roandi/). Para pedir la tarifa, rellene el formulario o llame al 666 631 615. Distribuimos a la hostelería de la provincia de Madrid desde Alcorcón.
 
 ---
 FAQ
 
-**¿Qué uvas lleva Camiño das Estrelas?**
-Godello, dona branca y palomino.
+**¿Qué diferencia hay entre Camiño das Estrelas y un godello de Valdeorras?**
+Camiño das Estrelas es un ensamblaje de godello, dona branca y palomino: más versátil y afrutado, para el servicio diario. Lagar de Cigur y Roandi son godellos al 100 %, con más carácter mineral y más fondo. En una carta pueden convivir: uno por copas y otro por botella.
 
-**¿Es un godello 100 %?**
-No: es un blanco de varias variedades; el catálogo no indica los porcentajes.
+**¿Es buen blanco para vender por copa?**
+Sí. Es fresco, fácil de explicar y con un final largo que deja buen recuerdo. Viene en caja de 12 botellas, con fondo de sobra para una semana de servicio en un local medio.
 
-**¿A qué temperatura se sirve?**
-Entre 8 y 10 °C.
+**¿Cómo recibo el precio?**
+Pida la tarifa por el formulario, por teléfono o por WhatsApp: le llega con el precio por botella, IVA no incluido, de esta y del resto de referencias. Sin pedido mínimo.
