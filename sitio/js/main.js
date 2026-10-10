@@ -131,21 +131,26 @@
   /* ---------- Formularios: sello de tiempo, recuperar lo escrito y avisos de vuelta ---------- */
   var q = w.location.search;
   function claveForm(f) { var t = f.querySelector('input[name="tipo"]'); return "gyf-form-" + (t ? t.value : (f.classList.contains("llamada__form") ? "llamada" : "contacto")); }
-  function camposForm(f) { return [].filter.call(f.querySelectorAll("input[name], textarea[name]"), function (i) { return i.type !== "hidden" && i.type !== "checkbox" && i.name !== "web"; }); }
+  function camposForm(f) { return [].filter.call(f.querySelectorAll("input[name], textarea[name]"), function (i) { return i.type !== "hidden" && i.type !== "checkbox" && i.name !== "contacto_alt"; }); }
   d.addEventListener("submit", function (e) {
     var f = e.target, t = f.querySelector && f.querySelector('input[name="t"]');
     if (t) t.value = Math.round(w.performance && performance.now ? performance.now() : 0);
     if (!f.querySelectorAll) return;
     var datos = {}; camposForm(f).forEach(function (i) { datos[i.name] = i.value; });
+    var sel = f.querySelector('select[name="tipo_negocio"]'); if (sel) datos.tipo_negocio = sel.value;
+    var qi = /[?&]interes=([a-z0-9\-]+)/i.exec(w.location.search); datos._interes = qi ? qi[1] : "";
+    try { var ref = d.referrer ? new URL(d.referrer) : null; datos._origen = ref && ref.hostname === w.location.hostname ? ref.pathname : ""; } catch (x) { datos._origen = ""; }
     try { sessionStorage.setItem(claveForm(f), JSON.stringify(datos)); } catch (x) {}
   }, true);
   var errForm = /[?&](llamada|enviado)=0/.test(q), okForm = /[?&](llamada|enviado)=1/.test(q);
   if (errForm || okForm) d.querySelectorAll("form").forEach(function (f) {
     var k = claveForm(f);
     try {
-      if (okForm) { sessionStorage.removeItem(k); return; }
-      var datos = JSON.parse(sessionStorage.getItem(k) || "null"); if (!datos) return;
+      var datos = JSON.parse(sessionStorage.getItem(k) || "null");
+      if (okForm) { if (datos) w.__gyfEnvio = datos; sessionStorage.removeItem(k); return; }
+      if (!datos) return;
       camposForm(f).forEach(function (i) { if (datos[i.name] && !i.value) i.value = datos[i.name]; });
+      var s2 = f.querySelector('select[name="tipo_negocio"]'); if (s2 && datos.tipo_negocio && !s2.value) s2.value = datos.tipo_negocio;
     } catch (x) {}
   });
   var ok = d.getElementById("form-ok"), ko = d.getElementById("form-error");
@@ -156,7 +161,14 @@
       else f.hidden = true;
     });
   }
-  if (ko && /enviado=0/.test(q)) ko.hidden = false;
+  if (ko && /enviado=0/.test(q)) {
+    ko.hidden = false;
+    /* Dani C-03: el motivo que devuelve enviar.php se traduce al texto concreto de data-motivos (lo escribe build.formulario) */
+    try {
+      var mo = /[?&]motivo=([a-z_\-]+)/i.exec(q), mapa = JSON.parse(ko.getAttribute("data-motivos") || "{}"), tx = ko.querySelector("[data-error-texto]");
+      if (tx && mo && mapa[mo[1]]) tx.textContent = mapa[mo[1]];
+    } catch (x) {}
+  }
   var lok = d.querySelector("[data-llamada-ok]"), lko = d.querySelector("[data-llamada-error]");
   if (lok && /llamada=1/.test(q)) {
     lok.hidden = false;
@@ -185,8 +197,7 @@
     gtag("consent", "update", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" });
     if (!silencioso) guardar("si");
   }
-  if (/llamada=1/.test(q)) w.dataLayer.push({ event: "solicitud_llamada", pagina: w.location.pathname });
-  if (/enviado=1/.test(q)) w.dataLayer.push({ event: "formulario_enviado", pagina: w.location.pathname });
+  if (/enviado=1/.test(q)) { var ev = w.__gyfEnvio || {}; w.dataLayer.push({ event: "formulario_enviado", pagina: w.location.pathname, origen: ev._origen || "", interes: ev._interes || "", tipo_negocio: ev.tipo_negocio || "" }); }
   if (/(llamada|enviado)=/.test(q) && w.history && history.replaceState) {
     try { history.replaceState(null, "", w.location.pathname + w.location.hash); } catch (e) {}
   }
@@ -201,13 +212,13 @@
     if (!a) return;
     var href = a.getAttribute("href");
     if (/^tel:/.test(href) || /wa\.me\//.test(href)) {
-      w.dataLayer.push({ event: /^tel:/.test(href) ? "click_llamar" : "click_whatsapp", ubicacion: ubicacion(a), pagina: PAG, abierto: ABIERTO === true });
+      w.dataLayer.push({ event: /^tel:/.test(href) ? "clic_llamar" : "clic_whatsapp", ubicacion: ubicacion(a), pagina: PAG, abierto: ABIERTO === true });
     } else if (/maps\.google\.com\/\?cid/.test(href)) {
-      w.dataLayer.push({ event: "click_resenas_google", ubicacion: ubicacion(a), pagina: PAG });
-    } else if (a.classList.contains("tarjeta__ir")) {
-      w.dataLayer.push({ event: "click_te_llamamos", pagina: PAG });
-    } else if (a.matches(".tarjeta__extra, .banda__extra, .mini__extra")) {
-      w.dataLayer.push({ event: "click_cta_extra", ubicacion: ubicacion(a), destino: href, pagina: PAG });
+      w.dataLayer.push({ event: "clic_resenas_google", ubicacion: ubicacion(a), pagina: PAG });
+    } else if (/^\/contacto\/([?#]|$)/.test(href)) {
+      /* Dani C-01: cualquier enlace a la página de contacto es «clic_cta_tarifa», con la ubicación, la página de origen y el interés (?interes=) */
+      var mi = /[?&]interes=([a-z0-9\-]+)/i.exec(href);
+      w.dataLayer.push({ event: "clic_cta_tarifa", ubicacion: ubicacion(a), origen: PAG, interes: mi ? mi[1] : "", pagina: PAG });
     }
   }, true);
   function tipoForm(f) { var t = f.querySelector('input[name="tipo"]'); return t ? t.value : (f.classList.contains("llamada__form") ? "llamada" : "contacto"); }
@@ -220,12 +231,12 @@
     var f = e.target.form; if (!f) return;
     var ahora = Date.now(); if (f._err && ahora - f._err < 800) return;
     f._err = ahora;
-    w.dataLayer.push({ event: "form_error", formulario: tipoForm(f), campo: e.target.name || "", motivo: "validacion", pagina: PAG });
+    w.dataLayer.push({ event: "formulario_error", formulario: tipoForm(f), campo: e.target.name || "", motivo: "validacion", pagina: PAG });
   }, true);
   var mq = /[?&](llamada|enviado)=0/.exec(q);
   if (mq) {
     var mm = /[?&]motivo=([a-z_\-]+)/i.exec(q);
-    w.dataLayer.push({ event: "form_error", formulario: mq[1] === "llamada" ? "llamada" : "contacto", motivo: mm ? mm[1] : "servidor", pagina: PAG });
+    w.dataLayer.push({ event: "formulario_error", formulario: mq[1] === "llamada" ? "llamada" : "contacto", motivo: mm ? mm[1] : "servidor", pagina: PAG });
   }
   if (PROD && GTM) {
     w.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
