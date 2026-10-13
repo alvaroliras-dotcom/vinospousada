@@ -8,7 +8,7 @@ D.O.: ribeiro
 Tipo: Blanco joven
 Uva: Palomino y torrontés
 Graduación: 11,5-12,5 % vol.
-Foto: finca-lavandeira-blanco-ribeiro.jpg
+Foto: finca-lavandeira-blanco-ribeiro.png
 Producto: finca-lavandeira
 ---
 Finca Lavandeira blanco es un joven y afrutado de la D.O. Ribeiro, de palomino (70 %) y torrontés (30 %): fresco, ligero y de fácil aceptación en sala. El Ribeiro de copa y de menú, para mariscos, pescados blancos, arroces y tapas. Caja de 12 botellas, reparto en toda la provincia de Madrid.

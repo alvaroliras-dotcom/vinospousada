@@ -173,7 +173,7 @@
       "formato": "Caja de 12 botellas de 75 cl",
       "temperatura": "",
       "maridaje": "Carnes, embutidos y quesos",
-      "foto": "finca-lavandeira-tinto-ribeiro.jpg",
+      "foto": "finca-lavandeira-tinto-ribeiro.png",
       "alt": "Botella de Finca Lavandeira tinto joven, vino tinto de la D.O. Ribeiro"
     },
     {
@@ -187,7 +187,7 @@
       "formato": "Caja de 12 botellas de 75 cl",
       "temperatura": "6-10 °C",
       "maridaje": "Mariscos, pescados y arroces",
-      "foto": "finca-lavandeira-blanco-ribeiro.jpg",
+      "foto": "finca-lavandeira-blanco-ribeiro.png",
       "alt": "Botella de Finca Lavandeira blanco, vino blanco joven de la D.O. Ribeiro"
     },
     {
@@ -215,7 +215,7 @@
       "formato": "Caja de 12 botellas de 75 cl",
       "temperatura": "",
       "maridaje": "Carnes a la brasa, guisos y caza",
-      "foto": "bancales-mencia-barrica-valdeorras.jpg",
+      "foto": "bancales-mencia-barrica-valdeorras.png",
       "alt": "Botella de Bancales Mencía, vino tinto de mencía con barrica de la D.O. Valdeorras"
     },
     {
@@ -244,7 +244,7 @@
       "formato": "Caja de 6 botellas de 75 cl",
       "temperatura": "8-10 °C",
       "maridaje": "Pescados, mariscos y arroces",
-      "foto": "roandi-godello-valdeorras.jpg",
+      "foto": "roandi-godello-valdeorras.png",
       "alt": "Botella de Roandi Godello, vino blanco de la D.O. Valdeorras"
     },
     {
@@ -258,7 +258,7 @@
       "formato": "Caja de 6 botellas de 75 cl",
       "temperatura": "10-12 °C",
       "maridaje": "Pescados con salsa, carnes blancas y quesos",
-      "foto": "alento-roandi-godello-lias-valdeorras.jpg",
+      "foto": "alento-roandi-godello-lias-valdeorras.png",
       "alt": "Botella de Alento de Roandi, godello de cepas viejas sobre lías de la D.O. Valdeorras"
     },
     {
@@ -272,7 +272,7 @@
       "formato": "Caja de 6 botellas de 75 cl",
       "temperatura": "",
       "maridaje": "Carnes, embutidos y quesos",
-      "foto": "flavia-mencia-tinto-joven-valdeorras.jpg",
+      "foto": "flavia-mencia-tinto-joven-valdeorras.png",
       "alt": "Botella de Flavia de Roandi, vino tinto joven de mencía de la D.O. Valdeorras"
     },
     {
@@ -391,7 +391,7 @@
       "formato": "Garrafa de 3 litros",
       "temperatura": "Muy fría",
       "maridaje": "Chupito, con el café o en postres",
-      "foto": "crema-de-orujo-gallega-garrafa-3-litros.jpg",
+      "foto": "crema-de-orujo-gallega-garrafa-3-litros.png",
       "alt": "Garrafa de 3 litros de crema de orujo Vinos Gallegos Pousada"
     },
     {
@@ -405,7 +405,7 @@
       "formato": "Garrafa de 3 litros",
       "temperatura": "Frío",
       "maridaje": "Chupito de sobremesa",
-      "foto": "aguardiente-de-hierbas-gallego-garrafa-3-litros.jpg",
+      "foto": "aguardiente-de-hierbas-gallego-garrafa-3-litros.png",
       "alt": "Garrafa de 3 litros de aguardiente de hierbas Vinos Gallegos Pousada"
     },
     {
@@ -419,7 +419,7 @@
       "formato": "Garrafa de 3 litros",
       "temperatura": "Frío o con hielo",
       "maridaje": "Con el café o en vaso corto con hielo",
-      "foto": "licor-de-cafe-gallego-garrafa-3-litros.jpg",
+      "foto": "licor-de-cafe-gallego-garrafa-3-litros.png",
       "alt": "Botella de licor de café Vinos Gallegos Pousada"
     },
     {
@@ -433,7 +433,7 @@
       "formato": "Garrafa de 3 litros",
       "temperatura": "Muy frío",
       "maridaje": "Chupito helado de sobremesa",
-      "foto": "limoncino-licor-de-limon-gallego-garrafa-3-litros.jpg",
+      "foto": "limoncino-licor-de-limon-gallego-garrafa-3-litros.png",
       "alt": "Garrafa de 3 litros de limoncino Vinos Gallegos Pousada"
     },
     {
@@ -447,7 +447,7 @@
       "formato": "Garrafa de 3 litros",
       "temperatura": "",
       "maridaje": "Chupito o copa pequeña con el café",
-      "foto": "orujo-blanco-gallego-garrafa-3-litros.jpg",
+      "foto": "orujo-blanco-gallego-garrafa-3-litros.png",
       "alt": "Garrafa de 3 litros de orujo blanco Vinos Gallegos Pousada"
     },
     {
@@ -461,7 +461,7 @@
       "formato": "Garrafa de 3 litros",
       "temperatura": "Frío o con hielo",
       "maridaje": "Vaso corto con hielo, de sobremesa",
-      "foto": "pacharan-gallego-garrafa-3-litros.jpg",
+      "foto": "pacharan-gallego-garrafa-3-litros.png",
       "alt": "Garrafa de 3 litros de pacharán gallego Vinos Gallegos Pousada"
     }
   ]

@@ -8,7 +8,7 @@ D.O.: ribeiro
 Tipo: Tinto joven
 Uva: Uvas tradicionales del Ribeiro
 Graduación: 12,5 % vol.
-Foto: finca-lavandeira-tinto-ribeiro.jpg
+Foto: finca-lavandeira-tinto-ribeiro.png
 Producto: finca-lavandeira-tinto
 ---
 Finca Lavandeira tinto es el tinto joven de la D.O. Ribeiro, una denominación de blancos que aquí ofrece una alternativa tinta con personalidad gallega: fresco, carnoso y afrutado. Para carnes rojas, caza, embutidos y quesos curados. Caja de 12 botellas, reparto en toda la provincia de Madrid.
