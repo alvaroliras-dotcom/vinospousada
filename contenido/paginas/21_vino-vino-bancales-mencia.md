@@ -8,7 +8,7 @@ D.O.: valdeorras
 Tipo: Tinto con barrica
 Uva: Mencía
 Graduación: 13 % vol.
-Foto: bancales-mencia-barrica-valdeorras.jpg
+Foto: bancales-mencia-barrica-valdeorras.png
 Producto: vino-bancales-mencia
 ---
 Bancales Mencía, de Bodega Roandi, es un tinto de mencía con paso por barrica de la D.O. Valdeorras: redondo, especiado y de taninos suaves. La alternativa gallega al crianza de siempre, para la carta de carne a la brasa, estofados y caza. Caja de 12 botellas, reparto en toda la provincia de Madrid.

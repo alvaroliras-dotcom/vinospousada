@@ -8,7 +8,7 @@ D.O.: —
 Tipo: Licor
 Uva: —
 Graduación: 25 % vol.
-Foto: licor-de-cafe-gallego-garrafa-3-litros.jpg
+Foto: licor-de-cafe-gallego-garrafa-3-litros.png
 Producto: licor-de-cafe
 ---
 El licor de café de Vinos Pousada es un licor gallego de 25 % vol. de aroma intenso a café, equilibrado y de sabor envolvente. Se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid, con reparto desde Alcorcón. Se recomienda tomar solo o con hielo, y por su perfil encaja en la sobremesa, junto al café y el postre. Si lo busca para su carta de licores, tiene aquí la referencia con graduación, formato y forma de pedir. Solicite la tarifa y le atendemos por teléfono, correo o WhatsApp.

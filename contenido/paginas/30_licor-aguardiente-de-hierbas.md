@@ -8,7 +8,7 @@ D.O.: —
 Tipo: Licor de hierbas
 Uva: —
 Graduación: 30 % vol.
-Foto: aguardiente-de-hierbas-gallego-garrafa-3-litros.jpg
+Foto: aguardiente-de-hierbas-gallego-garrafa-3-litros.png
 Producto: aguardiente-de-hierbas
 ---
 El aguardiente de hierbas de Vinos Pousada es un licor tradicional gallego de 30 % vol., elaborado con una selección de hierbas aromáticas gallegas, de sabor intenso y fresco. Se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid, con reparto desde Alcorcón. Es una referencia habitual para el final de la comida, servida bien fría en chupito, y combina con las sobremesas de cocina gallega. Si quiere incorporarla a su carta de licores, solicite la tarifa y le atendemos por teléfono o por WhatsApp.

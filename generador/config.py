@@ -206,7 +206,7 @@ ESTANTERIA = [
     ("/denominaciones/ribera-del-duero/", "Ribera del Duero", "Tintos jóvenes", "penalagua-tinto-joven-ribera-del-duero.png", False),
     ("/denominaciones/rioja/", "Rioja", "Crianza y joven", "geron-crianza-rioja.png", False),
     ("/vino-turbio/", "Vino turbio", "Barril de 50 litros", "faladoiro-vino-turbio-ribadavia.png", True),
-    ("/licores/", "Licores Pousada", "Garrafa de 3 litros", "crema-de-orujo-gallega-garrafa-3-litros.jpg", False),
+    ("/licores/", "Licores Pousada", "Garrafa de 3 litros", "crema-de-orujo-gallega-garrafa-3-litros.png", False),
 ]
 ESTANTERIA_ETIQUETA = "{n_vinos} vinos y {n_licores} licores"   # cifras que cuenta el generador (fichas publicadas), nunca fijas (David, 09/10/2026)
 ESTANTERIA_NOTA = "Ordenados por origen. Cada entrada lleva a sus fichas."

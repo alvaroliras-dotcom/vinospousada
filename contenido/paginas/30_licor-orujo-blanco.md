@@ -8,7 +8,7 @@ D.O.: —
 Tipo: Aguardiente
 Uva: —
 Graduación: 40 % vol.
-Foto: orujo-blanco-gallego-garrafa-3-litros.jpg
+Foto: orujo-blanco-gallego-garrafa-3-litros.png
 Producto: orujo-blanco
 ---
 El orujo blanco de Vinos Pousada es un aguardiente gallego tradicional de 40 % vol., limpio y cristalino, de carácter auténtico y sabor inconfundible. Es el licor de mayor graduación de la gama, y se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid. Se sirve en chupito, frío o a temperatura de bodega, al final de la comida. Con reparto desde Alcorcón, está pensado para cartas de licores de hostelería. Solicite la tarifa por teléfono, correo o WhatsApp.

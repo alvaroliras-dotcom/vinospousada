@@ -8,7 +8,7 @@ D.O.: —
 Tipo: Licor de endrinas
 Uva: —
 Graduación: 25 % vol.
-Foto: pacharan-gallego-garrafa-3-litros.jpg
+Foto: pacharan-gallego-garrafa-3-litros.png
 Producto: pacharan-gallego
 ---
 El pacharán gallego de Vinos Pousada es un licor de 25 % vol. elaborado con endrinas seleccionadas, de sabor intenso y equilibrado, un clásico de nuestra tierra. Se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid, con reparto desde Alcorcón. Es un licor de sobremesa que se toma frío, solo o con hielo, y que completa cualquier carta de digestivos de cocina gallega. Si desea incluirlo en su local, solicite la tarifa por teléfono, correo o WhatsApp y le contestamos.

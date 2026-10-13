@@ -8,7 +8,7 @@ D.O.: —
 Tipo: Licor de limón
 Uva: —
 Graduación: 20 % vol.
-Foto: limoncino-licor-de-limon-gallego-garrafa-3-litros.jpg
+Foto: limoncino-licor-de-limon-gallego-garrafa-3-litros.png
 Producto: limoncino
 ---
 El limoncino de Vinos Pousada, que también se escribe «limonciño», es un licor de limón de 20 % vol., elaborado con el sabor del limón gallego, suave, fresco y agradable, apto para cualquier ocasión. Se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid, con reparto desde Alcorcón. Es una referencia ligera para cerrar una comida de pescado o marisco o para acompañar un postre. Si quiere incluirlo en su carta de licores, solicite la tarifa por teléfono, correo o WhatsApp.

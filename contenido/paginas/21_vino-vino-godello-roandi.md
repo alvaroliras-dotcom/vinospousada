@@ -8,7 +8,7 @@ D.O.: valdeorras
 Tipo: Godello
 Uva: Godello 100 %
 Graduación: 12,5 % vol.
-Foto: roandi-godello-valdeorras.jpg
+Foto: roandi-godello-valdeorras.png
 Producto: vino-godello-roandi
 ---
 Roandi Godello, de Bodega Roandi, es un blanco 100 % godello de la D.O. Valdeorras, de viñedos de ladera sobre pizarra y esquisto a entre 500 y 600 metros de altitud: floral, de fruta de hueso y hierbas aromáticas. Para arroz con marisco, pescado al horno y quesos suaves. Caja de 6 botellas.

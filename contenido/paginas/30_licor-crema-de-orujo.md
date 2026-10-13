@@ -8,7 +8,7 @@ D.O.: —
 Tipo: Crema de licor
 Uva: —
 Graduación: 15 % vol.
-Foto: crema-de-orujo-gallega-garrafa-3-litros.jpg
+Foto: crema-de-orujo-gallega-garrafa-3-litros.png
 Producto: crema-de-orujo
 ---
 La crema de orujo de Vinos Pousada es un licor gallego suave y cremoso, de 15 grados (15 % vol.), que se suministra en garrafa de 3 litros a restaurantes, bares y comercios de la provincia de Madrid. En barra funciona como chupito muy frío al final de la comida; en cocina sirve de base para postres y acompaña el café. Es una de las referencias de licores más pedidas por la hostelería; la distribuimos desde Alcorcón, con reparto en toda la provincia. Si quiere incluirla en su carta de digestivos, solicite la tarifa y le atendemos por teléfono o por WhatsApp.

@@ -8,7 +8,7 @@ D.O.: valdeorras
 Tipo: Tinto joven
 Uva: Mencía 85 % y variedades autóctonas
 Graduación: 13 % vol.
-Foto: flavia-mencia-tinto-joven-valdeorras.jpg
+Foto: flavia-mencia-tinto-joven-valdeorras.png
 Producto: vino-flavia-mencia
 ---
 Flavia, de Bodega Roandi, es un tinto joven de la D.O. Valdeorras con mencía como uva principal (85 %) y cinco meses en barrica de roble americano: fresco, vivo y con fruta confitada. El tinto de rotación para la brasa, las setas y los guisos de temporada. Caja de 6 botellas, reparto en toda la provincia de Madrid.

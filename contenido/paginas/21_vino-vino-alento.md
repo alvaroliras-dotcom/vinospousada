@@ -8,7 +8,7 @@ D.O.: valdeorras
 Tipo: Godello sobre lías
 Uva: Godello 100 % de cepas viejas
 Graduación: 13 % vol.
-Foto: alento-roandi-godello-lias-valdeorras.jpg
+Foto: alento-roandi-godello-lias-valdeorras.png
 Producto: vino-alento
 ---
 Alento de Roandi, de Bodega Roandi, es un godello 100 % de cepas viejas de la D.O. Valdeorras, elaborado sobre sus finas lías y de producción limitada. El godello con más cuerpo de la casa, para la carta: aves asadas, pescados de carne firme y arroces melosos. Caja de 6 botellas, reparto en toda la provincia de Madrid.
