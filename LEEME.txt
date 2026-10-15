@@ -1,0 +1,15 @@
+08-WEB · POUSADA · v2 · 15/10/2026 · 94 archivos en 2 tandas
+
+QUÉ CAMBIA
+- Horario de 8 a 16 h (antes de 8 a 20 h) en toda la web: textos, formulario, tarjeta de llamada y marcado para Google.
+- Cabecera de /licores/: bodegón nuevo de las seis garrafas sobre fondo blanco, ancho bajo el titular y visible también en móvil.
+- Ficha de Google: CID real y coordenadas del local en el marcado (antes de prueba).
+
+CÓMO SUBIRLO A GITHUB (repositorio vinospousada > Add file > Upload files), en este orden:
+  1. Abre TANDA-1. Selecciona lo que ves al abrirla (cliente, contenido, generador, herramientas, recursos),
+     arrástralo junto a la zona de subida y pulsa «Commit changes». Espera a que termine.
+  2. Abre TANDA-2. Arrastra la carpeta que ves (sitio) y pulsa «Commit changes».
+Vercel vuelve a desplegar solo. Para ver los cambios en la vista previa: /licores/?v=2
+
+Los zip de al lado son lo mismo por tandas.
+NO se ha subido nada al alojamiento de Hostinger: la web vieja sigue igual.

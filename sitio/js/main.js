@@ -79,11 +79,11 @@
     var h = parseInt(p.hour, 10) % 24;
     var hoy = new Date(Date.UTC(parseInt(p.year, 10), parseInt(p.month, 10) - 1, parseInt(p.day, 10)));
     var laborable = esLaborable(hoy);
-    var abierto = ABIERTO = laborable && h >= 8 && h < 20;
+    var abierto = ABIERTO = laborable && h >= 8 && h < 16;
     d.querySelectorAll("[data-estado]").forEach(function (el) {
       el.classList.add(abierto ? "abierto" : "fuera");
       var s = el.querySelector("span");
-      if (s) s.textContent = abierto ? "Abierto ahora · hasta las 20:00" : "Ahora cerrado · de 8 a 20 h";
+      if (s) s.textContent = abierto ? "Abierto ahora · hasta las 16:00" : "Ahora cerrado · de 8 a 16 h";
     });
     var txt;
     if (abierto) txt = "Le llamamos hoy mismo.";
