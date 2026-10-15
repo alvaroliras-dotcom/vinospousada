@@ -31,7 +31,7 @@ En chupito o copa pequeña, al final de la comida, con el café. Muchos locales 
 
 ## Para su local
 
-El orujo blanco se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h, con el nombre de su local. Haga su pedido por WhatsApp, por teléfono o por correo, y sume el resto de licores y vinos en la misma entrega si le conviene. Si duda sobre cuántas garrafas necesita, cuéntenos el tipo de servicio que ofrece y le orientamos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+El orujo blanco se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h, con el nombre de su local. Haga su pedido por WhatsApp, por teléfono o por correo, y sume el resto de licores y vinos en la misma entrega si le conviene. Si duda sobre cuántas garrafas necesita, cuéntenos el tipo de servicio que ofrece y le orientamos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

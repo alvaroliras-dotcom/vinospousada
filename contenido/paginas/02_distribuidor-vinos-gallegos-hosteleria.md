@@ -34,7 +34,7 @@ La tarifa se pide directamente a la empresa, con el precio por botella de cada r
 
 ## Reparto y horario
 
-Repartimos en toda la provincia de Madrid. Le atendemos de lunes a viernes, de 8 a 20 h. Fuera de horario, cogemos el móvil. Si quiere ver la cobertura con detalle, consulte [reparto en la provincia de Madrid](/distribuidor-vinos-hosteleria-madrid/) o nuestra [sede en Alcorcón](/distribuidor-vinos-hosteleria-alcorcon/).
+Repartimos en toda la provincia de Madrid. Le atendemos de lunes a viernes, de 8 a 16 h. Fuera de horario, cogemos el móvil. Si quiere ver la cobertura con detalle, consulte [reparto en la provincia de Madrid](/distribuidor-vinos-hosteleria-madrid/) o nuestra [sede en Alcorcón](/distribuidor-vinos-hosteleria-alcorcon/).
 
 ## Para quién trabajamos
 
@@ -44,7 +44,7 @@ Trabajamos tanto con el local que necesita unas pocas cajas para probar una refe
 
 ## Solicite su tarifa
 
-Cuéntenos su local y lo que le interesa. Le respondemos de lunes a viernes, de 8 a 20 h.
+Cuéntenos su local y lo que le interesa. Le respondemos de lunes a viernes, de 8 a 16 h.
 
 ---
 FAQ

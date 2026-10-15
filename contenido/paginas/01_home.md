@@ -19,7 +19,7 @@ No hace falta que su carta sea de cocina gallega para que un albariño, un godel
 - **Pedir es sencillo.** Haga su pedido por WhatsApp, por teléfono o por correo.
 - **Sin pedido mínimo.** Servimos desde cajas hasta palés, según lo que necesite su local.
 - **Pago.** Por transferencia, Bizum, tarjeta o efectivo.
-- **Horario.** De lunes a viernes, de 8 a 20 h. Fuera de horario, cogemos el móvil.
+- **Horario.** De lunes a viernes, de 8 a 16 h. Fuera de horario, cogemos el móvil.
 - **Esta web no vende online.** Solicite la tarifa o llámenos y le atendemos directamente.
 
 ## Vinos gallegos, vino turbio y licores
@@ -40,4 +40,4 @@ Repartimos en toda la provincia de Madrid: desde Alcorcón a Móstoles, Leganés
 
 ## Pida su tarifa
 
-Cuéntenos qué tipo de local tiene y qué le interesa: vinos, turbio, licores. Le atendemos de lunes a viernes, de 8 a 20 h.
+Cuéntenos qué tipo de local tiene y qué le interesa: vinos, turbio, licores. Le atendemos de lunes a viernes, de 8 a 16 h.

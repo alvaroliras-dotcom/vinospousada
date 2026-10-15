@@ -31,7 +31,7 @@ Muy frío, en copa pequeña o chupito, al final de la comida; por su carácter f
 
 ## Para su local
 
-El limoncino se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo, por lo que puede empezar con una sola garrafa. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Haga su pedido por WhatsApp, teléfono o correo, y añada los demás licores y vinos que necesite en la misma entrega. Si prefiere empezar con una sola garrafa para ver cómo responde su clientela, díganoslo y se la preparamos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+El limoncino se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo, por lo que puede empezar con una sola garrafa. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Haga su pedido por WhatsApp, teléfono o correo, y añada los demás licores y vinos que necesite en la misma entrega. Si prefiere empezar con una sola garrafa para ver cómo responde su clientela, díganoslo y se la preparamos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

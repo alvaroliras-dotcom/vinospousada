@@ -33,7 +33,7 @@ Para el responsable de sala, el albariño tiene una ventaja práctica: el client
 
 ## Para su carta
 
-Si quiere incorporar un albariño de Rías Baixas a su carta, o ampliar el que ya tiene, pídanos la tarifa. Puede rellenar el formulario de contacto o llamar al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede combinar referencias de distintas denominaciones en un mismo pedido.
+Si quiere incorporar un albariño de Rías Baixas a su carta, o ampliar el que ya tiene, pídanos la tarifa. Puede rellenar el formulario de contacto o llamar al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede combinar referencias de distintas denominaciones en un mismo pedido.
 
 Cuéntenos qué tipo de local tiene y qué nivel de vino busca, y le proponemos una selección de albariños y otros blancos gallegos que encaje con su cocina. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

@@ -14,7 +14,7 @@ El [vino turbio gallego](/vino-turbio/), de la zona de Ribadavia, en barril de 5
 
 ## Cómo trabajamos hoy
 
-Distribuimos vinos gallegos, vino turbio y licores a bares y restaurantes de la provincia de Madrid, desde nuestra sede de [Alcorcón](/distribuidor-vinos-hosteleria-alcorcon/). Repartimos en toda la provincia, sin pedido mínimo, y servimos desde cajas hasta palés. Le atendemos de lunes a viernes, de 8 a 20 h; fuera de horario, cogemos el móvil.
+Distribuimos vinos gallegos, vino turbio y licores a bares y restaurantes de la provincia de Madrid, desde nuestra sede de [Alcorcón](/distribuidor-vinos-hosteleria-alcorcon/). Repartimos en toda la provincia, sin pedido mínimo, y servimos desde cajas hasta palés. Le atendemos de lunes a viernes, de 8 a 16 h; fuera de horario, cogemos el móvil.
 
 El [catálogo](/catalogo/) reúne hoy {n_vinos} vinos y {n_licores} licores, con las denominaciones gallegas como base y otras zonas para completar la carta. La selección cambia con la temporada.
 

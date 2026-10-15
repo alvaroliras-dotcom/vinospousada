@@ -616,3 +616,10 @@ html{scroll-padding-top:calc(var(--cab-alto) + 16px)}
   .js.con-gsap [data-palabras]:not(.listo) .pal,.js.con-gsap [data-lineas]:not(.listo) .lin,.js.con-gsap .pie__sim:not(.listo) path{opacity:1}
   .js.con-gsap [data-zoom] img{transform:none}
 }
+
+/* 15/10/2026 (Álvaro): cabecera de /licores/ con bodegón de las seis garrafas, ancho y bajo el texto; se ve también en móvil */
+.cab-int--bodegon .cab-int__grid{grid-template-columns:minmax(0,1fr)}
+.cab-int__pieza.cab-int__bodegon{grid-column:1;grid-row:2;margin:clamp(28px,4vw,48px) 0 0;border-radius:var(--r-m);overflow:hidden;box-shadow:0 30px 60px -30px rgba(23,32,31,.45)}
+.cab-int__bodegon img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover}
+@media (min-width:1000px){.cab-int--bodegon .cab-int__txt{max-width:780px}}
+@media (max-width:767px){.cab-int__bodegon img{aspect-ratio:3/2;object-position:50% 70%}}

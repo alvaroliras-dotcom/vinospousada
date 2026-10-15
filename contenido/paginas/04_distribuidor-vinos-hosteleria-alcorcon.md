@@ -18,7 +18,7 @@ La web no es una tienda: antes de acercarse, llame o escriba y concertamos lo qu
 
 Al 666 631 615 le atendemos nosotros, quienes conocemos el género y el reparto. Vinos Gallegos Pousada se fundó en 1979 en Alcorcón y desde entonces sirve a la hostelería de Madrid.
 
-El horario es de lunes a viernes, de 8 a 20 h. Fuera de horario, cogemos el móvil. Y si prefiere escribir, también atendemos por WhatsApp, en el mismo número, y por correo en info@vinospousada.es.
+El horario es de lunes a viernes, de 8 a 16 h. Fuera de horario, cogemos el móvil. Y si prefiere escribir, también atendemos por WhatsApp, en el mismo número, y por correo en info@vinospousada.es.
 
 ## Si su local está en Alcorcón o en el entorno
 

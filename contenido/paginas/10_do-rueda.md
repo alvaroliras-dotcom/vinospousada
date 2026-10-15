@@ -32,7 +32,7 @@ Si tenía en su carta el Rueda verdejo Musgo, ya no lo distribuimos: Don Indalec
 
 ## Para su carta
 
-Un verdejo de Rueda es una apuesta segura para la carta de un restaurante o un bar: reconocible, fresco y fácil de vender por copa. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede añadirlo a un pedido de blancos gallegos.
+Un verdejo de Rueda es una apuesta segura para la carta de un restaurante o un bar: reconocible, fresco y fácil de vender por copa. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede añadirlo a un pedido de blancos gallegos.
 
 Díganos qué tipo de local tiene y qué platos acompaña, y le recomendamos cómo combinarlo con nuestros albariños y godellos. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

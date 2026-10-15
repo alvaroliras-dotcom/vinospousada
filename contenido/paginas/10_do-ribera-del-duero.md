@@ -31,7 +31,7 @@ Son tintos de cada día, que maridan con carnes rojas, cordero, asados, legumbre
 
 ## Para su carta
 
-Si su carta lleva carnes, asados o cordero y quiere un tinto de Ribera del Duero que se explique solo, pídanos la tarifa. Rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, así que puede añadir el tinto a un pedido de blancos gallegos y completar la carta en un solo reparto.
+Si su carta lleva carnes, asados o cordero y quiere un tinto de Ribera del Duero que se explique solo, pídanos la tarifa. Rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, así que puede añadir el tinto a un pedido de blancos gallegos y completar la carta en un solo reparto.
 
 Díganos qué platos de carne trabaja y le orientamos entre una referencia y la otra. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

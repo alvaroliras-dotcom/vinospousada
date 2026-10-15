@@ -31,7 +31,7 @@ Bien frío, en chupito, al final de la comida. También puede servirse en vaso c
 
 ## Para su local
 
-El aguardiente de hierbas se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para recibir la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h, diciéndonos el nombre de su local. Haga su pedido por WhatsApp, por teléfono o por correo, y añada, si quiere, el resto de licores y los vinos que necesite en la misma entrega. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+El aguardiente de hierbas se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para recibir la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h, diciéndonos el nombre de su local. Haga su pedido por WhatsApp, por teléfono o por correo, y añada, si quiere, el resto de licores y los vinos que necesite en la misma entrega. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

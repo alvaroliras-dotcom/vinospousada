@@ -31,7 +31,7 @@ Solo o con hielo. En vaso corto, con uno o dos cubitos, es un licor de sobremesa
 
 ## Para su local
 
-El licor de café se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para recibir la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h, indicando el nombre de su local. Los pedidos se hacen por WhatsApp, por teléfono o por correo; puede incluir otros licores y vinos del catálogo en el mismo pedido. Si es la primera vez que nos escribe, cuéntenos qué tipo de local tiene y le orientamos sobre cuántas garrafas pedir para empezar. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+El licor de café se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para recibir la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h, indicando el nombre de su local. Los pedidos se hacen por WhatsApp, por teléfono o por correo; puede incluir otros licores y vinos del catálogo en el mismo pedido. Si es la primera vez que nos escribe, cuéntenos qué tipo de local tiene y le orientamos sobre cuántas garrafas pedir para empezar. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

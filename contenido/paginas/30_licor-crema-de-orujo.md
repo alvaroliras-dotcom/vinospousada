@@ -43,7 +43,7 @@ Bien fría: en chupito helado, después del postre o con el café. También pued
 
 ## Para su local
 
-La crema de orujo se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo, de modo que puede añadirla a su pedido de vinos. Para conocer la tarifa, escríbanos a info@vinospousada.es, mande un mensaje por WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Indíquenos el nombre de su local y cuántas garrafas calcula consumir, y le preparamos el pedido. Los pedidos se hacen por WhatsApp, por teléfono o por correo. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+La crema de orujo se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo, de modo que puede añadirla a su pedido de vinos. Para conocer la tarifa, escríbanos a info@vinospousada.es, mande un mensaje por WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Indíquenos el nombre de su local y cuántas garrafas calcula consumir, y le preparamos el pedido. Los pedidos se hacen por WhatsApp, por teléfono o por correo. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

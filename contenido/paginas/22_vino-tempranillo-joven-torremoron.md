@@ -31,7 +31,7 @@ Entre 16 y 18 °C. Si el local está caluroso, no lo deje a temperatura de sala:
 
 ## Para su local
 
-Torremorón Joven se entrega en caja de 12 botellas. Servimos a hostelería de toda la provincia de Madrid, sin pedido mínimo, de modo que puede combinarlo con otros tintos y blancos del catálogo en un mismo pedido. Para saber la tarifa, escríbanos a info@vinospousada.es, por WhatsApp o llame al 666 631 615 (lunes a viernes, de 8 a 20 h), diciéndonos el nombre de su local. Los pedidos se hacen por WhatsApp, teléfono o correo. Si ya trabaja otros tintos con nosotros, dígalo en el mensaje y lo tendremos en cuenta al preparar su pedido. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Torremorón Joven se entrega en caja de 12 botellas. Servimos a hostelería de toda la provincia de Madrid, sin pedido mínimo, de modo que puede combinarlo con otros tintos y blancos del catálogo en un mismo pedido. Para saber la tarifa, escríbanos a info@vinospousada.es, por WhatsApp o llame al 666 631 615 (lunes a viernes, de 8 a 16 h), diciéndonos el nombre de su local. Los pedidos se hacen por WhatsApp, teléfono o correo. Si ya trabaja otros tintos con nosotros, dígalo en el mensaje y lo tendremos en cuenta al preparar su pedido. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

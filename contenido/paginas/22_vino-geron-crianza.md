@@ -31,7 +31,7 @@ A 14 °C, en copa de tinto amplia. Si ha estado almacenado en sitio cálido, dé
 
 ## Para su local
 
-Gerón Crianza llega en caja de 6 botellas. Repartimos por toda la provincia de Madrid, sin pedido mínimo: puede sumarlo a su pedido habitual. Pida la tarifa por WhatsApp, por correo (info@vinospousada.es) o por teléfono, en el 666 631 615, de lunes a viernes de 8 a 20 h, indicando el nombre de su local y sus referencias de interés. El pedido también se hace por esos mismos canales. Si quiere ver antes el resto de tintos, tiene el catálogo completo en la web, y si duda entre dos referencias, pregúntenoslo por teléfono. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Gerón Crianza llega en caja de 6 botellas. Repartimos por toda la provincia de Madrid, sin pedido mínimo: puede sumarlo a su pedido habitual. Pida la tarifa por WhatsApp, por correo (info@vinospousada.es) o por teléfono, en el 666 631 615, de lunes a viernes de 8 a 16 h, indicando el nombre de su local y sus referencias de interés. El pedido también se hace por esos mismos canales. Si quiere ver antes el resto de tintos, tiene el catálogo completo en la web, y si duda entre dos referencias, pregúntenoslo por teléfono. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

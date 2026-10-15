@@ -33,7 +33,7 @@ Si tenía en su carta el Davalillo o el Don Paulino Crianza, ya no los distribui
 
 ## Para su carta
 
-Si su carta necesita un Rioja joven para el menú y un crianza para las carnes, pídanos la tarifa: rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede incluir los dos Gerón en el mismo pedido que sus blancos gallegos.
+Si su carta necesita un Rioja joven para el menú y un crianza para las carnes, pídanos la tarifa: rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede incluir los dos Gerón en el mismo pedido que sus blancos gallegos.
 
 Cuéntenos qué platos de carne y de cuchara sirve en su local y le decimos qué referencia encaja mejor y cómo presentarla en la carta. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

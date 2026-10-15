@@ -756,6 +756,9 @@ def cab_interior(p, t, etiqueta=None, tinte=None, nombre_pr="", slug_pr="", con_
     elif isinstance(pieza, tuple) and pieza[0] == "arco":
         modo = "arco"
         pieza_html = f'<figure class="cab-int__pieza cab-int__arco">{T.foto(pieza[1], pieza[2], "(max-width: 767px) 80vw, (max-width: 1024px) 40vw, 420px", prioridad=True)}</figure>'
+    elif isinstance(pieza, tuple) and pieza[0] == "bodegon":   # 15/10/2026 (Álvaro): bodegón ancho bajo el texto, también en móvil
+        modo = "bodegon"
+        pieza_html = f'<figure class="cab-int__pieza cab-int__bodegon">{T.foto(pieza[1], pieza[2], "(max-width: 1240px) 92vw, 1160px", prioridad=True)}</figure>'
     elif isinstance(pieza, tuple) and pieza[0] == "palabras":
         modo = "palabras"
         pals = "".join(f'<span style="--i:{i}">{esc(x)}</span>' for i, x in enumerate(pieza[1]))

@@ -31,7 +31,7 @@ Frío, solo o con hielo, como se indica para los licores de sobremesa. En vaso c
 
 ## Para su local
 
-El pacharán gallego se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h, indicando el nombre de su local. Los pedidos se hacen por WhatsApp, por teléfono o por correo, y puede incluir otros licores y vinos en el mismo envío. Si es la primera vez que nos escribe, díganoslo y le explicamos cómo funciona el reparto. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+El pacharán gallego se suministra en garrafa de 3 litros. Repartimos en toda la provincia de Madrid y no hay pedido mínimo. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h, indicando el nombre de su local. Los pedidos se hacen por WhatsApp, por teléfono o por correo, y puede incluir otros licores y vinos en el mismo envío. Si es la primera vez que nos escribe, díganoslo y le explicamos cómo funciona el reparto. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

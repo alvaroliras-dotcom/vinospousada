@@ -30,7 +30,7 @@ Porque es fácil de servir y porque se reconoce. Quien ha tomado turbio en Galic
 
 ## Cómo pedirlo
 
-Solicite la tarifa por el formulario, por teléfono o por WhatsApp: en el barril, el precio se da por litro. Haga su pedido por WhatsApp, por teléfono o por correo. Sin pedido mínimo. Repartimos en toda la [provincia de Madrid](/distribuidor-vinos-hosteleria-madrid/), de lunes a viernes, de 8 a 20 h.
+Solicite la tarifa por el formulario, por teléfono o por WhatsApp: en el barril, el precio se da por litro. Haga su pedido por WhatsApp, por teléfono o por correo. Sin pedido mínimo. Repartimos en toda la [provincia de Madrid](/distribuidor-vinos-hosteleria-madrid/), de lunes a viernes, de 8 a 16 h.
 
 ---
 FAQ

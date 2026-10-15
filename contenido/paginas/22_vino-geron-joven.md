@@ -31,7 +31,7 @@ A 14 °C, la temperatura de servicio indicada: en una cubitera con agua unos min
 
 ## Para su local
 
-Gerón Joven viene en caja de 6 botellas. Repartimos por toda la provincia de Madrid y no hay pedido mínimo: puede pedirlo junto al Crianza o junto a cualquier otra referencia del catálogo. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Los pedidos se hacen por esos mismos medios. Si duda entre el Joven y el Crianza para su carta, cuéntenos qué platos sirve y le orientamos antes de pedir. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Gerón Joven viene en caja de 6 botellas. Repartimos por toda la provincia de Madrid y no hay pedido mínimo: puede pedirlo junto al Crianza o junto a cualquier otra referencia del catálogo. Para conocer la tarifa, escriba a info@vinospousada.es, mande un WhatsApp o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Los pedidos se hacen por esos mismos medios. Si duda entre el Joven y el Crianza para su carta, cuéntenos qué platos sirve y le orientamos antes de pedir. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

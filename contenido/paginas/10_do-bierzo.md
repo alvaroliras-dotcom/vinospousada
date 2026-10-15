@@ -30,7 +30,7 @@ Se sirve entre 8 y 10 °C: frío, pero sin llegar a la temperatura de nevera pro
 
 ## Para su carta
 
-Para sumar un godello del Bierzo a su carta, pídanos la tarifa: rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede incluirlo junto a otros blancos gallegos o a los tintos de su pedido habitual. Es una referencia pensada para quien necesita un blanco de rotación con una uva reconocible y un origen distinto al gallego. Díganos qué platos sirve y le recomendamos con qué vinos combinarlo. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Para sumar un godello del Bierzo a su carta, pídanos la tarifa: rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede incluirlo junto a otros blancos gallegos o a los tintos de su pedido habitual. Es una referencia pensada para quien necesita un blanco de rotación con una uva reconocible y un origen distinto al gallego. Díganos qué platos sirve y le recomendamos con qué vinos combinarlo. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

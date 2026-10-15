@@ -31,7 +31,7 @@ Sírvalo entre 16 y 18 °C, en copa de tinto. Si ha estado en el almacén a temp
 
 ## Para su local
 
-Peñalagua se suministra en caja de 6 botellas. Repartimos por toda la provincia de Madrid y no pedimos un pedido mínimo, así que puede pedir una caja junto con el resto de su surtido. Para recibir la tarifa, escríbanos a info@vinospousada.es, mande un mensaje por WhatsApp o llámenos al 666 631 615, de lunes a viernes de 8 a 20 h. Díganos el nombre de su local y las referencias que le interesan, y si es la primera vez que nos escribe, con gusto le explicamos cómo funciona el reparto y cómo hacer el pedido. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Peñalagua se suministra en caja de 6 botellas. Repartimos por toda la provincia de Madrid y no pedimos un pedido mínimo, así que puede pedir una caja junto con el resto de su surtido. Para recibir la tarifa, escríbanos a info@vinospousada.es, mande un mensaje por WhatsApp o llámenos al 666 631 615, de lunes a viernes de 8 a 16 h. Díganos el nombre de su local y las referencias que le interesan, y si es la primera vez que nos escribe, con gusto le explicamos cómo funciona el reparto y cómo hacer el pedido. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

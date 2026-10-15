@@ -67,10 +67,10 @@ NEGOCIO = {
     "localidad": "Alcorcón",
     "provincia": "Madrid",
     "region": "Madrid",
-    "horario_texto": "De lunes a viernes, de 8:00 a 20:00",   # ⚑ días por confirmar (PROMESAS); las horas las validó Álvaro el 07/10/2026
-    "horario_corto": "L-V · 8:00-20:00",
+    "horario_texto": "De lunes a viernes, de 8:00 a 16:00",   # L-V 8-16 (Álvaro, 15/10/2026; antes 8-20)
+    "horario_corto": "L-V · 8:00-16:00",
     "dias_texto": "Lunes a viernes",
-    "abre": "08:00", "cierra": "20:00",
+    "abre": "08:00", "cierra": "16:00",
     "dias_schema": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     "zona_horaria": "Europe/Madrid",
     "festivos": [],                      # PROMESAS: festivos y vacaciones no se mencionan en la web
@@ -80,11 +80,11 @@ NEGOCIO = {
     "anios_marca": "47",
     "garantia": None,
     "fundacion": "1979",
-    "devuelve_llamada": "de 8 a 20 h",
+    "devuelve_llamada": "de 8 a 16 h",
     "cambia_equipos": None,
-    "cid": "0",                          # ⚑ CID de la ficha de Google pendiente (paso 3): sin él no hay mapa ni enlace a reseñas
-    "lat": 40.3459, "lng": -3.8298,      # ⚑ aproximado (Alcorcón); se sustituye por el del pin de la ficha (5 o más decimales)
-    "geo_aproximado": True,              # mientras sea True (o el CID sea 0) el JSON-LD NO lleva geo ni hasMap (Matías L-04, Turing A2)
+    "cid": "1926237380852368720",        # ficha de Google (paso 3, 28/09/2026)
+    "lat": 40.3490063, "lng": -3.8174882,  # pin de la ficha de Google (28/09/2026)
+    "geo_aproximado": False,             # mientras sea True (o el CID sea 0) el JSON-LD NO lleva geo ni hasMap (Matías L-04, Turing A2)
     "email_aviso": "",                   # ⚑ segundo buzón para un aviso corto por cada solicitud (el de Álvaro el primer mes); vacío = sin aviso
     "zona_servida": "Madrid",            # areaServed del JSON-LD: la provincia (AdministrativeArea «Madrid»); la sede (Alcorcón) va en address
     "schema_tipo": "WholesaleStore",     # distribuidor mayorista con local; subtipo de LocalBusiness
@@ -123,7 +123,7 @@ PORTADA = {
     "botellas": ["terras-vellas-albarino-rias-baixas.png", "da-vina-galega-albarino-rias-baixas.png", "don-indalecio-verdejo-rueda.png",
                  "castel-de-fornos-albarino-rias-baixas.png", "penalagua-tinto-joven-ribera-del-duero.png"],   # recursos/producto/, sin defectos visibles; en móvil salen las 3 primeras
     "onda": "marea",
-    "confianza": "Sin pedido mínimo · De lunes a viernes, de 8 a 20 h · Fuera de horario, cogemos el móvil",   # sin nombres (David, 09/10/2026)
+    "confianza": "Sin pedido mínimo · De lunes a viernes, de 8 a 16 h · Fuera de horario, cogemos el móvil",   # sin nombres (David, 09/10/2026)
 }
 
 # Cabeceras interiores · v2 (Jean Paul M-2 + encargo de Álvaro): la primera pantalla de cada tipo de página lleva imagen o
@@ -136,7 +136,7 @@ CABECERAS = {
     "catalogo":     {"fondo": "paisaje-uvas-lavado.jpg", "pieza": ("botellas", ["torremoron-tinto-joven-ribera-del-duero.png", "castel-de-fornos-albarino-rias-baixas.png", "don-indalecio-verdejo-rueda.png", "terras-vellas-albarino-rias-baixas.png"]), "tinte": "#EAF5F3", "onda": "ola"},
     "denominacion": {"fondo": "paisaje-vinedo-lavado.jpg", "pieza": "botellas_do", "onda": "ola"},
     "turbio":       {"fondo": None, "pieza": ("cunca", "vino-turbio-gallego-cunca-ribadavia.jpg", "Cunca de vino turbio sobre una barra de mármol", "faladoiro-vino-turbio-ribadavia.png"), "tinte": "#E4F3F1", "onda": "marea", "siguiente": "var(--oscuro)"},
-    "licores":      {"fondo": None, "pieza": ("arco", "licores-gallegos-garrafa-3-litros-hosteleria.jpg", "Garrafa de 3 litros de crema de orujo Pousada"), "tinte": "#F4F2EC", "onda": "costa"},
+    "licores":      {"fondo": None, "pieza": ("bodegon", "licores-gallegos-bodegon-garrafas.jpg", "Las seis garrafas de 3 litros de licores Pousada sobre una mesa de madera: orujo blanco, pacharán, crema de licor, licor café, licor de limón y licor de hierbas"), "tinte": "#F4F2EC", "onda": "costa"},
     "servicio":     {"fondo": "paisaje-praia-das-catedrais-lavado.jpg", "pieza": ("arco", "vino-turbio-gallego-cuncas-mesa.jpg", "Cuncas de vino turbio sobre una mesa de madera"), "tinte": "#F4F2EC", "onda": "ola"},
     "/distribuidor-vinos-hosteleria-madrid/": {"fondo": "paisaje-praia-das-catedrais-lavado.jpg", "pieza": ("palabras", ["Alcorcón", "Móstoles", "Leganés", "Getafe", "Fuenlabrada", "Pozuelo", "Alcalá", "Madrid"]), "tinte": "#F4F2EC", "onda": "costa"},
     "/distribuidor-vinos-hosteleria-alcorcon/": {"fondo": None, "pieza": ("arco", "almacen-vinos-pousada-alcorcon.jpg", "Almacén de Vinos Gallegos Pousada en Alcorcón, con palés de cajas de vino"), "tinte": "#F4F2EC", "onda": "ribera"},
@@ -270,7 +270,7 @@ PIE_FRASES = {
     "/vino-turbio/": ("¿Me compensa poner el barril?", "Pida la tarifa del turbio", ("Solicitar tarifa del turbio", "/contacto/?interes=vino-turbio"), "llamar"),
     "/licores/": ("¿Lo añado al mismo pedido?", "Añádalos al mismo pedido", ("Solicitar tarifa", "/contacto/?interes=licores"), "llamar"),
     "/nosotros/": ("¿Es gente seria?", "Trabaje con la casa", "llamar", "tarifa"),
-    "/contacto/": ("¿Qué pasa cuando envío esto?", "Le respondemos de 8 a 20 h", "llamar", "whatsapp"),
+    "/contacto/": ("¿Qué pasa cuando envío esto?", "Le respondemos de 8 a 16 h", "llamar", "whatsapp"),
 }
 # Plantillas por tipo de página (las fichas y los hubs son muchos): {nombre} = nombre del producto o de la D.O.
 PIE_FRASES_TIPO = {
@@ -278,19 +278,19 @@ PIE_FRASES_TIPO = {
     "licor": ("¿Lo añado al mismo pedido?", "Pida la tarifa de este licor", ("Solicitar tarifa", "/contacto/?interes={slug}"), "whatsapp"),
     "denominacion": ("¿Qué vinos de esta zona me encajan?", "Pida la tarifa de esta zona", ("Solicitar tarifa", "/contacto/?interes=vinos"), "llamar"),
 }
-PIE_SUB = "Cuéntenos qué tipo de local tiene y qué le interesa: vinos, turbio, licores. Le atendemos de lunes a viernes, de 8 a 20 h."
+PIE_SUB = "Cuéntenos qué tipo de local tiene y qué le interesa: vinos, turbio, licores. Le atendemos de lunes a viernes, de 8 a 16 h."
 
 # Formulario (04-LEGALES/formulario-textos.md): cinco campos, sin casilla, línea informativa (versión corta) y confianza
 FORMULARIO = {
     "tipos_negocio": ["Bar", "Restaurante", "Tienda", "Particular"],
     "intereses": {"vinos": "vinos gallegos", "vino-turbio": "vino turbio", "licores": "licores"},   # ?interes=… → mensaje prerrelleno; un slug de producto → su nombre
     "boton": "Enviar solicitud de tarifa",
-    "confianza": "Sin pedido mínimo · De 8 a 20 h · Fuera de horario, cogemos el móvil",   # sin nombres (David, 09/10/2026)
+    "confianza": "Sin pedido mínimo · De 8 a 16 h · Fuera de horario, cogemos el móvil",   # sin nombres (David, 09/10/2026)
     "confianza_particular": "Para particulares, el mínimo es una caja.",
     "informativa": "Sus datos los usa VINOS GALLEGOS POUSADA S.L. solo para responder a su solicitud (art. 6.1.b RGPD) y los guarda como máximo un año. Derechos en info@vinospousada.es · ",
-    # Confirmación (Dani C-16): sin nombres y sin plazo que PROMESAS.md no respalde (solo el horario de 8 a 20 h); con siguiente paso
+    # Confirmación (Dani C-16): sin nombres y sin plazo que PROMESAS.md no respalde (solo el horario de 8 a 16 h); con siguiente paso
     "ok_titulo": "Solicitud recibida",
-    "ok_texto": "Gracias. Le contestamos en horario de 8 a 20 h. Si tiene prisa, llame o escriba por WhatsApp al 666 631 615.",
+    "ok_texto": "Gracias. Le contestamos en horario de 8 a 16 h. Si tiene prisa, llame o escriba por WhatsApp al 666 631 615.",
     "ok_enlace": ("Mientras tanto, vea el catálogo", "/catalogo/"),
     "error_titulo": "No hemos podido enviar su solicitud",
     "error_texto": "Ha fallado el envío. Sus datos no se han perdido: pruebe de nuevo en unos segundos o, si lo prefiere, llámenos o escríbanos por WhatsApp al 666 631 615, o por correo a info@vinospousada.es.",
@@ -365,7 +365,7 @@ TEXTOS = {
     "tarjeta_titulo": "¿Prefiere que le llamemos?",
     "tarjeta_ir": "Déjenos su teléfono",
     "llamada_titulo": "Déjenos su nombre y su teléfono",
-    "llamada_promesa": "Le llamamos de 8 a 20 h.",
+    "llamada_promesa": "Le llamamos de 8 a 16 h.",
     "llamada_ok": "Recibido. Le llamamos {devuelve}; si es fuera de ese horario, en cuanto empecemos.",
     "llamada_boton": "Que me llamen",
     "promesa_abierto": "Le llamamos hoy mismo.",
@@ -386,8 +386,8 @@ TEXTOS = {
     "mapa_texto": "La web no es una tienda: llame o escriba antes de acercarse.",
     "privacidad_llamada": "Usamos sus datos solo para llamarle.",
     "privacidad_form": "Usamos sus datos solo para contestarle.",
-    "form_ok": "Solicitud recibida. Le respondemos de 8 a 20 h.",
-    "form_confianza": "Sin pedido mínimo · De 8 a 20 h · Fuera de horario, cogemos el móvil",
+    "form_ok": "Solicitud recibida. Le respondemos de 8 a 16 h.",
+    "form_confianza": "Sin pedido mínimo · De 8 a 16 h · Fuera de horario, cogemos el móvil",
     "form_municipio_ph": "",
     "form_mensaje_label": "Mensaje",
     "form_mensaje_ph": "Qué le interesa: vinos gallegos, vino turbio, licores. Su municipio.",
@@ -397,7 +397,7 @@ TEXTOS = {
     "contacto_tambien": "También por WhatsApp, en el mismo número",
     "banda_etiqueta": "", "banda_titulo": "", "banda_texto": "",
     "estado_abierto": "Abierto ahora · hasta las {cierra}",
-    "estado_fuera": "Ahora cerrado · de 8 a 20 h",
+    "estado_fuera": "Ahora cerrado · de 8 a 16 h",
     "pie_titular": "Pida su tarifa",
     "pie_etiqueta_contacto": "Contacto",
     "pie_tambien_whatsapp": "(también WhatsApp)",

@@ -31,7 +31,7 @@ Sírvalo entre 8 y 10 °C: sáquelo de la cámara unos minutos antes de abrirlo 
 
 ## Para su local
 
-Quinta Grande Godello se entrega en caja de 6 botellas. Repartimos en toda la provincia de Madrid y no hay pedido mínimo: puede incluirlo junto a otras referencias de su carta. Para recibir la tarifa, escríbanos por WhatsApp o por correo (info@vinospousada.es) o llámenos al 666 631 615, de lunes a viernes de 8 a 20 h, indicando el nombre de su local y qué vinos le interesan. Los pedidos se hacen por WhatsApp, por teléfono o por correo. Si antes quiere ver el conjunto de blancos, consulte el catálogo y díganos cuáles le interesan. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Quinta Grande Godello se entrega en caja de 6 botellas. Repartimos en toda la provincia de Madrid y no hay pedido mínimo: puede incluirlo junto a otras referencias de su carta. Para recibir la tarifa, escríbanos por WhatsApp o por correo (info@vinospousada.es) o llámenos al 666 631 615, de lunes a viernes de 8 a 16 h, indicando el nombre de su local y qué vinos le interesan. Los pedidos se hacen por WhatsApp, por teléfono o por correo. Si antes quiere ver el conjunto de blancos, consulte el catálogo y díganos cuáles le interesan. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

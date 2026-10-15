@@ -29,4 +29,4 @@ El licor es la última impresión que se lleva el cliente. Un chupito de orujo b
 
 ## Cómo pedirlos
 
-Solicite la tarifa por el formulario, por teléfono o por WhatsApp. Haga su pedido por WhatsApp, por teléfono o por correo. Sin pedido mínimo. Repartimos en toda la provincia de Madrid, de lunes a viernes, de 8 a 20 h. Puede completar el pedido con vinos del [catálogo](/catalogo/).
+Solicite la tarifa por el formulario, por teléfono o por WhatsApp. Haga su pedido por WhatsApp, por teléfono o por correo. Sin pedido mínimo. Repartimos en toda la provincia de Madrid, de lunes a viernes, de 8 a 16 h. Puede completar el pedido con vinos del [catálogo](/catalogo/).

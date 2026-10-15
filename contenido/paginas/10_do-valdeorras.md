@@ -35,7 +35,7 @@ En sala, el godello es la respuesta a quien quiere un blanco gallego distinto de
 
 ## Para su carta
 
-Un godello de Valdeorras da a su carta un blanco gallego con identidad propia, y un mencía joven, un tinto fresco para las carnes y los guisos. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede probar una referencia junto con el resto de su pedido.
+Un godello de Valdeorras da a su carta un blanco gallego con identidad propia, y un mencía joven, un tinto fresco para las carnes y los guisos. Para recibir la tarifa, rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede probar una referencia junto con el resto de su pedido.
 
 Díganos qué tipo de cocina trabaja y le proponemos qué godello y qué tinto encajan mejor. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

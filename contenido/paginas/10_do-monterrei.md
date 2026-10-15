@@ -30,7 +30,7 @@ Su caja de 6 botellas lo hace cómodo de reponer: no obliga a mantener mucho fon
 
 ## Para su carta
 
-Si quiere introducir un godello de Monterrei en su carta, pídanos la tarifa: rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede sumarlo a otras referencias gallegas en el mismo pedido.
+Si quiere introducir un godello de Monterrei en su carta, pídanos la tarifa: rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, de modo que puede sumarlo a otras referencias gallegas en el mismo pedido.
 
 Es una buena opción de segundo blanco gallego, junto a un albariño de Rías Baixas o a un godello de Valdeorras. Cuéntenos qué platos quiere acompañar y le decimos con qué referencias se combina mejor. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

@@ -35,7 +35,7 @@ Si lo que busca es el vino turbio de la zona de Ribadavia, servido muy frío y d
 
 ## Para su carta
 
-Si quiere un Ribeiro para el menú del día, para la barra o para una carta de blancos gallegos, pídanos la tarifa. Rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 20 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, así que puede sumar el Ribeiro a otras referencias de su pedido.
+Si quiere un Ribeiro para el menú del día, para la barra o para una carta de blancos gallegos, pídanos la tarifa. Rellene el formulario de contacto o llame al 666 631 615, de lunes a viernes de 8 a 16 h. Repartimos en toda la provincia de Madrid desde Alcorcón y no hay pedido mínimo, así que puede sumar el Ribeiro a otras referencias de su pedido.
 
 Díganos qué sirve hoy y qué quiere cambiar: le proponemos un blanco de rotación y, si le interesa, el turbio, para que su carta tenga el vino de la zona completo. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 

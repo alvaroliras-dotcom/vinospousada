@@ -31,7 +31,7 @@ Entre 8 y 10 °C, en copa de blanco y recién sacado de la cámara, para que la 
 
 ## Para su local
 
-Don Indalecio viene en caja de 6 botellas, y puede combinarlo con otras referencias en el mismo pedido porque no exigimos pedido mínimo. Repartimos por toda la provincia de Madrid. Haga su pedido por WhatsApp, por teléfono o por correo; para conocer la tarifa, llámenos al 666 631 615 (de lunes a viernes, de 8 a 20 h) o escriba a info@vinospousada.es indicando el nombre y el tipo de su local. Le contestamos con la tarifa y le decimos cómo preparar el primer pedido, sin compromiso de cantidad. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
+Don Indalecio viene en caja de 6 botellas, y puede combinarlo con otras referencias en el mismo pedido porque no exigimos pedido mínimo. Repartimos por toda la provincia de Madrid. Haga su pedido por WhatsApp, por teléfono o por correo; para conocer la tarifa, llámenos al 666 631 615 (de lunes a viernes, de 8 a 16 h) o escriba a info@vinospousada.es indicando el nombre y el tipo de su local. Le contestamos con la tarifa y le decimos cómo preparar el primer pedido, sin compromiso de cantidad. Aceptamos pago por transferencia, Bizum, tarjeta y efectivo.
 
 ---
 FAQ

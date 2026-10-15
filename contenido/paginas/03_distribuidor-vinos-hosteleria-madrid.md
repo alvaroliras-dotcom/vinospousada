@@ -61,7 +61,7 @@ Vinos gallegos y de otras denominaciones, vino turbio gallego en barril de 50 li
 No. No hay pedido mínimo, esté donde esté dentro de la provincia.
 
 **¿Qué horario tienen?**
-De lunes a viernes, de 8 a 20 h. Fuera de horario, cogemos el móvil: llame al 666 631 615 o escriba por WhatsApp.
+De lunes a viernes, de 8 a 16 h. Fuera de horario, cogemos el móvil: llame al 666 631 615 o escriba por WhatsApp.
 
 **¿Trabajan solo con hostelería o también como mayorista para otros distribuidores?**
 Las dos cosas. Somos distribuidor y mayorista de vinos gallegos, vino turbio y licores: trabajamos con bares y restaurantes de la provincia de Madrid, y también con tiendas y otros negocios que compran por volumen.
